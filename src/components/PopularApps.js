@@ -4,7 +4,17 @@ import { Row, Col } from 'antd';
 import PopularAppsApi from './PopularAppsApi';
 
 function PopularApps() {
-    return (
+    const carouselItems = PopularAppsApi().reduce((previousValue, currentValue, currentIndex) => {
+        let row = []; 
+        if(currentIndex % 2 == 1) {
+            row = previousValue.splice(-1, 1)[0]
+        }
+        row.push(currentValue)
+        previousValue.push(row)
+        return previousValue
+     },[] )
+     console.log(carouselItems);
+        return (
         <div>
             <Carousel>
                 <div>

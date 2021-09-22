@@ -53,6 +53,8 @@
 
 #overrideFeatured {
     margin-top: 8em;
+    border-bottom: 3px solid #eee6e6;
+    padding-bottom: 4em;
 }
 #overrideFeatured .imgWrapper img {
     object-fit: contain;
