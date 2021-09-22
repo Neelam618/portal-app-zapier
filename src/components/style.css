@@ -47,3 +47,17 @@
 #overrideCarousel .ant-layout-sider {
     min-width: 375px !important;
 }
+
+#overrideFeatured {
+    margin-top: 8em;
+}
+#overrideFeatured .imgWrapper img {
+    object-fit: contain;
+}
+
+#overrideFeatured .imgWrapper {
+    box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 20%);
+    height: 120px;
+    width: 120px;
+    border: 1px solid #E6E6E6;
+}

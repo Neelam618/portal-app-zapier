@@ -2,6 +2,8 @@ import React from 'react'
 import { Row, Col } from 'antd';
 import { Carousel } from 'antd';
 import { Layout } from 'antd';
+import FeaturedApps from './FeaturedApps'
+
 import './style.css'
 
 const { Header, Footer, Sider, Content } = Layout;
@@ -17,7 +19,7 @@ function PopularApps() {
                         <Carousel>
                             <div>
                                 <Row gutter={[0, 0]}>
-                                    <Col lg={12}>
+                                    <Col xl={12}>
                                         <a href="" className="appContent">
                                             <div className="appImg">
                                                 <span className="appImgWrapper">
@@ -30,7 +32,7 @@ function PopularApps() {
                                             </div>
                                         </a>
                                     </Col>
-                                    <Col lg={12}>
+                                    <Col xl={12}>
                                         <div className="appContent">
                                             <div className="appImg">
                                                 <span className="appImgWrapper">
@@ -47,7 +49,7 @@ function PopularApps() {
                             </div>
                             <div>
                                 <Row gutter={[0, 0]}>
-                                    <Col lg={12}>
+                                    <Col xl={12}>
                                         <div className="appContent">
                                             <div className="appImg">
                                                 <span className="appImgWrapper">
@@ -60,7 +62,7 @@ function PopularApps() {
                                             </div>
                                         </div>
                                     </Col>
-                                    <Col lg={12}>
+                                    <Col xl={12}>
                                         <div className="appContent">
                                             <div className="appImg">
                                                 <span className="appImgWrapper">
@@ -76,6 +78,7 @@ function PopularApps() {
                                 </Row>
                             </div>
                         </Carousel>
+                        <FeaturedApps />
                     </Content>
                 </Layout>
             </Layout>
