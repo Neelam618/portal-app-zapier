@@ -1,6 +1,7 @@
 .appContent {
     display: flex;
     padding: 3em;
+    color: rgba(0, 0, 0, 0.74);
 }
 .appImg {
     margin-right: 1em;
@@ -23,10 +24,10 @@
 }
 .appText p {
     font-size: 1rem;
-    /* overflow: hidden; */
-    /* text-overflow: ellipsis; */
-    /* max-height: 60px; */
+    overflow: hidden;
+    text-overflow: ellipsis;
     /* white-space: nowrap; */
+    /* width: 200px; */
 }
 
 #overrideCarousel .ant-carousel .slick-dots li.slick-active button {
