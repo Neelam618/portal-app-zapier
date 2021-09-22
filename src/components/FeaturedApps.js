@@ -1,15 +1,32 @@
 import React from 'react'
+import { Row, Col } from 'antd';
+import FeaturedAppsApi from './FeaturedAppsApi'
 import './style.css'
 
 function FeaturedApps() {
     return (
         <div id="overrideFeatured">
-            <span>Featured</span>
-            <span>
-                <span className="imgWrapper">
-                    <img src="https://zapier-images.imgix.net/storage/services/057c580adba56c05052e3ea0e4182f15.png?auto=format&ixlib=react-9.0.2&ar=undefined&fit=crop&h=84&w=84&q=50&dpr=1" alt="" />
-                </span>
-            </span>
+            <div>
+                <Row gutter={[0, 0]}>
+                    {
+                        FeaturedAppsApi().map((item) => {
+                            return (
+                                <Col span={6}>
+                                    <div className="appContainer">
+                                        <span className="imgContainer">
+                                            <span className="badge">{item.badgeText}</span>
+                                            <span className="imgWrapper">
+                                                <img src={item.image} alt="" />
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div>{item.title}</div>
+                                </Col>
+                            )
+                        })
+                    }
+                </Row>
+            </div>
         </div>
     )
 }

@@ -1,11 +1,11 @@
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 import './App.css';
-import PopularApps from './components/PopularApps';
+import Layout from './components/Layout';
 
 function App() {
   return (
     <div className="App">
-      <PopularApps />
+      <Layout />
     </div>
   );
 }
