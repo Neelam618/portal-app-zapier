@@ -26,12 +26,12 @@ function PopularApps() {
                                     <a href="" className="appContent">
                                         <div className="appImg">
                                             <span className="appImgWrapper">
-                                                <img src="https://zapier-images.imgix.net/storage/services/8913a06feb7556d01285c052e4ad59d0.png?auto=format&ixlib=react-9.0.2&ar=undefined&fit=crop&h=40&w=40&q=50&dpr=1" alt="" />
+                                                <img src={items[0].image} alt="" />
                                             </span>
                                         </div>
                                         <div className="appText">
                                             <h3>{items[0].title}</h3>
-                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.Esse nulla reprehenderit ipsam repudiandae corporis minus distinctio sint iste saepe ad </p>
+                                            <p>{items[0].description}</p>
                                         </div>
                                     </a>
                                 </Col>
@@ -40,12 +40,12 @@ function PopularApps() {
                                     <div className="appContent">
                                         <div className="appImg">
                                             <span className="appImgWrapper">
-                                                <img src="https://zapier-images.imgix.net/storage/services/8913a06feb7556d01285c052e4ad59d0.png?auto=format&ixlib=react-9.0.2&ar=undefined&fit=crop&h=40&w=40&q=50&dpr=1" alt="" />
+                                                <img src={items[1].image} alt="" />
                                             </span>
                                         </div>
                                         <div className="appText">
                                             <h3>{items[1].title}</h3>
-                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.Esse nulla reprehenderit ipsam repudiandae corporis minus distinctio sint iste saepe ad </p>
+                                            <p>{items[1].description}</p>
                                         </div>
                                     </div>
                                 </Col>
