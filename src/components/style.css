@@ -109,3 +109,22 @@
         text-transform: uppercase;
         font-size: 12px;
 }
+
+#overrideFeatured .badgeRed {
+    background-color: #ff4a00;
+}
+#overrideFeatured .badgeGreen {
+    background-color: #62d493;
+}
+#overrideFeatured .badgeYellow {
+    background-color: #ffc43e;
+}
+#overrideFeatured .badgeBlue {
+    background-color: #4289f7;
+}
+
+#overrideFeatured .title {
+    font-size: 14px;
+    font-weight: 700;
+    color: black;
+}
