@@ -41,10 +41,10 @@
     background-color: rgb(148, 144, 144);
 }
 #overrideCarousel .ant-layout.ant-layout-has-sider {
-    padding: 8em;
+    padding: 6em;
 }
 #overrideCarousel .ant-carousel .slick-dots-bottom {
-    bottom: -50px;
+    bottom: 65px;
 }
 
 #overrideCarousel .ant-layout-sider {
@@ -53,9 +53,10 @@
 
 #overrideCarousel .ant-carousel .slick-initialized .slick-slide {
     border-bottom: 2px solid #eee6e6;
+    padding-bottom: 6em;
 }
 #overrideFeatured {
-    margin-top: 8em;
+    margin-top: 3em;
     border-bottom: 3px solid #eee6e6;
     padding-bottom: 4em;
 }
