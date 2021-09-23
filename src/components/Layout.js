@@ -15,7 +15,7 @@ function AppLayout() {
             <Layout>
                 <Header>Header</Header>
                 <Layout>
-                    <Sider theme="light">Aside</Sider>
+                    <Sider>Aside</Sider>
                     <Content>
                         <PopularApps />
                         <FeaturedApps />

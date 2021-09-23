@@ -51,6 +51,9 @@
     min-width: 375px !important;
 }
 
+#overrideCarousel .ant-carousel .slick-initialized .slick-slide {
+    border-bottom: 2px solid #eee6e6;
+}
 #overrideFeatured {
     margin-top: 8em;
     border-bottom: 3px solid #eee6e6;

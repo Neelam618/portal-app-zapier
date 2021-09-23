@@ -22,7 +22,7 @@ function PopularApps() {
                         return (
                         <div>
                             <Row gutter={[0, 0]}>
-                                <Col lg={12}>
+                                <Col xl={12}>
                                     <a href="" className="appContent">
                                         <div className="appImg">
                                             <span className="appImgWrapper">
@@ -36,8 +36,8 @@ function PopularApps() {
                                     </a>
                                 </Col>
                                 {items.length > 1 ? 
-                                <Col lg={12}>
-                                    <div className="appContent">
+                                <Col xl={12}>
+                                    <a href="" className="appContent">
                                         <div className="appImg">
                                             <span className="appImgWrapper">
                                                 <img src={items[1].image} alt="" />
@@ -47,7 +47,7 @@ function PopularApps() {
                                             <h3>{items[1].title}</h3>
                                             <p>{items[1].description}</p>
                                         </div>
-                                    </div>
+                                    </a>
                                 </Col>
                                 : null }
                             </Row>
