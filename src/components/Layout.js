@@ -4,6 +4,7 @@ import { Carousel } from 'antd';
 import { Layout } from 'antd';
 import FeaturedApps from './FeaturedApps'
 import PopularApps from './PopularApps';
+import AllApps from './AllApps';
 
 import './style.css'
 
@@ -19,6 +20,7 @@ function AppLayout() {
                     <Content>
                         <PopularApps />
                         <FeaturedApps />
+                        <AllApps />
                     </Content>
                 </Layout>
             </Layout>
