@@ -18,16 +18,21 @@ function AllApps() {
 
     return (
         <div id="allApps">
-            <Row gutter={[24, 24]}>
+            <Row gutter={[8, 6]}>
                 {
                     items.slice(0, visible).map((item) => {
                         return (
-                        <Col span={12}>{item}</Col>
+                            <Col span={12}>
+                                <a href="" className="card">
+                                    <img className="image" src={item.image} alt="" />
+                                    <span className="text">{item.name}</span>
+                                </a>
+                            </Col>
                         )
                     })
                 }
             </Row>
-            <button onClick={showMoreItems}>Load More</button>
+            <button className="loadMoreBtn" onClick={showMoreItems}>Load More</button>
         </div>
     )
 }

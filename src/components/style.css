@@ -133,3 +133,35 @@
 #allApps .ant-col {
     text-align: start;
 }
+
+#allApps .card {
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+}
+#allApps .card .image {
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    padding:  3px;
+}
+
+#allApps .card .text {
+    padding: 15px;
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: black;
+}
+
+#allApps .loadMoreBtn {
+    display: block;
+    width: 100%;
+    font-weight: 700;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
