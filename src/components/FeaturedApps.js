@@ -36,7 +36,7 @@ function FeaturedApps() {
                                                     badgeColor = "badgeGreen"
                                                 }
                                                 return (
-                                                    <Col sm={12} md={24} lg={8} xl={6}>
+                                                    <Col md={24} lg={12} xl={6}>
                                                         <a href="">
                                                             <div className="appContainer">
                                                                 <span className="imgContainer">

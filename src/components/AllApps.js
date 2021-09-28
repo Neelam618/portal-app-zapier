@@ -22,7 +22,7 @@ function AllApps() {
                 {
                     items.slice(0, visible).map((item) => {
                         return (
-                            <Col span={12}>
+                            <Col lg={12}>
                                 <a href="" className="card">
                                     <img className="image" src={item.image} alt="" />
                                     <span className="text">{item.name}</span>
