@@ -14,7 +14,7 @@ function FeaturedApps() {
     return (
         <div id="overrideFeatured">
             <div style={{margin: '0 3em'}}>
-                <Carousel>
+                <Carousel autoplay>
                     {
                         chunkedItems.map((slide) => {
                             return (
