@@ -29,36 +29,36 @@
     /* white-space: nowrap; */
     /* width: 200px; */
 }
-#overrideCarousel .ant-layout {
+#layout .ant-layout {
     background-color: white;
 }
 
-#overrideCarousel .ant-carousel .slick-dots li.slick-active button {
+#popularApps .ant-carousel .slick-dots li.slick-active button {
     background-color: gray;
 }
 
-#overrideCarousel .ant-carousel .slick-dots li button {
+#popularApps .ant-carousel .slick-dots li button {
     background-color: rgb(148, 144, 144);
 }
-#overrideCarousel .ant-layout.ant-layout-has-sider {
+#layout .ant-layout.ant-layout-has-sider {
     padding: 6em;
 }
-#overrideCarousel .ant-carousel .slick-dots-bottom {
+#popularApps .ant-carousel .slick-dots-bottom{
     bottom: 65px;
 }
 
-#overrideCarousel .ant-layout-sider {
+#layout .ant-layout-sider {
     min-width: 375px !important;
 }
 
-#overrideCarousel .ant-carousel .slick-initialized .slick-slide {
-    border-bottom: 2px solid #eee6e6;
+#popularApps .ant-carousel .slick-initialized .slick-slide {
+    border-bottom: 3px solid #eee6e6;
     padding-bottom: 6em;
 }
 #overrideFeatured {
     margin-top: 3em;
     border-bottom: 3px solid #eee6e6;
-    padding-bottom: 4em;
+    padding-bottom: 6em;
 }
 #overrideFeatured .imgWrapper img {
     object-fit: contain;
@@ -128,6 +128,18 @@
     font-size: 14px;
     font-weight: 700;
     color: black;
+}
+
+#overrideFeatured .ant-carousel .slick-dots-bottom { 
+    bottom: -68px;
+}
+
+#overrideFeatured .ant-carousel .slick-dots li.slick-active button {
+    background-color: gray;
+}
+
+#overrideFeatured .ant-carousel .slick-dots li button {
+    background-color: rgb(148, 144, 144);
 }
 
 #allApps .ant-col {

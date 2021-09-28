@@ -12,7 +12,7 @@ const { Header, Footer, Sider, Content } = Layout;
 
 function AppLayout() {
     return (
-        <div id="overrideCarousel">
+        <div id="layout">
             <Layout>
                 <Header>Header</Header>
                 <Layout>

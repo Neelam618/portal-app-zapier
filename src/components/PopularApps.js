@@ -15,7 +15,7 @@ function PopularApps() {
     }, [])
     console.log(carouselItems);
     return (
-        <div>
+        <div id="popularApps">
             <Carousel>
                 {
                     carouselItems.map((items) => {
