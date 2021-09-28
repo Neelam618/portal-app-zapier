@@ -13,13 +13,13 @@ function FeaturedApps() {
     console.log(chunkedItems);
     return (
         <div id="overrideFeatured">
-            <div>
+            <div style={{margin: '0 3em'}}>
                 <Carousel>
                     {
                         chunkedItems.map((slide) => {
                             return (
                                 <div>
-                                    <Row gutter={[0, 0]}>
+                                    <Row gutter={[16, 16]}>
                                         {
                                             slide.map((item) => {
                                                 let badgeColor = "";
@@ -36,7 +36,7 @@ function FeaturedApps() {
                                                     badgeColor = "badgeGreen"
                                                 }
                                                 return (
-                                                    <Col span={6}>
+                                                    <Col sm={12} md={24} lg={8} xl={6}>
                                                         <a href="">
                                                             <div className="appContainer">
                                                                 <span className="imgContainer">

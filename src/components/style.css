@@ -91,6 +91,7 @@
     background-color: #f2f2f2;
     overflow: hidden;
     margin: 0 auto;
+    width: 100%;
 }
 
 #overrideFeatured .badge {
@@ -141,9 +142,13 @@
 #overrideFeatured .ant-carousel .slick-dots li button {
     background-color: rgb(148, 144, 144);
 }
+/* #overrideFeatured .ant-col {
+    margin: 0 1em;
+} */
 
 #allApps .ant-col {
     text-align: start;
+    margin: 0 10px;
 }
 
 #allApps .card {
