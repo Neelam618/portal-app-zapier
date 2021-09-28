@@ -1,46 +1,63 @@
 import React from 'react'
 import { Row, Col } from 'antd';
+import { Carousel } from 'antd';
 import FeaturedAppsApi from './FeaturedAppsApi'
 import './style.css'
 
 function FeaturedApps() {
+    let chunkedItems = []
+    let size = 4;
+    for (let i = 0; i < FeaturedAppsApi().length; i += size) {
+        chunkedItems.push(FeaturedAppsApi().slice(i, i + size))
+    }
+    console.log(chunkedItems);
     return (
         <div id="overrideFeatured">
             <div>
-                <Row gutter={[0, 0]}>
+                <Carousel>
                     {
-                        FeaturedAppsApi().map((item) => {
-                            let badgeColor = "";
-                            if (item.badgeText == "Featured") {
-                                badgeColor = "badgeRed"
-                            }
-                            if (item.badgeText == "New actions added") {
-                                badgeColor = "badgeYellow"
-                            }
-                            if (item.badgeText == "Coming soon") {
-                                badgeColor = "badgeBlue"
-                            }
-                            if (item.badgeText == "Recently added") {
-                                badgeColor = "badgeGreen"
-                            }
+                        chunkedItems.map((slide) => {
                             return (
-                                <Col span={6}>
-                                    <a href="">
-                                        <div className="appContainer">
-                                            <span className="imgContainer">
-                                                <span className={`badge ${badgeColor}`}>{item.badgeText}</span>
-                                                <span className="imgWrapper">
-                                                    <img src={item.image} alt="" />
-                                                </span>
-                                            </span>
-                                        </div>
-                                        <div className="title">{item.title}</div>
-                                    </a>
-                                </Col>
+                                <div>
+                                <Row gutter={[0, 0]}>
+                                    {
+                                        slide.map((item) => {
+                                            let badgeColor = "";
+                                            if (item.badgeText == "Featured") {
+                                                badgeColor = "badgeRed"
+                                            }
+                                            if (item.badgeText == "New actions added") {
+                                                badgeColor = "badgeYellow"
+                                            }
+                                            if (item.badgeText == "Coming soon") {
+                                                badgeColor = "badgeBlue"
+                                            }
+                                            if (item.badgeText == "Recently added") {
+                                                badgeColor = "badgeGreen"
+                                            }
+                                            return (
+                                            <Col span={6}>
+                                                <a href="">
+                                                    <div className="appContainer">
+                                                        <span className="imgContainer">
+                                                            <span className={`badge ${badgeColor}`}>{item.badgeText}</span>
+                                                            <span className="imgWrapper">
+                                                                <img src={item.image} alt="" />
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                    <div className="title">{item.title}</div>
+                                                </a>
+                                            </Col>
+                                            )
+                                        })
+                                    }
+                                </Row>
+                                </div>
                             )
                         })
                     }
-                </Row>
+                </Carousel>
             </div>
         </div>
     )
