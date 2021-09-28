@@ -185,3 +185,25 @@
 #allApps .ant-row {
     margin: 3em auto;
 }
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.miniLogo {
+   fill: #ff4a00;
+   height: 40px;
+   width: 40px;
+   display: inline-block;
+   vertical-align: middle;
+}
+.welcomeText {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px;
+}
+.welcomeText h1 {
+    margin-bottom: 0;
+    font-weight: 700;
+}
