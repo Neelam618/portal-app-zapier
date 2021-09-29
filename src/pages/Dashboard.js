@@ -54,7 +54,7 @@ function Dashboard() {
                                     <p className="listItemPara">Gmail + Google Drive</p>
                                 </div>
                             </div>
-                            <div>
+                            <div className="tryLinkWrapper">
                                 <a href="" className="tryLink">Try it</a>
                             </div>
                         </div>
