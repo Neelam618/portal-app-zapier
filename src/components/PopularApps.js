@@ -2,6 +2,7 @@ import React from 'react'
 import { Carousel } from 'antd';
 import { Row, Col } from 'antd';
 import PopularAppsApi from './PopularAppsApi';
+import '../../src/style.css'
 
 function PopularApps() {
     const carouselItems = PopularAppsApi().reduce((previousValue, currentValue, currentIndex) => {

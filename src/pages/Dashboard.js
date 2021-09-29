@@ -1,7 +1,7 @@
 import React from 'react'
 import { Input } from 'antd';
 import { SearchOutlined } from '@ant-design/icons'
-import '../components/style.css'
+import '../../src/style.css'
 
 function Dashboard() {
     return (

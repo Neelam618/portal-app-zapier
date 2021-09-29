@@ -2,7 +2,7 @@ import React from 'react'
 import { Row, Col } from 'antd';
 import { useState, useEffect } from 'react/cjs/react.development';
 import AllAppsApi from './AllAppsApi';
-import './style.css'
+import '../../src/style.css'
 
 function AllApps() {
     const [items, setItems] = useState([])

@@ -2,7 +2,7 @@ import React from 'react'
 import { Row, Col } from 'antd';
 import { Carousel } from 'antd';
 import FeaturedAppsApi from './FeaturedAppsApi'
-import './style.css'
+import '../../src/style.css'
 
 function FeaturedApps() {
     let chunkedItems = []

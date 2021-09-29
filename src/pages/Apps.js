@@ -1,16 +1,13 @@
 import React from 'react'
-import { Row, Col } from 'antd';
-import { Carousel } from 'antd';
 import { Layout } from 'antd';
-import FeaturedApps from './FeaturedApps'
-import PopularApps from './PopularApps';
-import AllApps from './AllApps';
-
-import './style.css'
+import FeaturedApps from '../components/FeaturedApps'
+import PopularApps from '../components/PopularApps';
+import AllApps from '../components/AllApps';
+import '../../src/style.css'
 
 const { Header, Footer, Sider, Content } = Layout;
 
-function AppLayout() {
+function Apps() {
     return (
         <div id="layout">
             <Layout>
@@ -28,4 +25,4 @@ function AppLayout() {
     )
 }
 
-export default AppLayout
+export default Apps
