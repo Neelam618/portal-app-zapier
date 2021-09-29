@@ -26,8 +26,6 @@
     font-size: 1rem;
     overflow: hidden;
     text-overflow: ellipsis;
-    /* white-space: nowrap; */
-    /* width: 200px; */
 }
 #layout .ant-layout {
     background-color: white;
@@ -38,7 +36,6 @@
 #popularApps .ant-carousel .slick-dots li.slick-active button {
     background-color: gray;
 }
-
 #popularApps .ant-carousel .slick-dots li button {
     background-color: rgb(148, 144, 144);
 }
@@ -48,11 +45,9 @@
 #popularApps .ant-carousel .slick-dots-bottom{
     bottom: 65px;
 }
-
 #layout .ant-layout-sider {
     min-width: 375px !important;
 }
-
 #popularApps .ant-carousel .slick-initialized .slick-slide {
     border-bottom: 3px solid #eee6e6;
     padding-bottom: 6em;
@@ -65,7 +60,6 @@
 #overrideFeatured .imgWrapper img {
     object-fit: contain;
 }
-
 #overrideFeatured .imgWrapper {
     display: flex;
     justify-content: center;
@@ -78,7 +72,6 @@
     width: 120px;
     border: 1px solid #E6E6E6;
 }
-
 #overrideFeatured .imgContainer {
     position: relative;
 }
@@ -94,7 +87,6 @@
     overflow: hidden;
     margin: 0 auto;
 }
-
 #overrideFeatured .badge {
     position: absolute;
     top: -36px;
@@ -112,7 +104,6 @@
         text-transform: uppercase;
         font-size: 12px;
 }
-
 #overrideFeatured .badgeRed {
     background-color: #ff4a00;
 }
@@ -125,17 +116,14 @@
 #overrideFeatured .badgeBlue {
     background-color: #4289f7;
 }
-
 #overrideFeatured .title {
     font-size: 14px;
     font-weight: 700;
     color: black;
 }
-
 #overrideFeatured .ant-carousel .slick-dots-bottom { 
     bottom: -68px;
 }
-
 #overrideFeatured .ant-carousel .slick-dots li.slick-active button {
     background-color: gray;
 }
@@ -143,14 +131,9 @@
 #overrideFeatured .ant-carousel .slick-dots li button {
     background-color: rgb(148, 144, 144);
 }
-/* #overrideFeatured .ant-col {
-    margin: 0 10px;
-} */
-
 #allApps .ant-col {
     text-align: center;
 }
-
 #allApps .card {
     border: 1px solid #f2f2f2;
     border-radius: 10px;
@@ -170,7 +153,6 @@
     border-radius: 10px;
     padding:  3px;
 }
-
 #allApps .card .text {
     padding: 15px;
     display: block;
@@ -178,7 +160,6 @@
     font-weight: 700;
     color: black;
 }
-
 #allApps .loadMoreBtn {
     display: block;
     width: 100%;
@@ -196,7 +177,6 @@
     justify-content: center;
     align-items: center;
 }
-
 .miniLogo {
    fill: #ff4a00;
    height: 40px;
@@ -252,8 +232,7 @@
     position: relative; 
     margin: 0 auto ;
     text-align: center;
-  }
-
+}
 .search input { 
     height: 50px;
     width: 100%;
@@ -263,7 +242,6 @@
     top: 3px;
     left: 44%;
 }
-
 .label {
     text-align: left; 
     font-weight: 700;
@@ -312,19 +290,16 @@
     display: block; 
     fill: #cccccc;
 }
-
-#dashboard .ant-input-affix-wrapper-lg {
+#dashboard .ant-input-affix-wrapper-lg, #popularApps .ant-input-affix-wrapper-lg{
     background-color: #f2f2f2;
     border: 0;
     border-radius: 10px;
     height: 50px;
 }
-
 #inputBox {
     background-color: #f2f2f2;
     text-indent: 10px;
 }
-
 #dashboard .listTitle {
     font-weight: 700;
     font-size: 24px;

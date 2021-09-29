@@ -1,6 +1,8 @@
 import React from 'react'
 import { Carousel } from 'antd';
 import { Row, Col } from 'antd';
+import { Input } from 'antd';
+import { SearchOutlined } from '@ant-design/icons'
 import PopularAppsApi from './PopularAppsApi';
 import '../../src/style.css'
 
@@ -17,6 +19,7 @@ function PopularApps() {
     console.log(carouselItems);
     return (
         <div id="popularApps">
+            <Input id="inputBox" size="large" placeholder="Search by App" prefix={<SearchOutlined />} />
             <Carousel autoplay>
                 {
                     carouselItems.map((items) => {
