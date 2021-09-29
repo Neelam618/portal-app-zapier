@@ -42,20 +42,20 @@ function Dashboard() {
                         <div className="listItemWrapper">
                             <div className="listItemContent">
                                 <div className="images">
-                                    <span className="imgWrapper1">
+                                    <span className="imgWrapper first">
                                         <img src="https://zapier-images.imgix.net/storage/services/54f0bd6f9c31b757ab20d4c7058dc7c0.png?auto=format&ixlib=react-9.0.2&ar=undefined&fit=crop&h=28&w=28&q=50&dpr=1" alt="" />
                                     </span>
-                                    <span className="imgWrapper2">
+                                    <span className="imgWrapper second">
                                         <img src="https://zapier-images.imgix.net/storage/services/bb735e567f1a1e9e3b8b7241497c2d43.png?auto=format&ixlib=react-9.0.2&ar=undefined&fit=crop&h=28&w=28&q=50&dpr=1" alt="" />
                                     </span>
                                 </div>
                                 <div className="listItemText">
-                                    <h2>Save new Gmail attachments to Google Drive</h2>
-                                    <p>Gmail + Google Drive</p>
+                                    <h2 className="listItemTitle">Save new Gmail attachments to Google Drive</h2>
+                                    <p className="listItemPara">Gmail + Google Drive</p>
                                 </div>
                             </div>
                             <div>
-                                <a href="">Tri it</a>
+                                <a href="" className="tryLink">Try it</a>
                             </div>
                         </div>
                     </li>
