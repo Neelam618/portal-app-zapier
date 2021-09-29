@@ -14,26 +14,29 @@ function Dashboard() {
                 <div className="card">
                     <h2 className="title">Create your own workflow</h2>
                     <p className="para">Know exactly what you want to build? Select the apps you want to connect to start your custom setup.</p>
-                    <div className="make-a-zap">
-                <div style={{ display: 'flex', alignItems: 'center', flexFlow: 'row nowrap'}}>
-                    <div className="trigger-app-input" style={{width: '100%'}}>
-                        <div style={{textAlign: 'left', fontWeight: 700, marginBottom: 10}}>Connect this app...</div>
-                        <Input id="inputBox" size="large" placeholder="Search for an app" prefix={<SearchOutlined />} />
-                    </div>
-                    <span className="plusIcon" style={{ position: 'relative', margin: 0, padding: '0 10px', display: 'flex', boxPack: 'center', transform: 'translateY(17px)', justifyContent: 'center', width: 'auto' }}>
-                        <span style={{ background: 'white', borderRadius: '50%', position: 'relative', zIndex: 1, height: 30, width: 30, fill: '#cccccc' }}>
-                            <span style={{ fill: '#cccccc', height: 30, width: 30, display: 'inline-block' }}>
-                                <svg style={{ display: 'block', fill: '#cccccc' }} width="30" height="30" viewBox="0 0 24 24" fill="#cccccc" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 6.48 6.48 2 12 2C17.52 2 22 6.48 22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12ZM13 13H17V11H13V7H11V11H7V13H11V17H13V13Z" fill="#cccccc"></path></svg>
+                    <div>
+                        <div className="make-a-zap">
+                            <div className="inputGroup">
+                                <div className="label">Connect this app...</div>
+                                <Input id="inputBox" size="large" placeholder="Search for an app" prefix={<SearchOutlined />} />
+                            </div>
+                            <span className="plusIcon" style={{ position: 'relative', margin: 0, padding: '0 10px', display: 'flex', boxPack: 'center', transform: 'translateY(17px)', justifyContent: 'center', width: 'auto' }}>
+                                <span style={{ background: 'white', borderRadius: '50%', position: 'relative', zIndex: 1, height: 30, width: 30, fill: '#cccccc' }}>
+                                    <span style={{ fill: '#cccccc', height: 30, width: 30, display: 'inline-block' }}>
+                                        <svg style={{ display: 'block', fill: '#cccccc' }} width="30" height="30" viewBox="0 0 24 24" fill="#cccccc" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 6.48 6.48 2 12 2C17.52 2 22 6.48 22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12ZM13 13H17V11H13V7H11V11H7V13H11V17H13V13Z" fill="#cccccc"></path></svg>
+                                    </span>
+                                </span>
                             </span>
-                        </span>
-                    </span>
-                    <div className="action-app-input" style={{width: '100%'}}>
-                        <div style={{textAlign: 'left', fontWeight: 700, marginBottom: 10}}>with this one!</div>
-                        <Input id="inputBox" size="large" placeholder="Search for an app" prefix={<SearchOutlined />} />
+                            <div className="inputGroup">
+                                <div className="label">with this one!</div>
+                                <Input id="inputBox" size="large" placeholder="Search for an app" prefix={<SearchOutlined />} />
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-                </div>
+            </section>
+            <section>
+                <h2 className="listTitle">Recommended workflows for you</h2>
             </section>
         </div>
     )
