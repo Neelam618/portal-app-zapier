@@ -303,11 +303,11 @@
     display: block; 
     fill: #cccccc;
 }
-#dashboard .ant-input-affix-wrapper-lg, #popularApps .ant-input-affix-wrapper-lg, #appConnections .ant-input-affix-wrapper-lg{
+#dashboard .ant-input-affix-wrapper-lg, #popularApps .ant-input-affix-wrapper-lg, #appConnections .ant-input-affix-wrapper{
     background-color: #f2f2f2;
     border: 0;
     border-radius: 10px;
-    height: 50px;
+    height: 50-mdpx;
 }
 #inputBox {
     background-color: #f2f2f2;
@@ -400,6 +400,10 @@
     border-radius: 10px;
     background-color: #F2F2F2;
 }
+
+#appConnections {
+    padding: 29px 40px;
+}
 #appConnections .heading {
     display: flex;
     justify-content: space-between;
@@ -412,6 +416,29 @@
 #appConnections .searchContainer {
     display: flex;
     align-items: center;
+}
+#appConnections .searchInput {
+    margin-right: 10px;
+    width: 100%;
+}
+#appConnections .addBtnWrapper {
+    width: 100%;
+}
+#appConnections .addBtn {
+    background-color: #136bf5;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    height: 40px;
+    border-radius: 12px;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    transition-duration: 200ms;
+    font-weight: 700;
+    width: 100%;
+}
+#appConnections .ant-input-affix-wrapper {
+    height: 40px;
 }
 
 @media screen and (max-width: 780px) {
@@ -449,5 +476,23 @@
         left: -47px;
         transform: rotate(90deg);
         right: 0;
-    } 
+    }
+    #appConnections .heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #appConnections .searchContainer {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+    #appConnections #inputBox {
+        width: 100%;
+    }
+    #appConnections .addBtn {
+        margin-top: 1em;
+    }
+ 
+        
 }

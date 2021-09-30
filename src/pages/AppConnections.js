@@ -8,8 +8,8 @@ function AppConnections() {
             <div className="heading">
                 <div><h1 className="title">Apps</h1></div>
                 <div className="searchContainer">
-                    <div><Input id="inputBox" size="large" placeholder="Search by App" prefix={<SearchOutlined />} /></div>
-                    <div><button>Add connection</button></div>
+                    <div className="searchInput"><Input id="inputBox" size="medium" placeholder="Search by App" prefix={<SearchOutlined />} /></div>
+                    <div className="addBtnWrapper"><button className="addBtn">Add connection</button></div>
                 </div>
             </div>
         </div>
