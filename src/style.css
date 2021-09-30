@@ -303,7 +303,7 @@
     display: block; 
     fill: #cccccc;
 }
-#dashboard .ant-input-affix-wrapper-lg, #popularApps .ant-input-affix-wrapper-lg{
+#dashboard .ant-input-affix-wrapper-lg, #popularApps .ant-input-affix-wrapper-lg, #appConnections .ant-input-affix-wrapper-lg{
     background-color: #f2f2f2;
     border: 0;
     border-radius: 10px;
@@ -399,6 +399,19 @@
     height: 40px;
     border-radius: 10px;
     background-color: #F2F2F2;
+}
+#appConnections .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#appConnections .title {
+    font-size: 32px;
+    font-weight: 700;
+}
+#appConnections .searchContainer {
+    display: flex;
+    align-items: center;
 }
 
 @media screen and (max-width: 780px) {
