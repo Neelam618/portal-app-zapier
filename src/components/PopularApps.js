@@ -35,7 +35,7 @@ function PopularApps() {
                                         </div>
                                         <div className="appText">
                                             <h3>{items[0].title}</h3>
-                                            <p>{items[0].description}</p>
+                                            <p className="description">{items[0].description}</p>
                                         </div>
                                     </a>
                                 </Col>
@@ -49,7 +49,7 @@ function PopularApps() {
                                         </div>
                                         <div className="appText">
                                             <h3>{items[1].title}</h3>
-                                            <p>{items[1].description}</p>
+                                            <p className="description">{items[1].description}</p>
                                         </div>
                                     </a>
                                 </Col>

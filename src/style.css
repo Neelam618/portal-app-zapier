@@ -1,3 +1,11 @@
+#popularApps {
+    text-align: start;
+}
+#popularApps .ant-input-affix-wrapper {
+    max-width: 480px;
+    margin-left: 3em;
+    margin-bottom: 50px;
+}
 .appContent {
     display: flex;
     padding: 3em;
@@ -22,10 +30,15 @@
 .appText h3 {
     font-weight: 700;
 }
-.appText p {
+.appText .description {
     font-size: 1rem;
-    overflow: hidden;
+    /* overflow: hidden; */
     text-overflow: ellipsis;
+    display: -webkit-box;
+    /* max-width: 200px; */
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 #layout .ant-layout {
     background-color: white;
@@ -43,14 +56,14 @@
     padding: 6em;
 }
 #popularApps .ant-carousel .slick-dots-bottom{
-    bottom: 65px;
+    bottom: 35px;
 }
 #layout .ant-layout-sider {
     min-width: 375px !important;
 }
 #popularApps .ant-carousel .slick-initialized .slick-slide {
     border-bottom: 3px solid #eee6e6;
-    padding-bottom: 6em;
+    padding-bottom: 4em;
 }
 #overrideFeatured {
     margin-top: 3em;
