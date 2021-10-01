@@ -23,13 +23,13 @@ function AppConnections() {
                 <div>
                     <div className="listDetails">
                         <div className="connections">
-                            <span className="count">1</span><div>Connection</div>
+                            <span className="count">1</span><div className="countText">Connection</div>
                         </div>
                         <div className="zaps">
-                            <span className="count">2</span><div>Zaps</div>
+                            <span className="count">2</span><div className="countText">Zaps</div>
                         </div>
                         <div>
-                            <svg className="arrowIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.58984 16.59L13.1698 12L8.58984 7.41L9.99984 6L15.9998 12L9.99984 18L8.58984 16.59Z" fill="#666666"></path></svg>
+                            <svg className="arrowIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.58984 16.59L13.1698 12L8.58984 7.41L9.99984 6L15.9998 12L9.99984 18L8.58984 16.59Z" fill="#136bf5"></path></svg>
                         </div>
                     </div>
                 </div>
