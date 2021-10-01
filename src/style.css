@@ -480,7 +480,17 @@
 }
 #appConnections .arrowIcon {
     vertical-align: middle;
-} 
+}
+#zaps {
+    margin: 2em;
+}
+#zaps .heading {
+    text-align: left;
+}
+#zaps .zaps {
+    border-right: 1px solid #e6e6e6;
+    padding-right: 30px;
+}
 
 @media screen and (max-width: 780px) {
     #dashboard .listItemContent {
