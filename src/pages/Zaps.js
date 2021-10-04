@@ -48,7 +48,55 @@ function zaps() {
                                 <div><button className="trashBtn">Trash</button></div>
                                 <div><button className="createBtn">Create Zap</button></div>
                             </div>
-                        </div>    
+                        </div> 
+                        <div className="zapList">
+                            <div className="zapItem">
+                                <div className="zapCheckbox">
+                                    <label className="selectZap">
+                                        <input className="checkboxInput" type="checkbox" />
+                                    </label>
+                                </div>
+                                <div className="zap">
+                                <div style={{position: 'relative'}}>
+                                    <div className="dashboardZap">
+                                        <div className="miniZap">
+                                            <div className="zapWrapper">
+                                                <div className="zapLogos">
+                                                    <ol className="zapIcons">
+                                                        <li className="zapIconsStep">
+                                                            <div className="zapIconWrap">
+                                                                <div className="zapIcon"></div>
+                                                            </div>
+                                                            <span className="caretIcon">
+                                                            <svg viewBox="0 0 512 512"><path d="M71 455c0 35 39 55 67 35l285-199c24-17 24-53 0-70L138 22c-28-20-67 0-67 35z"></path></svg>
+                                                            </span>
+                                                        </li>
+                                                        <li className="zapIconsStep">
+                                                            <div className="zapIconWrap">
+                                                                <div className="zapIcon-number">2</div>
+                                                            </div>
+                                                            <span className="caretIcon">
+                                                            <svg viewBox="0 0 512 512"><path d="M71 455c0 35 39 55 67 35l285-199c24-17 24-53 0-70L138 22c-28-20-67 0-67 35z"></path></svg>
+                                                            </span>
+                                                        </li>
+                                                        <li className="zapIconsStep">
+                                                            <div className="zapIconWrap">
+                                                                <div className="zapIcon"></div>
+                                                            </div>
+                                                        </li>                                                    
+                                                    </ol>
+                                                </div>
+                                                <div className="zapTitle">
+                                                    <span className="zapTitleText">Name your zap</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                            </div>
+                           
+                        </div>   
                     </Col>
                 </Row>
             </div>

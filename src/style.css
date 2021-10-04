@@ -589,7 +589,109 @@
     margin-left: 1em;
     border: none;
 }
+#zaps .zapItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+#zaps .zapCheckbox {
+    width: 50px;
+}
+#zaps .selectZap {
+    border-radius: 3px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dadfe2;
+    color: #fff;
+    flex: none;
+}
+#zaps .zap {
+    flex: 1;
+    min-width: 0;
+}
+#zaps .dashboardZap {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    cursor: pointer;
+}
+#zaps .miniZap {
+    background: #fff;
+    border-radius: 3px;
+    margin-top: 0;
+    padding: 1em;
+    position: relative;
+    text-align: left;
+    width: 100%;
+}
+#zaps .zapWrapper {
+    table-layout: fixed;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+#zaps .zapLogos {
+    vertical-align: middle;
+    width: 140px;
+    flex: none;
+}
+#zaps .zapIcons {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    align-items: center;
+    line-height: 1.75em;
+}
+#zaps .zapIconsStep {
+    display: flex;
+    align-items: center;
+}
+#zaps .zapIconWrap {
+    color: #5f6c72;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    border: 1px solid #eee;
+    background-color: #f6f6f6;
+    border-radius: 4px;
+    width: 30px;
+    height: 30px;
+}
+#zaps .zapIcon {
+    background-image: url(https://zapier-images.imgix.net/storage/services/54f0bd6f9c31b757ab20d4c7058dc7c0.128x128.png?auto=format%2Ccompress&ixlib=python-3.0.0&q=50);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 60%;
+    height: 60%;
+    display: inline-block;
+    vertical-align: middle;
+}
+#zaps .caretIcon {
+    margin: 0 9px;
+    color: #5f6c72;
+    width: 7px;
+    display: inline-block;
+}
+#zaps .zapTitle {
+    line-height: 1.5em;
+    padding: 0 14px;
+    flex: 1;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    font-size: .9em;
+    font-weight: 600;
+    color: #5f6c72;
 
+}
+#zaps .zapTitleText {
+    vertical-align: middle;
+}
 @media screen and (max-width: 780px) {
     #dashboard .listItemContent {
         flex-direction: column;
