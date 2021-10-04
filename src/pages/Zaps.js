@@ -35,8 +35,20 @@ function zaps() {
                             <div>0</div>
                         </div>
                     </Col>
-                    <Col span={14}>
-                        1 col-order-4
+                    <Col span={14} className="home">
+                       <h2 className="mainHeading">Home</h2>
+                       <div style={{position: 'relative'}}>
+                            <div className="toolbar">
+                                <div className="selectBox">
+                                    <span className="checkbox">
+                                        <input className="checkboxInput" type="checkbox" />
+                                    </span>
+                                </div>
+                                <span className="select-arrow"></span>
+                                <div><button className="trashBtn">Trash</button></div>
+                                <div><button className="createBtn">Create Zap</button></div>
+                            </div>
+                        </div>    
                     </Col>
                 </Row>
             </div>

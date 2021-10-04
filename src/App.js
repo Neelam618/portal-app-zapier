@@ -9,10 +9,10 @@ import Zaps from './pages/Zaps';
 function App() {
   return (
     <div className="App">
+      {/* <AppConnections /> */}
       <Zaps />
       {/* <Apps /> */}
       {/* <Dashboard /> */}
-      {/* <AppConnections /> */}
     </div>
   );
 }

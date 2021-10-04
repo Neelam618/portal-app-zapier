@@ -519,6 +519,76 @@
     display: flex;
     justify-content: space-between;
 }
+#zaps .home {
+    padding: 2em;
+}
+#zaps .toolbar {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+#zaps .selectBox {
+    border-radius: 3px;
+    padding-right: 55px;
+    overflow: auto;
+    white-space: pre-wrap;
+    height: auto;
+    line-height: 1.7;
+    min-height: 45px;
+    padding: 10px;
+    margin: 0;
+    border: 1px solid #dadfe2;
+}
+#zaps .checkbox {
+    vertical-align: text-bottom;
+    border-radius: 3px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dadfe2;
+    color: #fff;
+    flex: none;
+}
+#zaps .checkboxInput {
+    display: none;
+}
+#zaps .select-arrow {
+    display: block;
+    /* position: absolute; */
+    width: 45px;
+    height: 45px;
+    /* top: 0; */
+    /* left: 41px; */
+    border: 1px solid #dadfe2;
+    background-color: #fff;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 0 3px 3px 0;
+    background-image: url("https://cdn.zapier.com/zapier/images/icons/arrow-down.png");
+    background-size: 35%;
+}
+#zaps .mainHeading {
+    text-align: left;
+}
+#zaps .trashBtn {
+    padding: 0.5em 1em;
+    background: #f1f4f5;
+    opacity: 0.5;    
+    margin-left: 1em;
+    border: 1px solid #dadfe2;
+    border-radius: 4px;
+}
+#zaps .createBtn {
+    color: #fff;
+    background-color: #000;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    margin-left: 1em;
+    border: none;
+}
 
 @media screen and (max-width: 780px) {
     #dashboard .listItemContent {
