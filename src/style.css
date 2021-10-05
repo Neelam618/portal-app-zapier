@@ -617,11 +617,8 @@
 }
 #zaps .select-arrow {
     display: block;
-    /* position: absolute; */
     width: 45px;
     height: 45px;
-    /* top: 0; */
-    /* left: 41px; */
     border: 1px solid #dadfe2;
     background-color: #fff;
     background-position: center center;
@@ -629,6 +626,13 @@
     border-radius: 0 3px 3px 0;
     background-image: url("https://cdn.zapier.com/zapier/images/icons/arrow-down.png");
     background-size: 35%;
+}
+#zaps .ant-switch {
+    background-color: #666666;
+    font-weight: 600;
+}
+.ant-switch-inner {
+    font-size: 10px;
 }
 #zaps .mainHeading {
     text-align: left;
