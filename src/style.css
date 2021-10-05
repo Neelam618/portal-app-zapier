@@ -486,7 +486,14 @@
 }
 #zaps .heading {
     text-align: left;
+    font-size: 40px;
+    line-height: 45px;
+    font-weight: 800;
+    letter-spacing: -1px;
 }
+#zaps .ant-input {
+    text-indent: 8px;
+} 
 #zaps .zaps {
     border-right: 1px solid #e6e6e6;
     padding-right: 30px;
@@ -506,19 +513,70 @@
 #zaps .title {
     text-transform:uppercase;
     text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #577280;
+    margin: 1em 0;
+}
+#zaps .plusSvg {
+    vertical-align: middle;
+    background: #eceef1;
+    padding: 5px;
+    box-sizing: content-box;
+    border-radius: 50%;
 }
 #zaps .privateFolderListItem {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 1em;
+}
+#zaps .folderLink {
+    color: #499df3;
+    font-weight: 600;
+}
+#zaps .folderCount {
+    border: 1px solid #499df3;
+    color: #499df3;
+    padding: 0 15px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 600;
 }
 #zaps .sharedFolder {
     text-align: left;
     border-bottom: 1px solid #e6e6e6;
 }
+#zaps .comingSoonTitle {
+    color: inherit;
+    padding: 0;
+    margin: 0.5em 0 0.5em;
+    font-weight: 600;
+    color: #577280;
+}
+#zaps .comingSoonContent {
+    color: #969ea2;
+}
+#zaps .trialLink {
+    color: #499df3;
+}
 #zaps .trash {
     display: flex;
     justify-content: space-between;
+    margin: 1em 0;
+    font-size: 1.1rem;
+}
+#zaps .trashLink {
+    color: #577280;
+}
+#zaps .trashCount {
+    border: 1px solid #dadfe2;
+    color: #969ea2;
+    padding: 0 15px;
+    font-size: 12px;
+    margin: auto 0;
+    border-radius: 15px;
 }
 #zaps .home {
     padding: 2em;
@@ -715,6 +773,10 @@
     background-color: #666666;
 } */
 @media screen and (max-width: 974px) {
+    #zaps .zaps {
+        padding-right: 0;
+        border-right: none;
+    }
     #zaps .home {
         padding: 0;
     }
