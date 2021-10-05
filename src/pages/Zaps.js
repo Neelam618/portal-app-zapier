@@ -29,7 +29,7 @@ function zaps() {
         <div id="zaps">
             <div>
                 <Row>
-                    <Col span={10} className="zaps">
+                    <Col lg={8} className="zaps">
                         <h1 className="heading">Zaps</h1>
                         <Input size="medium" placeholder="Search by App" prefix={<SearchOutlined />} />
                         <div className="privateFolder">
@@ -57,7 +57,7 @@ function zaps() {
                             <div>0</div>
                         </div>
                     </Col>
-                    <Col span={14} className="home">
+                    <Col lg={16} className="home">
                         <h2 className="mainHeading">Home</h2>
                         <div style={{ position: 'relative' }}>
                             <div className="toolbar">
@@ -112,13 +112,16 @@ function zaps() {
                                                         <span className="zapTitleText">Name your workflow</span>
                                                     </div>
                                                     <div className="zapControls">
-                                                        <span className="zapToggle">
+                                                        <div className="zapToggle">
                                                             <Switch checkedChildren="ON" unCheckedChildren="OFF" defaultUnchecked />
-                                                        </span>
-                                                        <Tooltip placement="bottom" title="View workflow details">
-                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM11 17V11H13V17H11ZM11 7V9H13V7H11Z" fill="#666666"></path></svg>
-                                                        </Tooltip>
-                                                        <span>
+                                                        </div>
+                                                        <div className="zapTooltip">
+                                                            <Tooltip placement="bottom" title="View workflow details">
+                                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM11 17V11H13V17H11ZM11 7V9H13V7H11Z" fill="#666666"></path></svg>
+                                                            </Tooltip>
+                                                        </div>
+                                                    </div>
+                                                        <div className="zapDropdown">
                                                             <Dropdown trigger="click" overlay={menu} placement="bottomLeft">
                                                                 <Button>
                                                                     <span>
@@ -126,8 +129,7 @@ function zaps() {
                                                                     </span>
                                                                 </Button>
                                                             </Dropdown>
-                                                        </span>
-                                                    </div>
+                                                        </div>
                                                 </div>
                                             </div>
                                         </div>

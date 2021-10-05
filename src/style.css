@@ -490,6 +490,7 @@
 #zaps .zaps {
     border-right: 1px solid #e6e6e6;
     padding-right: 30px;
+    width: 100%;
 }
 #zaps .privateFolder {
     padding: 20px 0;
@@ -521,6 +522,7 @@
 }
 #zaps .home {
     padding: 2em;
+    width: 100%;
 }
 #zaps .toolbar {
     margin-bottom: 20px;
@@ -595,7 +597,7 @@
     margin-bottom: 15px;
 }
 #zaps .zapCheckbox {
-    width: 50px;
+    margin-right: 1em;
 }
 #zaps .selectZap {
     border-radius: 3px;
@@ -705,12 +707,18 @@
 #zaps .ant-dropdown-trigger {
     border: none;
 }
+
 /* #zaps .ant-switch-checked {
     background-color: #802424;
 }
 #zaps .ant-switch {
     background-color: #666666;
 } */
+@media screen and (max-width: 974px) {
+    #zaps .home {
+        padding: 0;
+    }
+}
 @media screen and (max-width: 780px) {
     #dashboard .listItemContent {
         flex-direction: column;
@@ -774,6 +782,33 @@
     #appConnections .listDetails {
         margin-top: 10px;
     }
-
+    #zaps .home {
+        padding: 0;
+    }
+    #zaps .zapWrapper {
+        display: block;
+        text-align: center;
+    }
+    #zaps .zapLogos {
+        margin: 1em auto;
+    }
+    #zaps .zapDropdown {
+        position: absolute;
+        right: 3px;
+        top: 0;
+    }
+    #zaps .zapControls {
+        justify-content: center;
+        align-items: unset;
+        background-color: #f8f8f8;
+        padding: 1em;
+        border-top: 1px solid #ddd;
+    }
+    #zaps .zapTitle {
+        margin-bottom: 1em;
+    }
+    #zaps .miniZap {
+        padding: 0;
+    }
         
 }
