@@ -692,6 +692,25 @@
 #zaps .zapTitleText {
     vertical-align: middle;
 }
+#zaps .zapControls {
+    align-items: center;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 5px;
+}
+#zaps .zapToggle {
+    position: relative;
+    margin-right: 1em;
+}
+#zaps .ant-dropdown-trigger {
+    border: none;
+}
+/* #zaps .ant-switch-checked {
+    background-color: #802424;
+}
+#zaps .ant-switch {
+    background-color: #666666;
+} */
 @media screen and (max-width: 780px) {
     #dashboard .listItemContent {
         flex-direction: column;
