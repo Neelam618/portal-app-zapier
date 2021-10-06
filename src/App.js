@@ -3,14 +3,14 @@ import './App.css';
 import Apps from './pages/Apps';
 import Dashboard from './pages/Dashboard';
 import AppConnections from './pages/AppConnections';
-import Zaps from './pages/Zaps';
+import Workflows from './pages/Workflows';
 
 
 function App() {
   return (
     <div className="App">
       {/* <AppConnections /> */}
-      <Zaps />
+      <Workflows />
       {/* <Apps /> */}
       {/* <Dashboard /> */}
     </div>
