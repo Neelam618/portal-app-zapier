@@ -3,7 +3,7 @@ import { Carousel } from 'antd';
 import { Row, Col } from 'antd';
 import { Input } from 'antd';
 import { SearchOutlined } from '@ant-design/icons'
-import PopularAppsApi from './PopularAppsApi';
+import PopularAppsApi from './APIs/PopularAppsApi';
 import '../../src/style.css'
 
 function PopularApps() {

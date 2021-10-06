@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row, Col } from 'antd';
 import { useState, useEffect } from 'react/cjs/react.development';
-import AllAppsApi from './AllAppsApi';
+import AllAppsApi from './APIs/AllAppsApi';
 import '../../src/style.css'
 
 function AllApps() {

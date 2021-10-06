@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row, Col } from 'antd';
 import { Carousel } from 'antd';
-import FeaturedAppsApi from './FeaturedAppsApi'
+import FeaturedAppsApi from './APIs/FeaturedAppsApi'
 import '../../src/style.css'
 
 function FeaturedApps() {

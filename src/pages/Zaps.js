@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row, Col, Input, Button } from 'antd';
 import { SearchOutlined } from '@ant-design/icons'
-import { Menu, Dropdown, Tooltip } from 'antd';
+import { Menu, Dropdown, Tooltip, Checkbox } from 'antd';
 import WorkflowItem from '../components/WorkflowItem';
 const menu = (
     <Menu>
@@ -60,11 +60,7 @@ function Zaps() {
                         <h2 className="subHeading">Home</h2>
                         <div style={{ position: 'relative' }}>
                             <div className="toolbar">
-                                <div className="selectBox">
-                                    <span className="checkbox">
-                                        <input className="checkboxInput" type="checkbox" />
-                                    </span>
-                                </div>
+                                <Checkbox className="selectBox"/>
                                 <Dropdown trigger="click" overlay={menu} placement="bottomLeft">
                                     <Button>
                                         <span>

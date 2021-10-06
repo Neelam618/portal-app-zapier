@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { Switch } from 'antd';
-import { Tooltip, Button } from 'antd';
+import { Tooltip, Button, Checkbox } from 'antd';
 import { Menu, Dropdown } from 'antd';
 
 const menu = (
@@ -29,11 +29,7 @@ function WorkflowItem(props) {
     return (
         <div>
             <div className="zapItem">
-                <div className="zapCheckbox">
-                    <label className="selectZap">
-                        <input className="checkboxInput" type="checkbox" />
-                    </label>
-                </div>
+                <Checkbox className="zapCheckbox"/>
                 <div className="zap">
                     <div style={{ position: 'relative' }}>
                         <div className="dashboardZap">
