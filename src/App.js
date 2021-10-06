@@ -4,6 +4,7 @@ import Apps from './pages/Apps';
 import Dashboard from './pages/Dashboard';
 import AppConnections from './pages/AppConnections';
 import Workflows from './pages/Workflows';
+import './style.css'
 
 
 function App() {

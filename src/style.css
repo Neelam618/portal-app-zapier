@@ -590,6 +590,13 @@
 #zaps .toolbar .ant-checkbox {
     margin: 0 auto;
 }
+/* .toolbar .ant-dropdown-menu-item {
+    padding: 10px 40px !important;
+    border-bottom: 1px solid;
+} */
+.dropdownRoot {
+    width: 200px;
+}
 #zaps .selectBox {
     border-radius: 3px;
     padding-right: 55px;
