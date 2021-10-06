@@ -66,7 +66,14 @@ function zaps() {
                                         <input className="checkboxInput" type="checkbox" />
                                     </span>
                                 </div>
-                                <span className="select-arrow"></span>
+                                {/* <span className="select-arrow"></span> */}
+                                <Dropdown trigger="click" overlay={menu} placement="bottomLeft">
+                                    <Button>
+                                        <span>
+                                            <svg width="15px" height="15px" viewBox="0 0 512 512"><path fill="#969ea2" d="M256 307l184-184c16-16 41-16 57 0s16 41 0 57L288 389c-9 9-21 13-32 12-11 1-23-3-32-12L15 180c-16-16-16-41 0-57s41-16 57 0z"></path></svg>
+                                        </span>
+                                    </Button>
+                                </Dropdown>
                                 <div><button className="trashBtn">Trash</button></div>
                                 <div><button className="createBtn">Create Workflow</button></div>
                             </div>
@@ -121,15 +128,15 @@ function zaps() {
                                                             </Tooltip>
                                                         </div>
                                                     </div>
-                                                        <div className="zapDropdown">
-                                                            <Dropdown trigger="click" overlay={menu} placement="bottomLeft">
-                                                                <Button>
-                                                                    <span>
-                                                                        <svg width="15px" height="15px" viewBox="0 0 512 512"><path fill="#969ea2" d="M256 307l184-184c16-16 41-16 57 0s16 41 0 57L288 389c-9 9-21 13-32 12-11 1-23-3-32-12L15 180c-16-16-16-41 0-57s41-16 57 0z"></path></svg>
-                                                                    </span>
-                                                                </Button>
-                                                            </Dropdown>
-                                                        </div>
+                                                    <div className="zapDropdown">
+                                                        <Dropdown trigger="click" overlay={menu} placement="bottomLeft">
+                                                            <Button>
+                                                                <span>
+                                                                    <svg width="15px" height="15px" viewBox="0 0 512 512"><path fill="#969ea2" d="M256 307l184-184c16-16 41-16 57 0s16 41 0 57L288 389c-9 9-21 13-32 12-11 1-23-3-32-12L15 180c-16-16-16-41 0-57s41-16 57 0z"></path></svg>
+                                                                </span>
+                                                            </Button>
+                                                        </Dropdown>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

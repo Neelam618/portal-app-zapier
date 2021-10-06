@@ -628,7 +628,6 @@
     background-size: 35%;
 }
 #zaps .ant-switch {
-    background-color: #666666;
     font-weight: 600;
 }
 .ant-switch-inner {
@@ -767,15 +766,18 @@
     margin-right: 1em;
 }
 #zaps .ant-dropdown-trigger {
-    border: none;
+    border: 1px solid #dadfe2;
+    height: 45px;
 }
-
-/* #zaps .ant-switch-checked {
-    background-color: #802424;
+#zaps .zapDropdown .ant-dropdown-trigger {
+    border: none;
 }
 #zaps .ant-switch {
     background-color: #666666;
-} */
+}
+#zaps .ant-switch-checked {
+    background-color: #136bf5;
+}
 @media screen and (max-width: 974px) {
     #zaps .zaps {
         padding-right: 0;
