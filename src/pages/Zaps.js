@@ -23,7 +23,6 @@ const menu = (
     </Menu>
 );
 function Zaps() {
-    let disabled;
     return (
         <div id="zaps">
             <div>
@@ -78,7 +77,7 @@ function Zaps() {
                         </div>
                         <h2 className="subHeading">Drafts</h2>
                         <Tooltip placement="bottom" title="View workflow details">
-                            <WorkflowItem disabled={true}/>
+                            <WorkflowItem switchDisabled={true}/>
                         </Tooltip>
                     </Col>
                 </Row>

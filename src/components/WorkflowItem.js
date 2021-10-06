@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { Switch } from 'antd';
 import { Tooltip, Button, Checkbox } from 'antd';
 import { Menu, Dropdown } from 'antd';
@@ -65,11 +65,11 @@ function WorkflowItem(props) {
                                     </div>
                                     <div className="zapControls">
                                         <div className="zapToggle">
-                                            {props.disabled?
+                                            {props.switchDisabled?
                                                 <Tooltip placement="bottom" title="This workflow is not complete">
-                                                    <Switch checkedChildren="ON" unCheckedChildren="OFF" defaultUnchecked disabled={props.disabled} />
+                                                    <Switch checkedChildren="ON" unCheckedChildren="OFF" defaultUnchecked disabled={props.switchDisabled} />
                                                 </Tooltip> : 
-                                                <Switch checkedChildren="ON" unCheckedChildren="OFF" defaultUnchecked disabled={props.disabled} />
+                                                <Switch checkedChildren="ON" unCheckedChildren="OFF" defaultUnchecked disabled={props.switchDisabled} />
                                             }
                                         </div>
                                         <div className="zapTooltip">
