@@ -10,17 +10,22 @@ function PlatformUi() {
     return (
         <div id="platformUi">
             <Layout>
-                <Content style={{ padding: '0 50px' }}>
+                <Content>
                     
                     <Layout className="site-layout-background" style={{ padding: '24px 0' }}>
-                        <Sider className="site-layout-background" width={200}>
-                            <div className="appTitle">
-                                <div className="appLogo">
-                                    <img width="42" src="https://cdn.zapier.com/zapier/images/frontend/placeholder/128x128.grey.png?auto=format&ar=undefined&fit=crop&ixlib=react-9.0.2&h=42&w=42&q=75&dpr=1" alt="" />
+                        <Sider className="site-layout-background" width={340}>
+                            <div className="sidebarHeader">
+                                <div className="appTitle">
+                                    <div className="appLogo">
+                                        <img width="42" src="https://cdn.zapier.com/zapier/images/frontend/placeholder/128x128.grey.png?auto=format&ar=undefined&fit=crop&ixlib=react-9.0.2&h=42&w=42&q=75&dpr=1" alt="" />
+                                    </div>
+                                    <div>
+                                        <h3 className="appName">App Name</h3>
+                                        <div className="visibility">Private</div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <div className="appName">App Name</div>
-                                    <div>Private</div>
+                                <div className="publishLink">
+                                    <a href="">Publish</a>
                                 </div>
                             </div>
                             <Menu

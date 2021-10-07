@@ -766,10 +766,11 @@
     background-color: transparent;
 }
 #platformUi .ant-layout-sider {
-    background-color: white;
+    background-color: #f2f2f2;
 }
 #platformUi .appTitle {
     display: flex;
+    padding: 30px 24px;
 }
 #platformUi .appLogo {
     height: 60px;
@@ -780,6 +781,43 @@
     background-color: rgb(255, 255, 255);
     border: 1px solid #e6e6e6;
     border-radius: 15px;
+    margin-right: 20px;
+}
+#platformUi .appName {
+    color: #354147;
+    font-size: 15px;
+    line-height: 1.5em;
+    font-weight: 600;
+    padding: 0 0 0.5em 0;
+}
+#platformUi .visibility {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+    height: 20px;
+    color: #333333;
+    background-color: white;
+    border-radius: 5px;
+}
+#platformUi .publishLink {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    background-color: #136bf5;
+    width: 100%;
+    display: block;
+    padding: 10px;
+    margin: 0 auto;
+    width: 290px;
+    border-radius: 10px;
+}
+#platformUi .publishLink a{
+    color: #fff;
+}
+#platformUi .sidebarHeader {
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 15px;
 }
 
 @media screen and (max-width: 974px) {
