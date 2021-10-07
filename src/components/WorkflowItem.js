@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Switch } from 'antd';
 import { Tooltip, Button, Checkbox } from 'antd';
 import { Menu, Dropdown } from 'antd';
@@ -26,12 +26,17 @@ const menu = (
 );
 
 function WorkflowItem(props) {
-    console.log(props);
+    const [checked, setChecked] = useState(false)
+
+    function onChange(e) {
+        console.log(`checked = ${e.target.checked}`);
+        setChecked(!checked)
+    }
 
     return (
         <div>
             <div className="zapItem">
-                <Checkbox className="zapCheckbox"/>
+                <Checkbox className="zapCheckbox" onChange={onChange} checked={checked}/>
                 <div className="zap">
                     <div style={{ position: 'relative' }}>
                         <div className="dashboardZap">

@@ -590,10 +590,6 @@
 #zaps .toolbar .ant-checkbox {
     margin: 0 auto;
 }
-/* .toolbar .ant-dropdown-menu-item {
-    padding: 10px 40px !important;
-    border-bottom: 1px solid;
-} */
 .dropdownRoot {
     width: 200px;
 }
@@ -763,6 +759,29 @@
 #zaps .ant-switch-checked {
     background-color: #136bf5;
 }
+#platformUi .ant-menu-root.ant-menu-inline, #platformUi .appTitle {
+    background-color: #f2f2f2;
+}
+#platformUi .ant-layout {
+    background-color: transparent;
+}
+#platformUi .ant-layout-sider {
+    background-color: white;
+}
+#platformUi .appTitle {
+    display: flex;
+}
+#platformUi .appLogo {
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #e6e6e6;
+    border-radius: 15px;
+}
+
 @media screen and (max-width: 974px) {
     #zaps .zaps {
         padding-right: 0;

@@ -5,13 +5,15 @@ import Dashboard from './pages/Dashboard';
 import AppConnections from './pages/AppConnections';
 import Workflows from './pages/Workflows';
 import './style.css'
+import PlatformUi from './pages/PlatformUi';
 
 
 function App() {
   return (
     <div className="App">
+      <PlatformUi />
       {/* <AppConnections /> */}
-      <Workflows />
+      {/* <Workflows /> */}
       {/* <Apps /> */}
       {/* <Dashboard /> */}
     </div>

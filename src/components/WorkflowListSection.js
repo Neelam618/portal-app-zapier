@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Row, Col, Input, Button } from 'antd';
 import { Menu, Dropdown, Tooltip, Checkbox } from 'antd';
 import WorkflowItem from '../components/WorkflowItem';
@@ -32,12 +32,19 @@ const menu = (
 );
 
 function WorkflowListSection() {
+    const [checked, setChecked] = useState(false)
+
+    function onChange(e) {
+        console.log(`checked = ${e.target.checked}`);
+        setChecked(!checked)
+    }
+
     return (
         <Col lg={16} className="home">
             <h2 className="subHeading">Home</h2>
             <div style={{ position: 'relative' }}>
                 <div className="toolbar">
-                    <Checkbox className="selectBox" />
+                    <Checkbox className="selectBox" onChange={onChange} checked={checked} />
                     <Dropdown trigger="click" overlay={menu} placement="bottomLeft" overlayClassName="dropdownRoot">
                         <Button>
                             <span>
@@ -50,8 +57,8 @@ function WorkflowListSection() {
                 </div>
             </div>
             <div className="zapList">
-                <WorkflowItem disabled={false} />
-                <WorkflowItem disabled={false} />
+                <WorkflowItem switchDisabled={false} />
+                <WorkflowItem switchDisabled={false} />
             </div>
             <h2 className="subHeading">Drafts</h2>
             <Tooltip placement="bottom" title="View workflow details">
