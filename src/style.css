@@ -1,3 +1,9 @@
+body {
+    font-size: 1rem;
+    color: #424242;
+    letter-spacing: 0.3px;
+}
+
 #popularApps {
     text-align: start;
 }
@@ -770,7 +776,7 @@
 }
 #platformUi .appTitle {
     display: flex;
-    padding: 30px 24px;
+    padding: 15px 24px;
 }
 #platformUi .appLogo {
     height: 60px;
@@ -788,7 +794,6 @@
     font-size: 15px;
     line-height: 1.5em;
     font-weight: 600;
-    padding: 0 0 0.5em 0;
 }
 #platformUi .visibility {
     display: inline-block;
@@ -813,6 +818,7 @@
     margin: 0 auto;
     width: 290px;
     border-radius: 10px;
+    cursor: pointer;
 }
 #platformUi .publishLink a{
     color: #fff;
@@ -827,12 +833,33 @@
     align-items: center;
     padding: 1em;
     border-bottom: 1px solid #cccccc;
+    color: #757575;
 }
 #platformUi .versionSelect, #platformUi .status {
     margin: 0 8px;
 }
 #platformUi .versionWrapper {
-    border-right: 1px solid #cccccc;;
+    border-right: 1px solid #cccccc;
+}
+#platformUi .ant-select-selector {
+    border-radius: 8px;
+    border: none
+}
+#platformUi .ant-dropdown-link {
+    background: white;
+    border: none;
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #424242;
+}
+#platformUi .anticon.anticon-down {
+    margin-left: 8px;
+}
+.ant-dropdown-menu {
+    border-radius: 10px;
 }
 
 @media screen and (max-width: 974px) {

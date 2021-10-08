@@ -1,13 +1,23 @@
 import React from 'react'
 import '../style.css'
-import { Layout, Menu, Select } from 'antd';
-
+import { Layout, Menu, Select, Dropdown } from 'antd';
+import { DownOutlined } from '@ant-design/icons';
 
 import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
 
 const { SubMenu } = Menu;
 const { Header, Content, Footer, Sider } = Layout;
 const { Option } = Select;
+
+const menu = (
+    <Menu>
+        <Menu.Item>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
+                See all versions
+            </a>
+        </Menu.Item>
+    </Menu>
+);
 
 function PlatformUi() {
     return (
@@ -33,10 +43,15 @@ function PlatformUi() {
                             <div className="appSummary">
                                 <div className="versionWrapper">Version
                                     <span className="versionSelect">
-                                        <Select defaultValue="1.0.0" style={{ width: 80 }} dropdownMatchSelectWidth={150}>
-                                            <Option value="allVersions">See all versions</Option>
-                                        </Select>
-                                    </span> 
+                                        {/* <Select defaultValue="1.0.0" style={{ width: 80 }} dropdownMatchSelectWidth={150}>
+                                            <a href="https://google.com">See all versions</a>
+                                        </Select> */}
+                                        <Dropdown overlay={menu} trigger="click">
+                                            <button className="ant-dropdown-link" onClick={e => e.preventDefault()}>
+                                                1.0.0 <DownOutlined />
+                                            </button>
+                                        </Dropdown>
+                                    </span>
                                 </div>
                                 <div>
                                     <span className="status">Status</span>
