@@ -861,6 +861,11 @@ body {
 .ant-dropdown-menu {
     border-radius: 10px;
 }
+#platformUi .ant-menu-inline.ant-menu-root .ant-menu-submenu-title > .ant-menu-title-content {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #424242;
+}
 
 @media screen and (max-width: 974px) {
     #zaps .zaps {
