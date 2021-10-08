@@ -831,7 +831,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1em;
+    padding: 8px;
     border-bottom: 1px solid #cccccc;
     color: #757575;
 }
