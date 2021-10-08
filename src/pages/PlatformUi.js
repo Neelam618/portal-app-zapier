@@ -83,8 +83,8 @@ function PlatformUi() {
                                 </SubMenu>
                             </Menu>
                         </Sider>
-                        <Layout className="site-layout" style={{ marginLeft: 200 }}>
-                            <Content style={{ padding: '0 24px', minHeight: 280, overflow: 'initial' }}>
+                        <Layout className="site-layout" style={{ marginLeft: 340 }}>
+                            <Content style={{ padding: '0 30px', minHeight: 280, overflow: 'initial', textAlign: 'left' }}>
                                 <div>
                                     <h1>Integration Home</h1>
                                     <div className="cards">
