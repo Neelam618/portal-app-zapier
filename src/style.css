@@ -866,6 +866,50 @@ body {
     text-transform: uppercase;
     color: #424242;
 }
+#platformUi .homeTitle {
+    color: #424242;
+}
+#platformUi .card {
+    display: flex;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    padding: 15px 20px;
+    justify-content: space-between;
+    transition-property: box-shadow, border-color, background-color;
+    transition-timing-function: ease-in-out;
+    transition-duration: 300ms;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex: 1 1 0%;
+    max-width: 100%;
+}
+#platformUi .cardInfo {
+    margin-right: 10px;
+    width: 68%;
+}
+#platformUi .icon {
+    margin-right: 10px;
+    vertical-align: text-top;
+}
+#platformUi .cardTitle {
+    font-size: 18px;
+    color: #424242;
+}
+#platformUi .cardPara {
+    font-size: 14px;
+    color: #757575;
+}
+#platformUi .authLink {
+    font-weight: 700;
+    height: 40px;
+    white-space:nowrap;
+    background-color: #136bf5;
+    color: white;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+}
 
 @media screen and (max-width: 974px) {
     #zaps .zaps {
@@ -875,6 +919,10 @@ body {
     #zaps .home {
         padding: 0;
     }
+    #platformUi .card {
+        flex-flow: row wrap;
+    }
+
 }
 @media screen and (max-width: 780px) {
     #dashboard .listItemContent {

@@ -86,13 +86,20 @@ function PlatformUi() {
                         <Layout className="site-layout" style={{ marginLeft: 340 }}>
                             <Content style={{ padding: '0 30px', minHeight: 280, overflow: 'initial', textAlign: 'left' }}>
                                 <div>
-                                    <h1>Integration Home</h1>
+                                    <h1 className="homeTitle">Integration Home</h1>
                                     <div className="cards">
                                         <section>
                                             <div className="card">
                                                 <div className="cardInfo">
-                                                    <h2>Authentication</h2>
-                                                    <p>Tell us how to authenticate users with your API. OAuth 2 is most common, but Zapier also supports a handful of options. Learn more.</p>
+                                                    <h2 className="cardTitle">
+                                                        <span className="icon">
+                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 5C13.66 5 15 6.34 15 8C15 9.66 13.66 11 12 11C10.34 11 9 9.66 9 8C9 6.34 10.34 5 12 5ZM6 15.98C7.29 17.92 9.5 19.2 12 19.2C14.5 19.2 16.71 17.92 18 15.98C17.97 13.99 13.99 12.9 12 12.9C10 12.9 6.03 13.99 6 15.98Z" fill="#666666"></path></svg>
+                                                        </span>
+                                                        Authentication</h2>
+                                                    <p className="cardPara">Tell us how to authenticate users with your API. OAuth 2 is most common, but Zapier also supports a handful of options. <a href="">Learn more</a>.</p>
+                                                </div>
+                                                <div>
+                                                    <a href="" className="authLink">Set Up Authentication</a>
                                                 </div>
                                             </div>
                                         </section>
