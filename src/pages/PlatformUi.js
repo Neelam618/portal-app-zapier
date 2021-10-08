@@ -22,8 +22,6 @@ const menu = (
 function PlatformUi() {
     return (
         <div id="platformUi">
-            <Layout>
-                <Content>
                     <Layout className="site-layout-background" style={{ padding: '24px 0' }}>
                         <Sider className="site-layout-background" width={340} style={{
                             overflow: 'auto',
@@ -85,9 +83,23 @@ function PlatformUi() {
                                 </SubMenu>
                             </Menu>
                         </Sider>
-                        <Content style={{ padding: '0 24px', minHeight: 280 }}>Content</Content>
+                        <Layout className="site-layout" style={{ marginLeft: 200 }}>
+                            <Content style={{ padding: '0 24px', minHeight: 280, overflow: 'initial' }}>
+                                <div>
+                                    <h1>Integration Home</h1>
+                                    <div className="cards">
+                                        <section>
+                                            <div className="card">
+                                                <div className="cardInfo">
+                                                    <h2>Authentication</h2>
+                                                    <p>Tell us how to authenticate users with your API. OAuth 2 is most common, but Zapier also supports a handful of options. Learn more.</p>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </Content>
                     </Layout>
-                </Content>
             </Layout>
         </div>
     )
