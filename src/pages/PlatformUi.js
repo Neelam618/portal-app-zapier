@@ -1,17 +1,19 @@
 import React from 'react'
 import '../style.css'
-import { Layout, Menu, Breadcrumb } from 'antd';
+import { Layout, Menu, Select } from 'antd';
+
+
 import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
 
 const { SubMenu } = Menu;
 const { Header, Content, Footer, Sider } = Layout;
+const { Option } = Select;
 
 function PlatformUi() {
     return (
         <div id="platformUi">
             <Layout>
                 <Content>
-                    
                     <Layout className="site-layout-background" style={{ padding: '24px 0' }}>
                         <Sider className="site-layout-background" width={340}>
                             <div className="sidebarHeader">
@@ -26,6 +28,19 @@ function PlatformUi() {
                                 </div>
                                 <div className="publishLink">
                                     <a href="">Publish</a>
+                                </div>
+                            </div>
+                            <div className="appSummary">
+                                <div className="versionWrapper">Version
+                                    <span className="versionSelect">
+                                        <Select defaultValue="1.0.0" style={{ width: 80 }} dropdownMatchSelectWidth={150}>
+                                            <Option value="allVersions">See all versions</Option>
+                                        </Select>
+                                    </span> 
+                                </div>
+                                <div>
+                                    <span className="status">Status</span>
+                                    <span className="visibility">Private</span>
                                 </div>
                             </div>
                             <Menu

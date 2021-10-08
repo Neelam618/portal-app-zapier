@@ -791,6 +791,7 @@
     padding: 0 0 0.5em 0;
 }
 #platformUi .visibility {
+    display: inline-block;
     font-size: 12px;
     font-weight: 700;
     line-height: 20px;
@@ -799,6 +800,7 @@
     color: #333333;
     background-color: white;
     border-radius: 5px;
+    padding: 0 15px;
 }
 #platformUi .publishLink {
     font-size: 14px;
@@ -818,6 +820,19 @@
 #platformUi .sidebarHeader {
     border-bottom: 1px solid #cccccc;
     padding-bottom: 15px;
+}
+#platformUi .appSummary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    border-bottom: 1px solid #cccccc;
+}
+#platformUi .versionSelect, #platformUi .status {
+    margin: 0 8px;
+}
+#platformUi .versionWrapper {
+    border-right: 1px solid #cccccc;;
 }
 
 @media screen and (max-width: 974px) {
