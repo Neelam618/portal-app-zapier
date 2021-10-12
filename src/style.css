@@ -957,9 +957,9 @@ body {
     padding: 15px;
     margin-top: 1em;
 }
-#auth .radio {
+#auth .radioLabel {
     font-weight: 600;
-    margin-bottom: 10px;
+    margin: 0 0 10px 10px;
 }
 #auth .radioPara, #auth .addCardPara {
     color: #757575;

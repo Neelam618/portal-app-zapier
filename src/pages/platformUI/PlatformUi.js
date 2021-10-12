@@ -16,7 +16,7 @@ function PlatformUi() {
                 <Layout className="site-layout" style={{ marginLeft: 340 }}>
                     <Content style={{ padding: '0 30px', minHeight: 280, overflow: 'initial', textAlign: 'left' }}> 
                         <Route path='/' exact={true}><Home /></Route>
-                        <Route path='/auth' exact={true}><Authentication /></Route>
+                        <Route path='/auth'><Authentication /></Route>
                         {/* <Route path='/triggers' exact={true}><Authentication /></Route> */}
                         {/* <Route path='/auth' exact={true}><Authentication /></Route> */}
                     </Content>
