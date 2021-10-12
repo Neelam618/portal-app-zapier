@@ -4,7 +4,7 @@ import { Radio } from 'antd';
 function Authentication() {
     return (
         <div id="auth">
-            <h3>Authentication</h3>
+            <h3 className="title">Authentication</h3>
             <div className="cards">
                 <div className="addCard">
                     <div>
@@ -42,6 +42,7 @@ function Authentication() {
                     </p>
                 </div>
             </div>
+            <button className="saveBtn">Save</button>
         </div>
     )
 }

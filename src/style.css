@@ -932,6 +932,11 @@ body {
 #platformUi .titleIcon {
     vertical-align: inherit;
 }
+#auth .title {
+    color: #757575;
+    font-weight: 600;
+    font-size: 18px;
+}
 #auth .addCard {
     display: flex;
     align-items: center;
@@ -944,6 +949,7 @@ body {
 }
 #auth .addCardTitle {
     margin-bottom: 0;
+    font-size: 16px;
 }
 #auth .radioCard {
     border: 1px solid #d9d9d9;
@@ -957,6 +963,18 @@ body {
 }
 #auth .radioPara, #auth .addCardPara {
     color: #757575;
+}
+#auth .saveBtn {
+    background-color: #f2f2f2;
+    padding: 7px 100px;
+    margin-top: 3em;
+    border: none;
+    float: right;
+    font-weight: 700;
+    color: #757575;
+    border-radius: 10px;;
+    border-radius: 10px;
+    cursor: not-allowed;
 }
 @media screen and (max-width: 974px) {
     #zaps .zaps {
