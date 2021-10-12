@@ -23,7 +23,7 @@ function Home() {
                             <p className="cardPara">Tell us how to authenticate users with your API. OAuth 2 is most common, but Zapier also supports a handful of options. <a href="">Learn more</a>.</p>
                         </div>
                         <div>
-                            <a href="" className="authLink">Set Up Authentication</a>
+                            <a href="" className="btn">Set Up Authentication</a>
                         </div>
                     </div>
                 </section>

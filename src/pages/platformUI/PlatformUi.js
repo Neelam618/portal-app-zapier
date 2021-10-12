@@ -4,6 +4,7 @@ import { Layout } from 'antd';
 import Authentication from './Authentication'
 import { Route } from 'react-router-dom'
 import Home from './Home'
+import Triggers from './Triggers'
 import '../../style.css'
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -17,7 +18,7 @@ function PlatformUi() {
                     <Content style={{ padding: '0 30px', minHeight: 280, overflow: 'initial', textAlign: 'left' }}> 
                         <Route path='/' exact={true}><Home /></Route>
                         <Route path='/auth'><Authentication /></Route>
-                        {/* <Route path='/triggers' exact={true}><Authentication /></Route> */}
+                        <Route path='/triggers'><Triggers /></Route>
                         {/* <Route path='/auth' exact={true}><Authentication /></Route> */}
                     </Content>
                 </Layout>

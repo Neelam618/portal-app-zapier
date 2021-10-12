@@ -66,7 +66,7 @@ function Aside() {
                 <SubMenu key="sub1" title="Build">
                     <Menu.Item key="1"><Link to="/">Integration Home</Link></Menu.Item>
                     <Menu.Item key="2"><Link to="/auth">Authentication</Link></Menu.Item>
-                    <Menu.Item key="3"><Link to="/tiggers">Triggers</Link></Menu.Item>
+                    <Menu.Item key="3"><Link to="/triggers">Triggers</Link></Menu.Item>
                     <Menu.Item key="4"><Link to="/actions">Actions</Link></Menu.Item>
                 </SubMenu>
                 <SubMenu key="sub2" title="Manage">

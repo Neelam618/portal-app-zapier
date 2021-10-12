@@ -897,7 +897,7 @@ body {
     font-size: 14px;
     color: #757575;
 }
-#platformUi .authLink {
+.btn {
     font-weight: 700;
     height: 40px;
     white-space:nowrap;
@@ -937,19 +937,22 @@ body {
     font-weight: 600;
     font-size: 18px;
 }
-#auth .addCard {
+.addCard {
     display: flex;
     align-items: center;
     border: 1px solid #d9d9d9;
     border-radius: 10px;
     padding: 15px;
 }
-#auth .addCardText {
+.addCardText {
     margin-left: 20px;
 }
-#auth .addCardTitle {
+.addCardTitle {
     margin-bottom: 0;
     font-size: 16px;
+}
+.addCardPara {
+    color: #757575;
 }
 #auth .radioCard {
     border: 1px solid #d9d9d9;
@@ -961,7 +964,7 @@ body {
     font-weight: 600;
     margin: 0 0 10px 10px;
 }
-#auth .radioPara, #auth .addCardPara {
+#auth .radioPara {
     color: #757575;
 }
 #auth .saveBtn {
@@ -975,6 +978,10 @@ body {
     border-radius: 10px;;
     border-radius: 10px;
     cursor: not-allowed;
+}
+#trigger .triggerBtn {
+    margin-top: 1em;
+    float: right;
 }
 @media screen and (max-width: 974px) {
     #zaps .zaps {
