@@ -1,7 +1,7 @@
 body {
     font-size: 1rem;
     color: #424242;
-    letter-spacing: 0.3px;
+    /* letter-spacing: 0.3px; */
 }
 
 #popularApps {
@@ -932,7 +932,32 @@ body {
 #platformUi .titleIcon {
     vertical-align: inherit;
 }
-
+#auth .addCard {
+    display: flex;
+    align-items: center;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    padding: 15px;
+}
+#auth .addCardText {
+    margin-left: 20px;
+}
+#auth .addCardTitle {
+    margin-bottom: 0;
+}
+#auth .radioCard {
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 1em;
+}
+#auth .radio {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+#auth .radioPara, #auth .addCardPara {
+    color: #757575;
+}
 @media screen and (max-width: 974px) {
     #zaps .zaps {
         padding-right: 0;
