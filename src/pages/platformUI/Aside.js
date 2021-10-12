@@ -1,9 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Layout, Menu, Select, Dropdown } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 
 const { SubMenu } = Menu;
+const { Header, Content, Footer, Sider } = Layout;
 
 const menu = (
     <Menu>
@@ -15,7 +16,8 @@ const menu = (
     </Menu>
 );
 
-function Sider() {
+function Aside() {
+
     return (
         <Sider className="site-layout-background" width={340} style={{
             overflow: 'auto',
@@ -57,15 +59,15 @@ function Sider() {
             </div>
             <Menu
                 mode="inline"
-                defaultSelectedKeys={['1']}
+                defaultSelectedKeys={'1'}
                 defaultOpenKeys={['sub1', 'sub2']}
                 style={{ height: 650 }}
             >
                 <SubMenu key="sub1" title="Build">
-                    <Menu.Item key="1"><a href="">Integration Home</a></Menu.Item>
-                    <Menu.Item key="2"><a href="">Authentication</a></Menu.Item>
-                    <Menu.Item key="3"><a href="">Triggers</a></Menu.Item>
-                    <Menu.Item key="4"><a href="">Actions</a></Menu.Item>
+                    <Menu.Item key="1"><Link to="/">Integration Home</Link></Menu.Item>
+                    <Menu.Item key="2"><Link to="/auth">Authentication</Link></Menu.Item>
+                    <Menu.Item key="3"><Link to="/tiggers">Triggers</Link></Menu.Item>
+                    <Menu.Item key="4"><Link to="/actions">Actions</Link></Menu.Item>
                 </SubMenu>
                 <SubMenu key="sub2" title="Manage">
                     <Menu.Item key="5"><a href="">Publishing</a></Menu.Item>
@@ -80,4 +82,4 @@ function Sider() {
     )
 }
 
-export default Sider
+export default Aside

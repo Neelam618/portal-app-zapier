@@ -1,5 +1,12 @@
 import React from 'react'
 
+const cardItems = [
+    { icon: "trigger.svg", title: "Trigger", text: "Help users find new data as soon as it’s available in your app. Triggers connect to webhooks or polling endpoints.", link: '' },
+    { icon: "actions.svg", title: 'Actions', text: 'Help users write data back to your integration. Actions create or update records through your API.', link: '' },
+    { icon: 'validate.svg', title: 'Validate Integration', text: 'Check your project for errors, get specific user experience recommendations, and get a list of remaining items that are required before you can make your integration available to everyone on Zapier.', link: '' },
+    { icon: 'publish.svg', title: 'Publish', text: 'When you’re ready, let our review team know you want to take your integration public. We’ll respond with feedback and a timeline for a marketing launch.', link: '' }
+]
+
 function Home() {
     return (
         <div>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Athentication() {
+function Authentication() {
     return (
         <div>
             hisaddddddddddddddddddddddddd
@@ -8,4 +8,4 @@ function Athentication() {
     )
 }
 
-export default Athentication
+export default Authentication

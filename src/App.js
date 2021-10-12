@@ -5,7 +5,7 @@ import Dashboard from './pages/Dashboard';
 import AppConnections from './pages/AppConnections';
 import Workflows from './pages/Workflows';
 import './style.css'
-import PlatformUi from './pages/PlatformUi';
+import PlatformUi from './pages/platformUI/PlatformUi';
 
 
 function App() {
