@@ -1021,6 +1021,16 @@ body {
 }
 #advanced .addPairBtn {
     justify-self: flex-start;
+    border: none;
+    height: 40px;
+    font-weight: 700;
+    width: 130px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#advanced .addPairBtn:hover {
+    background-color: #136bf5;
+    color: white;
 }
 #advanced .delete {
     vertical-align: middle;
