@@ -1004,6 +1004,14 @@ body {
     vertical-align: middle;
     margin-left: 10px;
 }
+#advanced .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 45px;
+    gap: 10px;
+}
+#advanced .delete {
+    vertical-align: middle;
+} 
 @media screen and (max-width: 974px) {
     #zaps .zaps {
         padding-right: 0;

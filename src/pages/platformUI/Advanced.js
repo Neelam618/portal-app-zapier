@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Card from './Card'
 import { Tabs } from 'antd';
 
@@ -9,6 +9,12 @@ function callback(key) {
 }
 
 function Advanced() {
+    const [showPair, setShowPair] = useState(true);
+
+    function deletePair() {
+        setShowPair(false)
+    }
+
     return (
         <div id="advanced">
             <h1 className='title'>Advanced</h1>
@@ -20,6 +26,24 @@ function Advanced() {
                     description="Use environment variables to set secret values (such as API keys or client IDs and secrets), or to manage configurations and switch between staging and production environments. Environment variables are set per version."
                     link=""
                     />
+                    <div>
+                        <div className="grid">
+                           <h3>Key</h3>
+                           <h3>Value</h3> 
+                        </div>
+                        {
+                            showPair ?
+                            <div className="grid">
+                                <input type="text" /> 
+                                <input type="text" /> 
+                                <button onClick={deletePair}>
+                                    <svg className="delete" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="#666666"></path></svg>
+                                </button>
+                            </div> : null
+                        }
+                        
+                        <button>Add</button>
+                    </div>
                 </TabPane>
                 <TabPane tab="Export Project" key="2">
                     <h1 className="tabTitle">Export Project to CLI</h1>
