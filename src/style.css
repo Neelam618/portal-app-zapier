@@ -1,7 +1,7 @@
 body {
     font-size: 1rem;
     color: #424242;
-    letter-spacing: 0.3px;
+    /* letter-spacing: 0.3px; */
 }
 
 #popularApps {
@@ -866,6 +866,199 @@ body {
     text-transform: uppercase;
     color: #424242;
 }
+#platformUi .homeTitle {
+    color: #424242;
+}
+#platformUi .card {
+    display: flex;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin: 15px 0;
+    justify-content: space-between;
+    flex: 1 1 0%;
+    max-width: 100%;
+}
+#platformUi .cardInfo {
+    margin-right: 10px;
+    width: 68%;
+}
+#platformUi .icon {
+    vertical-align: text-top;
+}
+#platformUi .icon {
+    margin-right: 10px;
+}
+#platformUi .cardTitle {
+    font-size: 18px;
+    color: #424242;
+}
+#platformUi .cardPara {
+    font-size: 14px;
+    color: #757575;
+}
+.btn {
+    font-weight: 700;
+    height: 40px;
+    white-space:nowrap;
+    background-color: #136bf5;
+    color: white;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#platformUi .lockWrapper {
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 100px;
+    border: 1px solid rgb(117, 117, 117);
+    display: flex;
+    height: 60px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 60px;
+}
+#platformUi .lock {
+    height: 32px;
+    width: 32px;
+    display: inline-block;
+}
+#platformUi .lock svg {
+    display: block;
+    height: inherit;
+    width: inherit;
+}
+#platformUi .titleIcon {
+    vertical-align: inherit;
+}
+#auth .title {
+    color: #757575;
+    font-weight: 600;
+    font-size: 18px;
+}
+.addCard {
+    display: flex;
+    align-items: center;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    padding: 15px;
+}
+.addCardText {
+    margin-left: 20px;
+}
+.addCardTitle {
+    margin-bottom: 0;
+    font-size: 16px;
+}
+.addCardPara {
+    color: #757575;
+}
+#auth .radioCard {
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 1em;
+}
+#auth .radioLabel {
+    font-weight: 600;
+    margin: 0 0 10px 10px;
+}
+#auth .radioPara {
+    color: #757575;
+}
+#auth .saveBtn {
+    background-color: #f2f2f2;
+    padding: 7px 100px;
+    margin-top: 3em;
+    border: none;
+    float: right;
+    font-weight: 700;
+    color: #757575;
+    border-radius: 10px;;
+    border-radius: 10px;
+    cursor: not-allowed;
+}
+.triggerBtn, .actionsBtn {
+    margin-top: 1em;
+    float: right;
+}
+#advanced .title, #advanced .tabTitle  {
+    font-weight: 600;
+    color: #424242;
+    font-size: 18px;
+    margin: 0px 0px 20px;
+}
+#advanced .ant-tabs-tab-btn {
+    font-weight: 600;
+    color: #666666;
+}
+#advanced .list {
+    padding-left: 0;
+    list-style: inside disc;
+}
+#advanced .tabText {
+    color: #757575;
+}
+#advanced .arrow {
+    vertical-align: middle;
+    margin-left: 10px;
+}
+#advanced .formContainer {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(1, 1fr);
+} 
+#advanced .inputRowtitle {
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-top: 2em;
+}
+#advanced .inputRow {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 45px;
+    gap: 10px;
+}
+#advanced .addPairBtn {
+    justify-self: flex-start;
+    border: none;
+    height: 40px;
+    font-weight: 700;
+    width: 130px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#advanced .addPairBtn:hover {
+    background-color: #136bf5;
+    color: white;
+}
+#advanced .delete {
+    vertical-align: middle;
+}
+#advanced .input {
+    height: 40px;
+    padding: 8px 15px;
+    border-color: transparent;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+}
+#advanced .input:hover {
+    border: 2px solid rgb(212, 210, 210);
+}
+#advanced .input:focus {
+    outline-color : #136bf5;
+}
+#advanced .deleteBtn {
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+} 
+#advanced .deleteBtn:hover {
+    background-color: #136bf5;
+}
+#advanced .deleteBtn:hover .delete {
+filter: brightness(2.5);
+}
 
 @media screen and (max-width: 974px) {
     #zaps .zaps {
@@ -875,6 +1068,10 @@ body {
     #zaps .home {
         padding: 0;
     }
+    #platformUi .card {
+        flex-flow: row wrap;
+    }
+
 }
 @media screen and (max-width: 780px) {
     #dashboard .listItemContent {
