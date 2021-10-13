@@ -7,7 +7,7 @@ const { TabPane } = Tabs;
 function Advanced() {
 
     const [pairList, setPairList] = useState([
-        { key: "key", value: "value" },
+        { key: "", value: "" },
     ])
     const handleChange = (e, index) => {
         const { name, value } = e.target;
