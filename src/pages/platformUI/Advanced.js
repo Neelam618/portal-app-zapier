@@ -4,34 +4,37 @@ import { Tabs } from 'antd';
 
 const { TabPane } = Tabs;
 
-function callback(key) {
-    console.log(key);
-}
-
 function Advanced() {
-    // const [showPair, setShowPair] = useState(true);
 
-    // function deletePair() {
-    //     setShowPair(false)
-    // }
-
-    const [inputList, setinputList] = useState([
+    const [pairList, setPairList] = useState([
         { key: "key", value: "value" },
-        { key: "key1", value: "value1" },
-
     ])
     const handleChange = (e, index) => {
         const { name, value } = e.target;
 
-        const list = [...inputList];
+        const list = [...pairList];
         list[index][name] = value
 
-        setinputList(list);
+        setPairList(list);
+    }
+
+    const addPair = () => {
+        setPairList([...pairList, { key: "", value: "" }])
+        // OR
+        // const list = [...pairList]
+        // list.push({key: "", value: ""})
+        // setPairList(list)
+    }
+
+    const deletePair = index => {
+        const list = [...pairList]
+        list.splice(index, 1)
+        setPairList(list)
     }
     return (
         <div id="advanced">
             <h1 className='title'>Advanced</h1>
-            <Tabs defaultActiveKey="1" onChange={callback}>
+            <Tabs defaultActiveKey="1">
                 <TabPane tab="Environment" key="1">
                     <h1 className="tabTitle">Environment Variables</h1>
                     <Card
@@ -39,29 +42,27 @@ function Advanced() {
                         description="Use environment variables to set secret values (such as API keys or client IDs and secrets), or to manage configurations and switch between staging and production environments. Environment variables are set per version."
                         link=""
                     />
-                    <div>
-                        <div className="grid">
+                    <div className="formContainer">
+                        <div className="inputRow inputRowtitle">
                             <h3>Key</h3>
                             <h3>Value</h3>
                         </div>
                         {
-                            inputList.map((item, i) => {
+                            pairList.map((item, i) => {
                                 return (
-                                    <div className="grid keyValuePAir" key={i}>
-                                        <input type="text" name="key" value={item.key} onChange={e => handleChange(e, i)} />
-                                        <input type="text" name="value" value={item.value} onChange={e => handleChange(e, i)} />
-                                        <button
-                                        >
+                                    <div className="inputRow" key={i}>
+                                        <input className="input" type="text" placeholder="key" name="key" value={item.key} onChange={e => handleChange(e, i)} />
+                                        <input className="input" type="text" placeholder="value" name="value" value={item.value} onChange={e => handleChange(e, i)} />
+                                        <button className="deleteBtn" onClick={() => deletePair(i)}>
                                             <svg className="delete" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="#666666"></path></svg>
                                         </button>
                                     </div>
                                 )
                             })
-
                         }
-                        <button>Add</button>
+                        <button className="addPairBtn" onClick={addPair}>Add</button>
                     </div>
-                    <pre>{JSON.stringify(inputList)}</pre>
+                    {/* <pre>{JSON.stringify(inputList)}</pre> */}
                 </TabPane>
                 <TabPane tab="Export Project" key="2">
                     <h1 className="tabTitle">Export Project to CLI</h1>

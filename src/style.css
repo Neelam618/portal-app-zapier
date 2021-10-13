@@ -1004,14 +1004,52 @@ body {
     vertical-align: middle;
     margin-left: 10px;
 }
-#advanced .grid {
+#advanced .formContainer {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(1, 1fr);
+} 
+#advanced .inputRowtitle {
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-top: 2em;
+}
+#advanced .inputRow {
     display: grid;
     grid-template-columns: repeat(2, 1fr) 45px;
     gap: 10px;
 }
+#advanced .addPairBtn {
+    justify-self: flex-start;
+}
 #advanced .delete {
     vertical-align: middle;
+}
+#advanced .input {
+    height: 40px;
+    padding: 8px 15px;
+    border-color: transparent;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+}
+#advanced .input:hover {
+    border: 2px solid rgb(212, 210, 210);
+}
+#advanced .input:focus {
+    outline-color : #136bf5;
+}
+#advanced .deleteBtn {
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
 } 
+#advanced .deleteBtn:hover {
+    background-color: #136bf5;
+}
+#advanced .deleteBtn:hover .delete {
+filter: brightness(2.5);
+}
+
 @media screen and (max-width: 974px) {
     #zaps .zaps {
         padding-right: 0;
