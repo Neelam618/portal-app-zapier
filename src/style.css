@@ -979,9 +979,30 @@ body {
     border-radius: 10px;
     cursor: not-allowed;
 }
-#trigger .triggerBtn {
+.triggerBtn, .actionsBtn {
     margin-top: 1em;
     float: right;
+}
+#advanced .title, #advanced .tabTitle  {
+    font-weight: 600;
+    color: #424242;
+    font-size: 18px;
+    margin: 0px 0px 20px;
+}
+#advanced .ant-tabs-tab-btn {
+    font-weight: 600;
+    color: #666666;
+}
+#advanced .list {
+    padding-left: 0;
+    list-style: inside disc;
+}
+#advanced .tabText {
+    color: #757575;
+}
+#advanced .arrow {
+    vertical-align: middle;
+    margin-left: 10px;
 }
 @media screen and (max-width: 974px) {
     #zaps .zaps {

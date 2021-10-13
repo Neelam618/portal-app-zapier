@@ -5,6 +5,8 @@ import Authentication from './Authentication'
 import { Route } from 'react-router-dom'
 import Home from './Home'
 import Triggers from './Triggers'
+import Actions from './Actions'
+import Advanced from './Advanced';
 import '../../style.css'
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -19,7 +21,8 @@ function PlatformUi() {
                         <Route path='/' exact={true}><Home /></Route>
                         <Route path='/auth'><Authentication /></Route>
                         <Route path='/triggers'><Triggers /></Route>
-                        {/* <Route path='/auth' exact={true}><Authentication /></Route> */}
+                        <Route path='/actions'><Actions /></Route>
+                        <Route path='/advanced'><Advanced /></Route>
                     </Content>
                 </Layout>
             </Layout>

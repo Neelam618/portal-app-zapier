@@ -59,7 +59,7 @@ function Aside() {
             </div>
             <Menu
                 mode="inline"
-                defaultSelectedKeys={'1'}
+                defaultSelectedKeys={['1']}
                 defaultOpenKeys={['sub1', 'sub2']}
                 style={{ height: 650 }}
             >
@@ -68,14 +68,15 @@ function Aside() {
                     <Menu.Item key="2"><Link to="/auth">Authentication</Link></Menu.Item>
                     <Menu.Item key="3"><Link to="/triggers">Triggers</Link></Menu.Item>
                     <Menu.Item key="4"><Link to="/actions">Actions</Link></Menu.Item>
+                    <Menu.Item key="5"><Link to="/advanced">Advanced</Link></Menu.Item>
                 </SubMenu>
                 <SubMenu key="sub2" title="Manage">
-                    <Menu.Item key="5"><a href="">Publishing</a></Menu.Item>
-                    <Menu.Item key="6"><a href="">Versions</a></Menu.Item>
-                    <Menu.Item key="7"><a href="">Sharing</a></Menu.Item>
-                    <Menu.Item key="8"><a href="">Analytics</a></Menu.Item>
-                    <Menu.Item key="9"><a href="">Monitoring</a></Menu.Item>
-                    <Menu.Item key="10"><a href="">History</a></Menu.Item>
+                    <Menu.Item key="6"><a href="">Publishing</a></Menu.Item>
+                    <Menu.Item key="7"><a href="">Versions</a></Menu.Item>
+                    <Menu.Item key="8"><a href="">Sharing</a></Menu.Item>
+                    <Menu.Item key="9"><a href="">Analytics</a></Menu.Item>
+                    <Menu.Item key="10"><a href="">Monitoring</a></Menu.Item>
+                    <Menu.Item key="11"><a href="">History</a></Menu.Item>
                 </SubMenu>
             </Menu>
         </Sider>
