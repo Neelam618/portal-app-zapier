@@ -82,6 +82,30 @@ function Advanced() {
                 </TabPane>
                 <TabPane tab="View Source" key="3">
                     <h1 className="tabTitle">Source Definition for v1.0.0</h1>
+                    <div className="content">
+                        <section className="leftCol">
+                            <pre className="pre">
+                                <code className="code">
+                                    {
+                                    JSON.stringify(
+                                    {
+                                    "version": "1.0.0",
+                                    "platformVersion": "9.5.0"
+                                        },
+                                        null, "\t"
+                                    )
+                                    }
+                                </code>
+                            </pre>
+                        </section>
+                        <section className="rightCol">
+                            <div>
+                                <p>This is the source definition of the selected version of your integration. Copy this into your favorite diff tool to compare changes from a previous version.</p>
+                                <p>To learn more about this structure see the schema definition.</p>
+                                <p>Want to edit this code directly instead of working through the UI? Have a look at the Zapier CLI!</p>
+                            </div>
+                        </section>
+                    </div>
                 </TabPane>
             </Tabs>
         </div>

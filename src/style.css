@@ -1059,6 +1059,52 @@ body {
 #advanced .deleteBtn:hover .delete {
 filter: brightness(2.5);
 }
+#advanced .content {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: minmax(500px, 1000px) 275px;
+}
+#advanced .leftCol {
+    text-align: right;
+}
+#advanced .rightCol {
+    color: #424242;
+    font-size: 16px;
+}
+#advanced .pre {
+    color: black;
+    background: rgb(245, 242, 240);
+    text-shadow: white 0px 1px;
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    font-size: 1em;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    overflow-wrap: normal;
+    line-height: 1.5;
+    tab-size: 4;
+    hyphens: none;
+    padding: 1em;
+    margin: 0.5em 0px;
+    overflow: auto;
+    height: 65vh;
+}
+#advanced .code {
+    text-shadow: white 0px 1px;
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    font-size: 1em;
+    text-align: left;
+    white-space: pre-wrap;
+    word-spacing: normal;
+    word-break: normal;
+    overflow-wrap: normal;
+    line-height: 1.5;
+    tab-size: 4;
+    hyphens: none;
+    display: block;
+    padding: 10px;
+}
 
 @media screen and (max-width: 974px) {
     #zaps .zaps {

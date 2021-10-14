@@ -1,7 +1,7 @@
 import React from 'react'
 import { Layout, Menu, Select, Dropdown } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const { SubMenu } = Menu;
 const { Header, Content, Footer, Sider } = Layout;
@@ -60,15 +60,16 @@ function Aside() {
             <Menu
                 mode="inline"
                 defaultSelectedKeys={['1']}
+                // selectedKeys={['1']}
                 defaultOpenKeys={['sub1', 'sub2']}
                 style={{ height: 650 }}
             >
                 <SubMenu key="sub1" title="Build">
-                    <Menu.Item key="1"><Link to="/">Integration Home</Link></Menu.Item>
-                    <Menu.Item key="2"><Link to="/auth">Authentication</Link></Menu.Item>
-                    <Menu.Item key="3"><Link to="/triggers">Triggers</Link></Menu.Item>
-                    <Menu.Item key="4"><Link to="/actions">Actions</Link></Menu.Item>
-                    <Menu.Item key="5"><Link to="/advanced">Advanced</Link></Menu.Item>
+                    <Menu.Item key="1"><NavLink strict to="/" to="/">Integration Home</NavLink></Menu.Item>
+                    <Menu.Item key="2"><NavLink strict to="/auth" to="/auth" >Authentication</NavLink></Menu.Item>
+                    <Menu.Item key="3"><NavLink strict to="/triggers" to="/triggers" >Triggers</NavLink></Menu.Item>
+                    <Menu.Item key="4"><NavLink strict to="/actions" to="/actions" >Actions</NavLink></Menu.Item>
+                    <Menu.Item key="5"><NavLink strict to="/advanced" to="/advanced">Advanced</NavLink></Menu.Item>
                 </SubMenu>
                 <SubMenu key="sub2" title="Manage">
                     <Menu.Item key="6"><a href="">Publishing</a></Menu.Item>
