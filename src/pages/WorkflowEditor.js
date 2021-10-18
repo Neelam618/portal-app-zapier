@@ -1,7 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Switch } from 'antd';
 
 function WorkflowEditor() {
+    const [toggleInputField, setToggleInputField] = useState(false)
+    const [data, setData] = useState('Name your workflow')
+    const [inputVal, setInputVal] = useState(data)
+
+    function showInputField() {
+        setToggleInputField(true)
+    }
+
+    function getInputData(val) {
+        setData(val.target.value)
+        console.log(data)
+    }
+    function showWorkflowName(workflowName) {
+        setInputVal(workflowName)
+        setToggleInputField(false)
+    }
+
+    const handleFocus = (event) => event.target.select();         //for selecting input value by default
+
     return (
         <div id="editor">
             <div className="header">
@@ -16,10 +35,16 @@ function WorkflowEditor() {
                             </a>
                         </div>
                         <div className="nameWorkflowField">
-                            <span className="editIconWrapper">
-                                <svg aria-labelledby="edit-icon-1634539957205.949" class="edit-icon-animated css-voy20m" height="20" viewBox="0 0 24 24" width="20"><title id="edit-icon-1634539957205.949"></title><path fill="#999999" d="M20.71 5.63006C21.1 6.02006 21.1 6.65006 20.71 7.04006L18.88 8.87006L15.13 5.12006L16.96 3.29006C17.35 2.90006 17.98 2.90006 18.37 3.29006L20.71 5.63006ZM3 21.0001V17.2501L14.06 6.19006L17.81 9.94006L6.75 21.0001H3Z"></path></svg>
+                            <span>
+                                <span className="editIconWrapper">
+                                    <svg aria-labelledby="edit-icon-1634539957205.949" class="edit-icon-animated css-voy20m" height="20" viewBox="0 0 24 24" width="20"><title id="edit-icon-1634539957205.949"></title><path fill="#999999" d="M20.71 5.63006C21.1 6.02006 21.1 6.65006 20.71 7.04006L18.88 8.87006L15.13 5.12006L16.96 3.29006C17.35 2.90006 17.98 2.90006 18.37 3.29006L20.71 5.63006ZM3 21.0001V17.2501L14.06 6.19006L17.81 9.94006L6.75 21.0001H3Z"></path></svg>
+                                </span>
+                                {
+                                    toggleInputField ? <input type="text" value={data} onBlur={() => showWorkflowName(data)} onChange={getInputData} autoFocus onFocus={handleFocus} /> 
+                                    : <span className="workflowName" onClick={showInputField} >{inputVal}</span>
+                                }
                             </span>
-                            <span className="workflowName">Name your workflow</span>
+
                         </div>
                     </div>
                     <div>
