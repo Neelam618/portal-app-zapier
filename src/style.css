@@ -1147,6 +1147,32 @@ filter: brightness(2.5);
     border-radius: 10px;
     padding: 20px;
 }
+#editor .header {
+    padding: 1em;
+}
+#editor .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#editor .backToWorkflowLink {
+    margin-right: 2em;
+}
+#editor .editIconWrapper {
+    margin-right: 10px;
+}
+#editor .workflowName {
+    font-size: 18px;
+    font-weight: 700;
+}
+#editor .leftHeading {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+#editor .nameWorkflowField {
+    border-bottom: 1px solid #cccccc;
+}
 @media screen and (max-width: 974px) {
     #zaps .zaps {
         padding-right: 0;

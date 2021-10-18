@@ -4,6 +4,7 @@ import Apps from './pages/Apps';
 import Dashboard from './pages/Dashboard';
 import AppConnections from './pages/AppConnections';
 import Workflows from './pages/Workflows';
+import WorkflowEditor from './pages/WorkflowEditor'
 import './style.css'
 import PlatformUi from './pages/platformUI/PlatformUi';
 
@@ -11,9 +12,10 @@ import PlatformUi from './pages/platformUI/PlatformUi';
 function App() {
   return (
     <div className="App">
-      <PlatformUi />
+      {/* <PlatformUi /> */}
       {/* <AppConnections /> */}
       {/* <Workflows /> */}
+      <WorkflowEditor />
       {/* <Apps /> */}
       {/* <Dashboard /> */}
     </div>
