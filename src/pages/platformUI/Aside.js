@@ -65,14 +65,14 @@ function Aside() {
                 style={{ height: 650 }}
             >
                 <SubMenu key="sub1" title="Build">
-                    <Menu.Item key="1"><NavLink strict to="/" to="/">Integration Home</NavLink></Menu.Item>
-                    <Menu.Item key="2"><NavLink strict to="/auth" to="/auth" >Authentication</NavLink></Menu.Item>
-                    <Menu.Item key="3"><NavLink strict to="/triggers" to="/triggers" >Triggers</NavLink></Menu.Item>
-                    <Menu.Item key="4"><NavLink strict to="/actions" to="/actions" >Actions</NavLink></Menu.Item>
-                    <Menu.Item key="5"><NavLink strict to="/advanced" to="/advanced">Advanced</NavLink></Menu.Item>
+                    <Menu.Item key="1"><NavLink strict to="/">Integration Home</NavLink></Menu.Item>
+                    <Menu.Item key="2"><NavLink to="/auth" >Authentication</NavLink></Menu.Item>
+                    <Menu.Item key="3"><NavLink to="/triggers">Triggers</NavLink></Menu.Item>
+                    <Menu.Item key="4"><NavLink to="/actions" >Actions</NavLink></Menu.Item>
+                    <Menu.Item key="5"><NavLink to="/advanced" >Advanced</NavLink></Menu.Item>
                 </SubMenu>
                 <SubMenu key="sub2" title="Manage">
-                    <Menu.Item key="6"><a href="">Publishing</a></Menu.Item>
+                    <Menu.Item key="6"><NavLink to="/publishing" to="/publishing">Publishing</NavLink></Menu.Item>
                     <Menu.Item key="7"><a href="">Versions</a></Menu.Item>
                     <Menu.Item key="8"><a href="">Sharing</a></Menu.Item>
                     <Menu.Item key="9"><a href="">Analytics</a></Menu.Item>

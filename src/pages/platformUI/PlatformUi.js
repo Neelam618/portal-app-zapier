@@ -7,6 +7,7 @@ import Home from './Home'
 import Triggers from './Triggers'
 import Actions from './Actions'
 import Advanced from './Advanced';
+import Publishing from './Publishing'
 import '../../style.css'
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -23,6 +24,7 @@ function PlatformUi() {
                         <Route path='/triggers'><Triggers /></Route>
                         <Route path='/actions'><Actions /></Route>
                         <Route path='/advanced'><Advanced /></Route>
+                        <Route path='/publishing'><Publishing /></Route>
                     </Content>
                 </Layout>
             </Layout>
