@@ -1173,6 +1173,43 @@ filter: brightness(2.5);
 #editor .nameWorkflowField {
     border-bottom: 1px solid #cccccc;
 }
+#editor .inputBox {
+    outline: none;
+    border: none;
+    color: #136bf5;
+    font-weight: 600;
+}
+#editor .iconSet {
+    display: flex;
+    align-items: center;
+    padding: 18px;
+    position: relative;
+}
+#editor .appIcon {
+    align-items: center;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    display: flex;
+    height: 60px;
+    padding: 0px 10px;
+    width: min-content;
+}
+#editor .appStatus {
+    position: absolute;
+    top: 13px;
+    left: 8px;
+}
+#editor .appIconImg {
+    width: 40px;
+}
+#editor .listContent {
+    display: flex;
+    align-items: center;
+}
+#editor .listHeading {
+    text-align: start;
+    justify-content: start;
+}
 @media screen and (max-width: 974px) {
     #zaps .zaps {
         padding-right: 0;
