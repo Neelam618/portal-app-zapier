@@ -67,12 +67,12 @@ function WorkflowEditor() {
                      <div className="title">
                         1
                         .
-                        New Attachment in Gamil
+                        New Attachment in Gmail
                      </div>
                   </div>
                </div>
                <div>
-                  <button></button>
+                  <button className="editBtn">Edit</button>
                </div>
             </div>
          </div>
