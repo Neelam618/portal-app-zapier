@@ -1147,6 +1147,9 @@ filter: brightness(2.5);
     border-radius: 10px;
     padding: 20px;
 }
+#editor svg {
+    vertical-align: middle;
+}
 #editor .header {
     padding: 1em;
 }
@@ -1194,23 +1197,25 @@ filter: brightness(2.5);
     padding: 0px 10px;
     width: min-content;
 }
-#editor .appStatus {
+#editor .statusIcon {
     position: absolute;
-    bottom: 37px;
-    right: 45px;
+    bottom: 40px;
+    right: 48px;
 }
 #editor .appIconImg {
     width: 40px;
 }
-#editor .listItem {
-    border-radius: 10px;
-    border: 1px solid #cccccc;
-    background-color: #ffffff;
+#editor .listItemheader {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 18px;
     cursor: pointer;
+}
+#editor .listItem {
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
 }
 #editor .listContent {
     display: flex;
@@ -1223,8 +1228,9 @@ filter: brightness(2.5);
 #editor .title {
     font-size: 18px;
     font-weight: 700;
+    color: #000;
 }
-#editor .stepName {
+#editor .listSubHeading {
     color: #666666;
     font-size: 14px;
 }
@@ -1241,8 +1247,29 @@ filter: brightness(2.5);
     padding: 0.5em 1.5em;
     font-weight: 700;
 }
-#editor .listItem:hover .editBtn {
+#editor .listItemheader:hover .editBtn {
     opacity: 1;
+}
+#editor .subListItemTitle {
+    font-weight: 700;
+    font-size: 14px;
+}
+#editor .subListItemExtended {
+    text-align: start;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 0 10px;
+}
+#editor .subListItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    cursor: pointer;
+    border-top: 1px solid rgb(204, 204, 204);
+}
+#editor .arrow {
+    margin-right: 10px;
 }
 @media screen and (max-width: 974px) {
     #zaps .zaps {

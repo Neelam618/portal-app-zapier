@@ -5,6 +5,8 @@ function WorkflowEditor() {
    const [toggleInputField, setToggleInputField] = useState(false)
    const [data, setData] = useState('Name your workflow')
    const [inputVal, setInputVal] = useState(data)
+   const [isVisible, setIsVisible] = useState(false)
+   const [isCollapsed, setIsCollapsed] = useState(false)
 
    function showInputField() {
       setToggleInputField(true)
@@ -20,6 +22,13 @@ function WorkflowEditor() {
    }
 
    const handleFocus = (event) => event.target.select();         //for selecting input value by default
+
+   function showAccordion() {
+      setIsVisible(true)
+   }
+   function showListContent() {
+
+   }
 
    return (
       <div id="editor">
@@ -52,28 +61,58 @@ function WorkflowEditor() {
             </div>
          </div>
          <div className="main">
-            <div className="listItem">
-               <div className="listContent">
-                  <div className="iconSet">
-                     <div className="appIcon">
-                        <img className="appIconImg" src="https://zapier-images.imgix.net/storage/services/54f0bd6f9c31b757ab20d4c7058dc7c0.128x128.png?auto=format%2Ccompress&ixlib=python-3.0.0&q=50" alt="" />
+            <div className="listItem" onClick={showAccordion}>
+               <div className="listItemheader">
+                  <div className="listContent">
+                     <div className="iconSet">
+                        <div className="appIcon">
+                           <img className="appIconImg" src="https://zapier-images.imgix.net/storage/services/54f0bd6f9c31b757ab20d4c7058dc7c0.128x128.png?auto=format%2Ccompress&ixlib=python-3.0.0&q=50" alt="" />
+                        </div>
+                        <div className="statusIcon">
+                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM11 17V15H13V17H11ZM11 7V13H13V7H11Z" fill="#666666"></path></svg>
+                        </div>
                      </div>
-                     <div className="appStatus">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM11 17V15H13V17H11ZM11 7V13H13V7H11Z" fill="#666666"></path></svg>
+                     <div className="listHeading">
+                        <span className="listSubHeading">Trigger</span>
+                        <div className="title">
+                           1
+                           .
+                           Trigger title
+                        </div>
                      </div>
                   </div>
-                  <div className="listHeading">
-                     <span className="stepName">Trigger</span>
-                     <div className="title">
-                        1
-                        .
-                        New Attachment in Gmail
-                     </div>
+                  <div>
+                     <button className="editBtn">Edit</button>
                   </div>
                </div>
-               <div>
-                  <button className="editBtn">Edit</button>
-               </div>
+               {
+                  isVisible ?
+                     <div className="subListItemExtended">
+                        <div className="subListItem">
+                           <div className="subListItemTitle" onClick={showListContent}>
+                              <span className="arrow">
+                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.41 8.59009L12 13.1701L16.59 8.59009L18 10.0001L12 16.0001L6 10.0001L7.41 8.59009Z" fill="#666666"></path></svg>                           
+                              </span>
+                              Choose app & event
+                           </div>
+                           <div>
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 6.48 6.48 2 12 2C17.52 2 22 6.48 22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12ZM5 12L10 17L19 8L17.59 6.58L10 14.17L6.41 10.59L5 12Z" fill="#666666"></path></svg>
+                           </div>
+                        </div>
+                        <div className="subListItem">
+                           <div className="subListItemTitle" onClick={showListContent}>
+                              <span className="arrow">
+                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.41 8.59009L12 13.1701L16.59 8.59009L18 10.0001L12 16.0001L6 10.0001L7.41 8.59009Z" fill="#666666"></path></svg>                           
+                              </span>
+                              Choose app & event
+                           </div>
+                           <div>
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 6.48 6.48 2 12 2C17.52 2 22 6.48 22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12ZM5 12L10 17L19 8L17.59 6.58L10 14.17L6.41 10.59L5 12Z" fill="#666666"></path></svg>
+                           </div>
+                        </div>
+                     </div> : null
+               }
+
             </div>
          </div>
       </div>
