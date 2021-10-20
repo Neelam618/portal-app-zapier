@@ -1256,7 +1256,6 @@ filter: brightness(2.5);
 }
 #editor .subListItemExtended {
     text-align: start;
-    font-weight: 700;
     font-size: 14px;
     padding: 0 10px;
 }
@@ -1270,6 +1269,27 @@ filter: brightness(2.5);
 }
 #editor .arrow {
     margin-right: 10px;
+}
+#editor .selectedAppIcon {
+    width: 20px;
+    margin-right: 10px;
+}
+#editor .chooseAppContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    padding: 16px;
+    cursor: pointer;
+}
+#editor .selectedAppName {
+    font-weight: 600;
+}
+#editor .changeText {
+    color: #136bf5;
+    font-weight: 600;
+    font-size: 14px;
 }
 @media screen and (max-width: 974px) {
     #zaps .zaps {
