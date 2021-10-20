@@ -1,7 +1,7 @@
 body {
     font-size: 1rem;
     color: #424242;
-    /* letter-spacing: 0.3px; */
+    letter-spacing: 0.3px;
 }
 
 #popularApps {
@@ -1267,6 +1267,11 @@ filter: brightness(2.5);
     cursor: pointer;
     border-top: 1px solid rgb(204, 204, 204);
 }
+#editor .subListItemContent {
+    width: 100%;
+    padding: 10px 50px 50px;
+    min-height: 200px;
+}
 #editor .arrow {
     margin-right: 10px;
 }
@@ -1290,6 +1295,66 @@ filter: brightness(2.5);
     color: #136bf5;
     font-weight: 600;
     font-size: 14px;
+}
+#editor .eventLabel {
+    display: grid;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 10px;
+    grid-template-columns: 1fr auto;
+    font-weight: 600;
+    color: #424242;
+}
+#editor .requiredText {
+    color: #757575;
+    font-size: 12px;
+    font-weight: 400;
+}
+#editor .requiredText::before {
+    content: "(";
+}
+#editor .requiredText::after {
+    content: ")";
+}
+#editor .chooseEventInputWrapper {
+    grid-template-columns: 40px 1fr 40px;
+    display: grid;
+    grid-template-areas: "iconBefore input iconAfter";
+    position: relative;
+    border-radius: 10px;
+}
+#editor .chooseEventInput {
+    height: 40px;
+    padding: 8px 15px;
+    background-color: #f2f2f2;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(66, 66, 66);
+    grid-area: 1 / 1 / 4 / 4;
+    border-radius: inherit;
+    border: none;
+}
+#editor .chooseEventArrows {
+    grid-area: iconAfter / iconAfter / iconAfter / iconAfter;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(117, 117, 117);
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+}
+#editor .chooseEventContainer {
+    margin: 1.5em auto;
+}
+#editor .eventLabel {
+    margin-bottom: 0.8em;
+}
+#editor .eventInputInfo {
+    font-size: 12px;
+    margin-top: 6px;
+    color: #666666;
 }
 @media screen and (max-width: 974px) {
     #zaps .zaps {
