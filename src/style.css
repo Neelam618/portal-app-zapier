@@ -1405,6 +1405,24 @@ filter: brightness(2.5);
 #editor .titlePara {
     color: #666666;
 } */
+#editor .selectListItemTitle {
+    font-weight: 600;
+}
+#editor .selectListItemPara {
+    font-size: 12px;
+}
+/* #editor .selectDropdownContainer {
+    -webkit-box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
+-moz-box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
+box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
+} */
+#editor .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    border-radius: 10px;
+}
+#editor .ant-select-selector {
+    background: #f2f2f2;
+    color: #424242;
+}
 @media screen and (max-width: 974px) {
     #zaps .zaps {
         padding-right: 0;
