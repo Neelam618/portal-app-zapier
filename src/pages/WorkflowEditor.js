@@ -7,10 +7,12 @@ function WorkflowEditor() {
    const [data, setData] = useState('Name your workflow')
    const [inputVal, setInputVal] = useState(data)
    const [isVisible, setIsVisible] = useState(false)
-   const [isCollapsed, setIsCollapsed] = useState(false)
-   const [selectInputVal, setSelectInputValue] =useState("")
+   const [isChooseAppEventCollapsed, setIsChooseAppEventCollapsed] = useState(false)
+   const [isChooseAccountCollapsed, setIsChooseAccountCollapsed] = useState(false)
+   const [selectInputVal, setSelectInputValue] = useState("")
    const [isModalVisible, setIsModalVisible] = useState(false);
-   const [option,setOption] = useState()
+   const [option, setOption] = useState()
+   const [showActionPopup, setShowActionPopup] = useState(false)
 
    function showInputField() {
       setToggleInputField(true)
@@ -30,8 +32,11 @@ function WorkflowEditor() {
    function showAccordion() {
       setIsVisible(true)
    }
-   function showSubListContent() {
-      setIsCollapsed(!isCollapsed)
+   function showChooseAppEventContent() {
+      setIsChooseAppEventCollapsed(!isChooseAppEventCollapsed)
+   }
+   function showChooseAccountContent() {
+      setIsChooseAccountCollapsed(!isChooseAccountCollapsed)
    }
 
    const showModal = () => {
@@ -50,11 +55,14 @@ function WorkflowEditor() {
    //    setSelectInputValue(e.target.value)
    // }
 
-   function selectHandleChange(value){
+   function selectHandleChange(value) {
       setOption(value)
    }
    const { Option } = Select;
 
+   // function showActionPopup() {
+
+   // }
    return (
       <div id="editor">
          <div className="header">
@@ -113,7 +121,7 @@ function WorkflowEditor() {
                {
                   isVisible ?
                      <div className="subListItemExtended">
-                        <div className="subListItem" onClick={showSubListContent}>
+                        <div className="subListItem" onClick={showChooseAppEventContent}>
                            <div className="subListItemTitle">
                               <span className="arrow">
                                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.41 8.59009L12 13.1701L16.59 8.59009L18 10.0001L12 16.0001L6 10.0001L7.41 8.59009Z" fill="#666666"></path></svg>
@@ -125,7 +133,7 @@ function WorkflowEditor() {
                            </div>
                         </div>
                         {
-                           isCollapsed ?
+                           isChooseAppEventCollapsed ?
                               <div className="subListItemContent">
                                  <div className="chooseAppContainer" onClick={showModal}>
                                     <div className="selectedApp">
@@ -135,25 +143,25 @@ function WorkflowEditor() {
                                     <div className="changeText">Change</div>
                                  </div>
                                  <Modal title="Change Trigger" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-                                 <div className="modalGrid">
-                                    <div className="leftCol">
-                                       <div className="modalContentHeading">
-                                          <div>
-                                             <span className="modalHeadingIcon">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 8H8V4H4V8ZM10 20H14V16H10V20ZM8 20H4V16H8V20ZM4 14H8V10H4V14ZM14 14H10V10H14V14ZM16 4V8H20V4H16ZM14 8H10V4H14V8ZM16 14H20V10H16V14ZM20 20H16V16H20V20Z" fill="#666666"></path></svg>
-                                             </span>
-                                          </div>
-                                          <div>
+                                    <div className="modalGrid">
+                                       <div className="leftCol">
+                                          <div className="modalContentHeading">
                                              <div>
-                                                <span>App Event</span>
+                                                <span className="modalHeadingIcon">
+                                                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 8H8V4H4V8ZM10 20H14V16H10V20ZM8 20H4V16H8V20ZM4 14H8V10H4V14ZM14 14H10V10H14V14ZM16 4V8H20V4H16ZM14 8H10V4H14V8ZM16 14H20V10H16V14ZM20 20H16V16H20V20Z" fill="#666666"></path></svg>
+                                                </span>
                                              </div>
                                              <div>
-                                                <span className="titlePara">Start the Zap when something happens in an app</span>   
+                                                <div>
+                                                   <span>App Event</span>
+                                                </div>
+                                                <div>
+                                                   <span className="titlePara">Start the Zap when something happens in an app</span>
+                                                </div>
                                              </div>
                                           </div>
                                        </div>
                                     </div>
-                                 </div>
                                  </Modal>
                                  <div className="chooseEventContainer">
                                     <label className="eventLabel">Trigger Event
@@ -167,42 +175,68 @@ function WorkflowEditor() {
                                           </span>
                                        </div>
                                     </div> */}
-                                       <div className="selectDropdownContainer">
-                                          <Select className="selectListItem" defaultValue="1" style={{ width: "100%" }} onChange={selectHandleChange}>
-                                             <Option value="1">
-                                                <div className="selectListItemTitle">New Public Message Posted Anywhere</div>
-                                                <p className="selectListItemPara">Triggers when a new message is posted to any public channel</p>
-                                             </Option>
-                                             <Option value="2">
-                                                <div className="selectListItemTitle">New Public Message Posted Anywhere 2</div>
-                                                <p className="selectListItemPara">Triggers when a new message is posted to any public channel</p>
-                                             </Option>
-                                          </Select>
-                                       </div>
-                                    
+                                    <div className="selectDropdownContainer">
+                                       <Select className="selectListItem" defaultValue="1" style={{ width: "100%" }} onChange={selectHandleChange}>
+                                          <Option value="1">
+                                             <div className="selectListItemTitle">New Public Message Posted Anywhere</div>
+                                             <p className="selectListItemPara">Triggers when a new message is posted to any public channel</p>
+                                          </Option>
+                                          <Option value="2">
+                                             <div className="selectListItemTitle">New Public Message Posted Anywhere 2</div>
+                                             <p className="selectListItemPara">Triggers when a new message is posted to any public channel</p>
+                                          </Option>
+                                       </Select>
+                                    </div>
+
                                     <p className="eventInputInfo">This is what starts the workflow.</p>
 
                                  </div>
                               </div> : null
                         }
 
-
-
-                        <div className="subListItem" onClick={showSubListContent}>
+                        <div className="subListItem" onClick={showChooseAccountContent}>
                            <div className="subListItemTitle">
                               <span className="arrow">
                                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.41 8.59009L12 13.1701L16.59 8.59009L18 10.0001L12 16.0001L6 10.0001L7.41 8.59009Z" fill="#666666"></path></svg>
                               </span>
-                              Choose app & event
+                              Choose account
                            </div>
                            <div>
                               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 6.48 6.48 2 12 2C17.52 2 22 6.48 22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12ZM5 12L10 17L19 8L17.59 6.58L10 14.17L6.41 10.59L5 12Z" fill="#666666"></path></svg>
                            </div>
                         </div>
+                        {
+                           isChooseAccountCollapsed ?
+                              <div className="subListItemContent">
+                                 <label htmlFor="">Gmail account</label>
+                                 <input type="text" />
+                              </div> : null
+                        }
+
                      </div> : null
                }
 
             </div>
+
+
+
+            <div className="topLine"></div>
+            {
+               showActionPopup ?
+                  <div>dshhdke</div> :
+                  <div>
+                     <div style={{ position: 'relative' }}>
+                        <div style={{ height: '26px' }}>
+                           <div className="plusBtn" onClick={() => setShowActionPopup(true)}>
+                              <svg style={{ display: 'block' }} width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z" fill="#136bf5"></path></svg>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+            }
+            <div className="bottomLine"></div>
+            <div className="arrowHead">▼</div>
+
          </div>
       </div>
    )

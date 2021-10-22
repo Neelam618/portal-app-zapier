@@ -1423,6 +1423,39 @@ box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
     background: #f2f2f2;
     color: #424242;
 }
+#editor .topLine, #editor .bottomLine {
+    background-color: rgb(153, 153, 153);
+    height: 16px;
+    left: 50%;
+    margin-left: -1px;
+    position: relative;
+    width: 2px;
+    z-index: 0;
+}
+ 
+#editor .plusBtn {
+    background-color: rgb(255, 255, 255);
+    border-radius: 26px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 0px 5px 1px;
+    cursor: pointer;
+    display: inline-block;
+    height: 26px;
+    position: relative;
+    width: 26px;
+    transition: box-shadow 100ms ease-out 0s, transform 300ms ease-out 0s;
+    z-index: 2;
+    animation: 1000ms ease-out 0s 1 normal none running animation-150ug9m;
+    transform-origin: center center;
+}
+#editor .arrowHead {
+    color: rgb(153, 153, 153);
+    margin-bottom: -4px;
+    margin-top: -4px;
+    padding-left: 1px;
+    position: relative;
+    z-index: 4;
+    line-height: 1;
+}
 @media screen and (max-width: 974px) {
     #zaps .zaps {
         padding-right: 0;
