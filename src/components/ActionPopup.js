@@ -1,10 +1,14 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import { Input } from 'antd';
 import { SearchOutlined } from '@ant-design/icons'
+import useOnClickOutside from 'use-onclickoutside'
 
-function ActionPopup() {
+function ActionPopup(props) {
+    const ref = useRef(null)
+    useOnClickOutside(ref, () => props.setShowActionPopup(false))
+
     return (
-        <div className="actionContainer" id="actionPopup">
+        <div className="actionContainer" id="actionPopup" ref={ref}>
             <div className="actionHeader">
                 <div className="actionTitle">
                     <div className="actionIcon">

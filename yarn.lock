@@ -2489,6 +2489,11 @@
   "resolved" "https://registry.npmjs.org/aproba/-/aproba-1.2.0.tgz"
   "version" "1.2.0"
 
+"are-passive-events-supported@^1.1.0":
+  "integrity" "sha512-5wnvlvB/dTbfrCvJ027Y4L4gW/6Mwoy1uFSavney0YO++GU+0e/flnjiBBwH+1kh7xNCgCOGvmJC3s32joYbww=="
+  "resolved" "https://registry.npmjs.org/are-passive-events-supported/-/are-passive-events-supported-1.1.1.tgz"
+  "version" "1.1.1"
+
 "argparse@^1.0.7":
   "integrity" "sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg=="
   "resolved" "https://registry.npmjs.org/argparse/-/argparse-1.0.10.tgz"
@@ -9931,7 +9936,7 @@
   optionalDependencies:
     "fsevents" "^2.1.3"
 
-"react@*", "react@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@^17.0.2", "react@>= 16", "react@>= 16.9.0", "react@>=15", "react@>=16", "react@>=16.0.0", "react@>=16.9.0", "react@17.0.2":
+"react@*", "react@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@^16.8.0 || ^17.0.0", "react@^17.0.2", "react@>= 16", "react@>= 16.9.0", "react@>=15", "react@>=16", "react@>=16.0.0", "react@>=16.9.0", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"
@@ -11707,6 +11712,26 @@
   dependencies:
     "punycode" "1.3.2"
     "querystring" "0.2.0"
+
+"use-isomorphic-layout-effect@^1.0.0":
+  "integrity" "sha512-L7Evj8FGcwo/wpbv/qvSfrkHFtOpCzvM5yl2KVyDJoylVuSvzphiiasmjgQPttIGBAy2WKiBNR98q8w7PiNgKQ=="
+  "resolved" "https://registry.npmjs.org/use-isomorphic-layout-effect/-/use-isomorphic-layout-effect-1.1.1.tgz"
+  "version" "1.1.1"
+
+"use-latest@^1.0.0":
+  "integrity" "sha512-d2TEuG6nSLKQLAfW3By8mKr8HurOlTkul0sOpxbClIv4SQ4iOd7BYr7VIzdbktUCnv7dua/60xzd8igMU6jmyw=="
+  "resolved" "https://registry.npmjs.org/use-latest/-/use-latest-1.2.0.tgz"
+  "version" "1.2.0"
+  dependencies:
+    "use-isomorphic-layout-effect" "^1.0.0"
+
+"use-onclickoutside@^0.4.0":
+  "integrity" "sha512-lg1U+V8SaCfemgBs5dg+cfEOzjuwVS9ATH0VMLSBHI6R11tbfmiKci1lg6pjwXr1sj95XWd2+5EbffJEAPdkJQ=="
+  "resolved" "https://registry.npmjs.org/use-onclickoutside/-/use-onclickoutside-0.4.0.tgz"
+  "version" "0.4.0"
+  dependencies:
+    "are-passive-events-supported" "^1.1.0"
+    "use-latest" "^1.0.0"
 
 "use@^3.1.0":
   "integrity" "sha512-cwESVXlO3url9YWlFW/TA9cshCEhtu7IKJ/p5soJ/gGpj7vbvFrAY/eIioQ6Dw23KjZhYgiIo8HOs1nQ2vr/oQ=="

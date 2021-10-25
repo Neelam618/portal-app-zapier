@@ -10,7 +10,6 @@ function WorkflowEditor() {
    const [isVisible, setIsVisible] = useState(false)
    const [isChooseAppEventCollapsed, setIsChooseAppEventCollapsed] = useState(false)
    const [isChooseAccountCollapsed, setIsChooseAccountCollapsed] = useState(false)
-   const [selectInputVal, setSelectInputValue] = useState("")
    const [isModalVisible, setIsModalVisible] = useState(false);
    const [option, setOption] = useState()
    const [showActionPopup, setShowActionPopup] = useState(false)
@@ -52,18 +51,11 @@ function WorkflowEditor() {
       setIsModalVisible(false);
    };
 
-   // const handleChange = (e) => {
-   //    setSelectInputValue(e.target.value)
-   // }
-
    function selectHandleChange(value) {
       setOption(value)
    }
    const { Option } = Select;
 
-   // function showActionPopup() {
-
-   // }
    return (
       <div id="editor">
          <div className="header">
@@ -222,7 +214,7 @@ function WorkflowEditor() {
             <div className="topLine"></div>
             {
                showActionPopup ?
-                  <ActionPopup /> :
+                  <ActionPopup setShowActionPopup={setShowActionPopup} /> :
                   <div>
                      <div style={{ position: 'relative' }}>
                         <div style={{ height: '26px' }}>
