@@ -315,7 +315,7 @@ body {
     border-radius: 10px;
     height: 50-mdpx;
 }
-#inputBox {
+#dashboard #inputBox {
     background-color: #f2f2f2;
     text-indent: 10px;
 }
@@ -1458,16 +1458,16 @@ box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
 }
 #actionPopup.actionContainer {
     border-radius: 10px;
-    border-radius: 9px 9px 0px 0px;
-    padding: 18px;
     width: 100%;
-    background-color: rgb(255, 74, 0);
 }
 #actionPopup .actionHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: #ffffff;
+    background-color: rgb(255, 74, 0);
+    padding: 18px;
+    border-radius: 9px 9px 0px 0px;
 }
 #actionPopup .actionIcon {
     margin-right: 15px;
@@ -1484,7 +1484,7 @@ box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
     display: flex;
     align-items: center;
 }
-#actionPopup .actionContent {
+#actionPopup .actionTitleText, #actionPopup .appEventTitleText {
     text-align: start;
 }
 #actionPopup .learnMoreBtn {
@@ -1494,6 +1494,59 @@ box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
     padding: 0 1em;
     border-radius: 10px;
     font-weight: 500;
+}
+#actionPopup .appEventIcon {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    border: 1px solid rgb(255, 74, 0);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+#actionPopup .appEventHeading {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+#actionPopup .actionMain {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-right: 1px solid rgb(204, 204, 204);
+    border-bottom: 1px solid rgb(204, 204, 204);
+    border-left: 1px solid rgb(204, 204, 204);
+    border-image: initial;
+    border-top: none;
+    padding: 18px;
+    background-color: #ffffff;
+}
+#actionPopup .buttonContent {
+    display: flex;
+}
+#actionPopup .actionGrid {
+    display: grid;
+    grid-template-columns: 1.75fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-align: left;
+    background-color: rgb(255, 255, 255);
+}
+#actionPopup .optionsButton {
+    background-color: #ffffff;
+    border: none;
+}
+#actionPopup .buttonText {
+    text-align: start;
+}
+#actionPopup .buttonIcon {
+    margin-right: 1em;
+}
+#actionPopup .leftCol {
+    padding: 20px;
 }
 @media screen and (max-width: 974px) {
     #zaps .zaps {
