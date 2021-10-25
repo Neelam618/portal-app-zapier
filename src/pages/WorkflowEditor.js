@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Switch } from 'antd';
 import { Modal, Select } from 'antd';
+import ActionPopup from '../components/ActionPopup'
 
 function WorkflowEditor() {
    const [toggleInputField, setToggleInputField] = useState(false)
@@ -218,12 +219,10 @@ function WorkflowEditor() {
 
             </div>
 
-
-
             <div className="topLine"></div>
             {
                showActionPopup ?
-                  <div>dshhdke</div> :
+                  <ActionPopup /> :
                   <div>
                      <div style={{ position: 'relative' }}>
                         <div style={{ height: '26px' }}>

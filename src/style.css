@@ -1456,6 +1456,45 @@ box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
     z-index: 4;
     line-height: 1;
 }
+#actionPopup.actionContainer {
+    border-radius: 10px;
+    border-radius: 9px 9px 0px 0px;
+    padding: 18px;
+    width: 100%;
+    background-color: rgb(255, 74, 0);
+}
+#actionPopup .actionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+}
+#actionPopup .actionIcon {
+    margin-right: 15px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    border: 1px solid rgb(255, 255, 255);
+    opacity: 0.8;
+}
+#actionPopup .actionTitle {
+    display: flex;
+    align-items: center;
+}
+#actionPopup .actionContent {
+    text-align: start;
+}
+#actionPopup .learnMoreBtn {
+    border: none;
+    background: rgb(199 73 22);
+    height: 40px;
+    padding: 0 1em;
+    border-radius: 10px;
+    font-weight: 500;
+}
 @media screen and (max-width: 974px) {
     #zaps .zaps {
         padding-right: 0;
