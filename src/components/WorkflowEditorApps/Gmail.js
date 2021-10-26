@@ -40,7 +40,7 @@ function Gmail() {
     }
 
     function showAccountOptions() {
-        setshowDropdown(true)
+        setshowDropdown(!showDropdown)
     }
 
     const { Option } = Select;
@@ -156,12 +156,16 @@ function Gmail() {
                                             <div className="chooseAccountIcon">
                                                 <img width="20px" src="https://zapier-images.imgix.net/storage/services/54f0bd6f9c31b757ab20d4c7058dc7c0.128x128.png?auto=format%2Ccompress&ixlib=python-3.0.0&q=50" alt="" />                                            
                                             </div>
-                                            <button className="chooseAccountBtn" onClick={showAccountOptions}>
+                                            <button className="chooseAccountBtn" onClick={showAccountOptions} ref={ref}>
                                                 <span className="chooseAccountText">Choose an account...</span>
                                             </button>
                                             {
                                             showDropdown ? 
-                                            <div ref={ref}>jhgughiuhu</div> : null
+                                            <div>
+                                                <div>
+                                                    <div>Choose...</div>
+                                                </div>
+                                            </div> : null
                                             }
                                             <div className="chooseAccountBtnArrows">
                                                 <span className="chooseAccountBtnArrowsIconWrapper">
