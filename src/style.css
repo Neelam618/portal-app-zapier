@@ -1549,6 +1549,75 @@ box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
 #actionPopup .leftCol {
     padding: 20px;
 }
+
+#gmail .selectGmail {
+    display: block;
+    width: 100%;
+}
+#gmail .chooseAccountContainer {
+    display: grid;
+    grid-template-columns: 40px 1fr 40px;
+    grid-template-areas: "iconBefore input iconAfter";
+    position: relative;
+    border-radius: 10px;
+}
+#gmail .chooseAccountIcon {
+    grid-area: iconBefore / iconBefore / iconBefore / iconBefore;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(117, 117, 117);
+    position: relative;
+    width: 28px;
+    height: 28px;
+    margin: auto;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 6px;
+    background-color: #fff;
+}
+#gmail .chooseAccountBtn {
+    padding-left: 40px;
+    padding-right: 40px;
+    height: 40px;
+    padding: 8px 15px;
+    background-color: #f2f2f2;
+    color: rgb(66, 66, 66);
+    border-radius: inherit;
+    grid-area: 1 / 1 / 4 / 4;
+    font-weight: 600;
+    font-size: 14px;
+    border: 0;
+    text-align: start;
+    text-indent: 30px;
+}
+#gmail .chooseAccountText {
+    color: rgb(117, 117, 117);
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#gmail .chooseAccountBtnArrows {
+    grid-area: iconAfter / iconAfter / iconAfter / iconAfter;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(117, 117, 117);
+    position: relative;
+    pointer-events: none;
+    z-index: 1;
+}
+#gmail .chooseAccountBtnArrowsIconWrapper {
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    fill: currentcolor;
+}
+#gmail .chooseAccountInfo {
+    font-size: 12px;
+}
 @media screen and (max-width: 974px) {
     #zaps .zaps {
         padding-right: 0;
