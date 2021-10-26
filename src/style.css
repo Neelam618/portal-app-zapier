@@ -1510,6 +1510,7 @@ box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    margin-bottom: 1em;
 }
 #actionPopup .actionMain {
     border-bottom-left-radius: 10px;
