@@ -124,6 +124,7 @@ function Gmail() {
                                             </Select>
                                         </div>
                                         <p className="eventInputInfo">This is what starts the workflow.</p>
+                                        <button className="continueBtn">Continue</button>
                                     </div>
                                 </div> : null
                         }
@@ -158,6 +159,7 @@ function Gmail() {
                                         </div>
                                     </div>
                                     <p className="chooseAccountInfo">Google Sheets is a secure partner with Zapier. Your credentials are encrypted & can be removed at any time.</p>
+                                    <button className="continueBtn">Continue</button>
                                 </div> : null
                         }
                     </div> : null
