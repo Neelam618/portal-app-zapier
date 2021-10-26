@@ -1590,6 +1590,8 @@ box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
     border: 0;
     text-align: start;
     text-indent: 30px;
+    pointer-events: all;
+    cursor: pointer;
 }
 #gmail .chooseAccountText {
     color: rgb(117, 117, 117);
