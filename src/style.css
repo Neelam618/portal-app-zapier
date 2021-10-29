@@ -1651,6 +1651,7 @@ box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
 }
 #gmail .dropdownSearchInput {
     display: block;
+    width: 100%;
 }
 #gmail .chooseAccountInfo {
     z-index: -999;
