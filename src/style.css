@@ -1234,10 +1234,14 @@ filter: brightness(2.5);
     color: #666666;
     font-size: 14px;
 }
-#editor .main {
+#editor .mainContainer {
     padding: 2em 3em;
     background-color: #eeeeee;
     border-top: 1px solid #cccccc;
+}
+#editor .mainContent {
+    width: 895px;
+    margin: 0 auto;
 }
 #editor .editBtn {
     opacity: 0;
@@ -1633,6 +1637,23 @@ box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
     cursor: pointer;
     font-size: 16px;
     margin-top: 2em;
+}
+#gmail .chooseAccountBtn {
+    position: relative;
+}
+#gmail .chooseAccountDropdown {
+    position: absolute;
+    background-color: #fff;
+    z-index: 111;
+    top: 40px;
+    padding: 1em;
+    width: 100%;
+}
+#gmail .dropdownSearchInput {
+    display: block;
+}
+#gmail .chooseAccountInfo {
+    z-index: -999;
 }
 @media screen and (max-width: 974px) {
     #zaps .zaps {

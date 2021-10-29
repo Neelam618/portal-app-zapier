@@ -12,12 +12,12 @@ import PlatformUi from './pages/platformUI/PlatformUi';
 function App() {
   return (
     <div className="App">
-      {/* <PlatformUi /> */}
       {/* <AppConnections /> */}
       {/* <Workflows /> */}
       <WorkflowEditor />
       {/* <Apps /> */}
       {/* <Dashboard /> */}
+      {/* <PlatformUi /> */}
     </div>
   );
 }

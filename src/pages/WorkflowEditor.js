@@ -55,24 +55,26 @@ function WorkflowEditor() {
                </div>
             </div>
          </div>
-         <div className="main">
-            <Gmail />
-            <div className="topLine"></div>
-            {
-               showActionPopup ?
-                  <ActionPopup setShowActionPopup={setShowActionPopup} /> :
-                  <div>
-                     <div style={{ position: 'relative' }}>
-                        <div style={{ height: '26px' }}>
-                           <div className="plusBtn" onClick={() => setShowActionPopup(true)}>
-                              <svg style={{ display: 'block' }} width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z" fill="#136bf5"></path></svg>
+         <div className="mainContainer">
+            <div className="mainContent">
+               <Gmail />
+               <div className="topLine"></div>
+               {
+                  showActionPopup ?
+                     <ActionPopup setShowActionPopup={setShowActionPopup} /> :
+                     <div>
+                        <div style={{ position: 'relative' }}>
+                           <div style={{ height: '26px' }}>
+                              <div className="plusBtn" onClick={() => setShowActionPopup(true)}>
+                                 <svg style={{ display: 'block' }} width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z" fill="#136bf5"></path></svg>
+                              </div>
                            </div>
                         </div>
                      </div>
-                  </div>
-            }
-            <div className="bottomLine"></div>
-            <div className="arrowHead">▼</div>
+               }
+               <div className="bottomLine"></div>
+               <div className="arrowHead">▼</div>
+            </div>
          </div>
       </div>
    )
