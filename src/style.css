@@ -1656,6 +1656,9 @@ box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
 #gmail .chooseAccountInfo {
     z-index: -999;
 }
+.ant-select {
+    width: 100%;
+}
 @media screen and (max-width: 974px) {
     #zaps .zaps {
         padding-right: 0;
