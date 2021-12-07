@@ -56,6 +56,28 @@ function ActionPopup(props) {
                                 </div>
                             </div>
                         </button>
+                        <button className="optionsButton">
+                            <div className="buttonContent">
+                                <div className="buttonIcon">
+                                    <img src="https://zapier-images.imgix.net/storage/services//bcc9b8c3b870e129fb7c869ec686ab90.png?auto=format&fit=crop&h=50&ixlib=react-9.0.2&w=50&ar=undefined&h=40&w=40&q=75&dpr=1" alt="" />
+                                </div>
+                                <div className="buttonText">
+                                    <div>Format</div>
+                                    <div>Change how incoming data is changed</div>
+                                </div>
+                            </div>
+                        </button>
+                        <button className="optionsButton">
+                            <div className="buttonContent">
+                                <div className="buttonIcon">
+                                    <img src="https://zapier-images.imgix.net/storage/services/2b3416ebc79b3fb31c014a3a149633c0.png?auto=format&fit=crop&h=50&ixlib=react-9.0.2&w=50&ar=undefined&h=40&w=40&q=75&dpr=1" alt="" />
+                                </div>
+                                <div className="buttonText">
+                                    <div>Delay</div>
+                                    <div>Pause actions for a certain amount of time</div>
+                                </div>
+                            </div>
+                        </button>
                     </div>
                 </div>
             </div>

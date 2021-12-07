@@ -1543,6 +1543,7 @@ box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
 #actionPopup .optionsButton {
     background-color: #ffffff;
     border: none;
+    padding: 2em;
 }
 #actionPopup .buttonText {
     text-align: start;

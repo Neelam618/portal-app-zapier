@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Switch } from 'antd';
-import ActionPopup from '../components/ActionPopup'
+import CreateAction from '../components/CreateAction'
 import Gmail from '../components/WorkflowEditorApps/Gmail';
 
 function WorkflowEditor() {
@@ -61,7 +61,7 @@ function WorkflowEditor() {
                <div className="topLine"></div>
                {
                   showActionPopup ?
-                     <ActionPopup setShowActionPopup={setShowActionPopup} /> :
+                     <CreateAction setShowActionPopup={setShowActionPopup} /> :
                      <div>
                         <div style={{ position: 'relative' }}>
                            <div style={{ height: '26px' }}>
