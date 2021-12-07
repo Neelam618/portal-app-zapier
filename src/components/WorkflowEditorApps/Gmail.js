@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-import { Modal, Select } from 'antd';
+import { Modal, Select, Input } from 'antd';
 import useOnClickOutside from 'use-onclickoutside'
 import { Radio } from 'antd';
 
@@ -173,8 +173,8 @@ function Gmail() {
                                             <div className="chooseAccountIcon">
                                                 <img width="20px" src="https://zapier-images.imgix.net/storage/services/54f0bd6f9c31b757ab20d4c7058dc7c0.128x128.png?auto=format%2Ccompress&ixlib=python-3.0.0&q=50" alt="" />
                                             </div>
-                                            <Select defaultValue="lucy" style={{ width: "100%" }}>
-                                                <Option value="chat">Gmail emailId@gmail.com</Option>                                                
+                                            <Select defaultValue="Choose Account" style={{ width: "100%" }}>
+                                                <Option value="email1">Gmail emailId@gmail.com</Option>                                                
                                             </Select>
                                         </div>
 
@@ -204,7 +204,7 @@ function Gmail() {
                                             <div className="chooseAccountIcon">
                                                 <img width="20px" src="https://zapier-images.imgix.net/storage/services/54f0bd6f9c31b757ab20d4c7058dc7c0.128x128.png?auto=format%2Ccompress&ixlib=python-3.0.0&q=50" alt="" />
                                             </div>
-                                            <Select defaultValue="lucy" style={{ width: "100%" }}>
+                                            <Select defaultValue="Inbox and All Labels" style={{ width: "100%" }}>
                                                 <Option value="chat">Chat</Option>
                                                 <Option value="sent">Sent</Option>
                                                 <Option value="inbox">Inbox</Option>
@@ -213,11 +213,13 @@ function Gmail() {
                                                 <Option value="draft">Draft</Option>
                                                 <Option value="span">Span</Option>
                                             </Select>
-                                                                        
                                         </div>
-
                                     </div>
-                                    <p className="chooseAccountInfo">Google Sheets is a secure partner with Zapier. Your credentials are encrypted & can be removed at any time.</p>
+                                    <p className="chooseAccountInfo">Gmail is a secure partner with Zapier. Your credentials are encrypted & can be removed at any time.</p>
+                                    <label htmlFor="">Search String</label>
+                                    <Input placeholder="Enter text..." />
+                                    <p>This works the same as the search bar you see in Gmail. For example: from:amy OR from:david or subject:dinner label:my-family</p>                               
+                                    <button>Refresh fields</button>
                                     <button className="continueBtn">Continue</button>
                                 </div> : null
                         }
