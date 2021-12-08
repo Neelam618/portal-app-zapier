@@ -1147,48 +1147,48 @@ filter: brightness(2.5);
     border-radius: 10px;
     padding: 20px;
 }
-#editor svg {
+#createWorkflow svg {
     vertical-align: middle;
 }
-#editor .header {
+#createWorkflow .header {
     padding: 1em;
 }
-#editor .heading {
+#createWorkflow .heading {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-#editor .backToWorkflowLink {
+#createWorkflow .backToWorkflowLink {
     margin-right: 2em;
 }
-#editor .editIconWrapper {
+#createWorkflow .editIconWrapper {
     margin-right: 10px;
 }
-#editor .workflowName {
+#createWorkflow .workflowName {
     font-size: 18px;
     font-weight: 700;
 }
-#editor .leftHeading {
+#createWorkflow .leftHeading {
     display: flex;
     align-items: center;
     cursor: pointer;
 }
-#editor .nameWorkflowField {
+#createWorkflow .nameWorkflowField {
     border-bottom: 1px solid #cccccc;
 }
-#editor .inputBox {
+#createWorkflow .inputBox {
     outline: none;
     border: none;
     color: #136bf5;
     font-weight: 600;
 }
-#editor .iconSet {
+#createWorkflow .iconSet {
     display: flex;
     align-items: center;
     position: relative;
     margin-right: 1em;
 }
-#editor .appIcon {
+#createWorkflow .appIcon {
     align-items: center;
     border: 1px solid #d9d9d9;
     border-radius: 8px;
@@ -1197,54 +1197,62 @@ filter: brightness(2.5);
     padding: 0px 10px;
     width: min-content;
 }
-#editor .statusIcon {
+#createWorkflow .statusIcon {
     position: absolute;
     bottom: 40px;
     right: 48px;
 }
-#editor .appIconImg {
+#createWorkflow .appIconImg {
     width: 40px;
 }
-#editor .listItemheader {
+/* #createWorkflow .listItemheader, */
+#createWorkflow .action
+{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 18px;
     cursor: pointer;
 }
-#editor .listItem {
+#createWorkflow .listItem {
     border-radius: 10px;
     border: 1px solid #cccccc;
     background-color: #ffffff;
 }
-#editor .listContent {
+/* #createWorkflow .listContent, */
+#createWorkflow .actionContent
+{
     display: flex;
     align-items: center;
 }
-#editor .listHeading {
+/* #createWorkflow .listHeading, */
+#createWorkflow .actionHeading
+{
     text-align: start;
     justify-content: start;
 }
-#editor .title {
+/* #createWorkflow .title, */
+#createWorkflow .actionTitle
+{
     font-size: 18px;
     font-weight: 700;
     color: #000;
     margin-bottom: 0;
 }
-#editor .listSubHeading {
+#createWorkflow .listSubHeading {
     color: #666666;
     font-size: 14px;
 }
-#editor .mainContainer {
+#createWorkflow .mainContainer {
     padding: 2em 3em;
     background-color: #eeeeee;
     border-top: 1px solid #cccccc;
 }
-#editor .mainContent {
+#createWorkflow .mainContent {
     width: 895px;
     margin: 0 auto;
 }
-#editor .editBtn {
+#createWorkflow .editBtn {
     opacity: 0;
     background-color: #fff;
     border: 1px solid #cccccc;
@@ -1252,19 +1260,19 @@ filter: brightness(2.5);
     padding: 0.5em 1.5em;
     font-weight: 700;
 }
-#editor .listItemheader:hover .editBtn {
+#createWorkflow .listItemheader:hover .editBtn {
     opacity: 1;
 }
-#editor .subListItemTitle {
+#createWorkflow .subListItemTitle {
     font-weight: 700;
     font-size: 14px;
 }
-#editor .subListItemExtended {
+#createWorkflow .subListItemExtended {
     text-align: start;
     font-size: 14px;
     padding: 0 10px;
 }
-#editor .subListItem {
+#createWorkflow .subListItem {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1272,19 +1280,19 @@ filter: brightness(2.5);
     cursor: pointer;
     border-top: 1px solid rgb(204, 204, 204);
 }
-#editor .subListItemContent {
+#createWorkflow .subListItemContent {
     width: 100%;
     padding: 10px 50px 50px;
     min-height: 200px;
 }
-#editor .arrow {
+#createWorkflow .arrow {
     margin-right: 10px;
 }
-#editor .selectedAppIcon {
+#createWorkflow .selectedAppIcon {
     width: 20px;
     margin-right: 10px;
 }
-#editor .chooseAppContainer {
+#createWorkflow .chooseAppContainer {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1293,15 +1301,15 @@ filter: brightness(2.5);
     padding: 16px;
     cursor: pointer;
 }
-#editor .selectedAppName {
+#createWorkflow .selectedAppName {
     font-weight: 600;
 }
-#editor .changeText {
+#createWorkflow .changeText {
     color: #136bf5;
     font-weight: 600;
     font-size: 14px;
 }
-#editor .eventLabel {
+#createWorkflow .eventLabel {
     display: grid;
     -webkit-box-align: center;
     align-items: center;
@@ -1310,25 +1318,25 @@ filter: brightness(2.5);
     font-weight: 600;
     color: #424242;
 }
-#editor .requiredText {
+#createWorkflow .requiredText {
     color: #757575;
     font-size: 12px;
     font-weight: 400;
 }
-#editor .requiredText::before {
+#createWorkflow .requiredText::before {
     content: "(";
 }
-#editor .requiredText::after {
+#createWorkflow .requiredText::after {
     content: ")";
 }
-#editor .chooseEventInputWrapper {
+#createWorkflow .chooseEventInputWrapper {
     grid-template-columns: 40px 1fr 40px;
     display: grid;
     grid-template-areas: "iconBefore input iconAfter";
     position: relative;
     border-radius: 10px;
 }
-#editor .chooseEventInput {
+#createWorkflow .chooseEventInput {
     height: 40px;
     padding: 8px 15px;
     background-color: #f2f2f2;
@@ -1339,7 +1347,7 @@ filter: brightness(2.5);
     border-radius: inherit;
     border: none;
 }
-#editor .chooseEventArrows {
+#createWorkflow .chooseEventArrows {
     grid-area: iconAfter / iconAfter / iconAfter / iconAfter;
     height: 40px;
     display: flex;
@@ -1350,13 +1358,13 @@ filter: brightness(2.5);
     z-index: 1;
     pointer-events: none;
 }
-#editor .chooseEventContainer {
+#createWorkflow .chooseEventContainer {
     margin: 1.5em auto;
 }
-#editor .eventLabel {
+#createWorkflow .eventLabel {
     margin-bottom: 0.8em;
 }
-#editor .eventInputInfo {
+#createWorkflow .eventInputInfo {
     font-size: 12px;
     margin-top: 6px;
     color: #666666;
@@ -1374,7 +1382,7 @@ filter: brightness(2.5);
 .ant-modal-title {
     font-weight: 700;
 }
-/* #editor .modalGrid {
+/* #createWorkflow .modalGrid {
     grid-template-columns: 1.75fr 1fr;
     display: grid;
     gap: 20px;
@@ -1383,7 +1391,7 @@ filter: brightness(2.5);
     border-bottom-left-radius: 10px;
     text-align: left;
 }
-#editor .leftCol {
+#createWorkflow .leftCol {
     background-color: rgb(250, 250, 250);
     border-radius: 10px;
     display: flex;
@@ -1392,7 +1400,7 @@ filter: brightness(2.5);
     -webkit-box-pack: start;
     justify-content: flex-start;
 }
-#editor .modalHeadingIcon {
+#createWorkflow .modalHeadingIcon {
     width: 40px;
     min-width: 40px;
     height: 40px;
@@ -1403,32 +1411,32 @@ filter: brightness(2.5);
     border: 1px solid rgb(255, 74, 0);
     border-radius: 4px;
 }
-#editor .modalContentHeading {
+#createWorkflow .modalContentHeading {
     display: flex;
     align-items: center;
 }
-#editor .titlePara {
+#createWorkflow .titlePara {
     color: #666666;
 } */
-#editor .selectListItemTitle {
+#createWorkflow .selectListItemTitle {
     font-weight: 600;
 }
-#editor .selectListItemPara {
+#createWorkflow .selectListItemPara {
     font-size: 12px;
 }
-/* #editor .selectDropdownContainer {
+/* #createWorkflow .selectDropdownContainer {
     -webkit-box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
 -moz-box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
 box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
 } */
-#editor .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+#createWorkflow .ant-select:not(.ant-select-customize-input) .ant-select-selector {
     border-radius: 10px;
 }
-#editor .ant-select-selector {
+#createWorkflow .ant-select-selector {
     background: #f2f2f2;
     color: #424242;
 }
-#editor .topLine, #editor .bottomLine {
+#createWorkflow .topLine, #createWorkflow .bottomLine {
     background-color: rgb(153, 153, 153);
     height: 16px;
     left: 50%;
@@ -1438,7 +1446,7 @@ box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
     z-index: 0;
 }
  
-#editor .plusBtn {
+#createWorkflow .plusBtn {
     background-color: rgb(255, 255, 255);
     border-radius: 26px;
     box-shadow: rgb(0 0 0 / 10%) 0px 0px 5px 1px;
@@ -1449,10 +1457,9 @@ box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
     width: 26px;
     transition: box-shadow 100ms ease-out 0s, transform 300ms ease-out 0s;
     z-index: 2;
-    animation: 1000ms ease-out 0s 1 normal none running animation-150ug9m;
     transform-origin: center center;
 }
-#editor .arrowHead {
+#createWorkflow .arrowHead {
     color: rgb(153, 153, 153);
     margin-bottom: -4px;
     margin-top: -4px;
@@ -1460,6 +1467,23 @@ box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
     position: relative;
     z-index: 4;
     line-height: 1;
+}
+#createWorkflow .actionAndTriggerTitle {
+    font-weight: 800;
+} 
+#createWorkflow .action {
+    border-radius: 10px;
+    padding: 18px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(204, 204, 204);
+    opacity: 0.6;
+}
+#createWorkflow .action:hover {
+    opacity: 1;
 }
 .actionContainer, .triggerContainer {
     border-radius: 10px;
@@ -1482,10 +1506,10 @@ box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
     align-items: center;
     justify-content: center;
     border-radius: 15px;
-    border: 1px solid rgb(255, 255, 255);
-    opacity: 0.8;
+    border: 1px solid rgb(204, 204, 204);
+    /* opacity: 0.8; */
 }
-.actionAndTriggerTitle {
+.actionAndTriggerTitleContainer {
     display: flex;
     align-items: center;
 }
