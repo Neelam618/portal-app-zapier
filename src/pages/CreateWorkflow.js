@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { Switch } from 'antd';
 import CreateAction from '../components/CreateAction'
-import Gmail from '../components/WorkflowEditorApps/Gmail';
+import Trigger from '../components/steps/Trigger';
+import CreateTrigger from '../components/steps/CreateTrigger';
 
 function WorkflowEditor() {
    const [toggleInputField, setToggleInputField] = useState(false)
@@ -57,7 +58,7 @@ function WorkflowEditor() {
          </div>
          <div className="mainContainer">
             <div className="mainContent">
-               <Gmail />
+               <CreateTrigger />
                <div className="topLine"></div>
                {
                   showActionPopup ?

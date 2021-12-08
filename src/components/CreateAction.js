@@ -3,7 +3,7 @@ import { Input } from 'antd';
 import { SearchOutlined } from '@ant-design/icons'
 import useOnClickOutside from 'use-onclickoutside'
 
-function ActionPopup(props) {
+function CreateAction(props) {
     const ref = useRef(null)
     useOnClickOutside(ref, () => props.setShowActionPopup(false))
 
@@ -85,4 +85,4 @@ function ActionPopup(props) {
     )
 }
 
-export default ActionPopup
+export default CreateAction

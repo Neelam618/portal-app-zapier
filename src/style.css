@@ -1460,11 +1460,11 @@ box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
     z-index: 4;
     line-height: 1;
 }
-#actionPopup.actionContainer {
+#actionAndTriggerPopup.actionAndTriggerContainer {
     border-radius: 10px;
     width: 100%;
 }
-#actionPopup .actionHeader {
+#actionAndTriggerPopup .actionAndTriggerHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1473,7 +1473,7 @@ box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
     padding: 18px;
     border-radius: 9px 9px 0px 0px;
 }
-#actionPopup .actionIcon {
+#actionAndTriggerPopup .actionAndTriggerIcon {
     margin-right: 15px;
     width: 60px;
     height: 60px;
@@ -1484,14 +1484,14 @@ box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
     border: 1px solid rgb(255, 255, 255);
     opacity: 0.8;
 }
-#actionPopup .actionTitle {
+#actionAndTriggerPopup .actionAndTriggerTitle {
     display: flex;
     align-items: center;
 }
-#actionPopup .actionTitleText, #actionPopup .appEventTitleText {
+#actionAndTriggerPopup .actionAndTriggerTitleText, #actionAndTriggerPopup .appEventTitleText {
     text-align: start;
 }
-#actionPopup .learnMoreBtn {
+#actionAndTriggerPopup .learnMoreBtn {
     border: none;
     background: rgb(199 73 22);
     height: 40px;
@@ -1499,7 +1499,7 @@ box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
     border-radius: 10px;
     font-weight: 500;
 }
-#actionPopup .appEventIcon {
+#actionAndTriggerPopup .appEventIcon {
     width: 40px;
     min-width: 40px;
     height: 40px;
@@ -1510,13 +1510,13 @@ box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
     justify-content: center;
     align-items: center;
 } 
-#actionPopup .appEventHeading {
+#actionAndTriggerPopup .appEventHeading {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     margin-bottom: 1em;
 }
-#actionPopup .actionMain {
+#actionAndTriggerPopup .actionAndTriggerMain {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     border-right: 1px solid rgb(204, 204, 204);
@@ -1527,10 +1527,10 @@ box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
     padding: 18px;
     background-color: #ffffff;
 }
-#actionPopup .buttonContent {
+#actionAndTriggerPopup .buttonContent {
     display: flex;
 }
-#actionPopup .actionGrid {
+#actionAndTriggerPopup .actionAndTriggerGrid {
     display: grid;
     grid-template-columns: 1.75fr 1fr;
     gap: 20px;
@@ -1540,19 +1540,61 @@ box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
     text-align: left;
     background-color: rgb(255, 255, 255);
 }
-#actionPopup .optionsButton {
+#actionAndTriggerPopup .optionsButton {
     background-color: #ffffff;
     border: none;
-    padding: 2em;
+    padding: 2em 10px;
+    cursor: pointer;
 }
-#actionPopup .buttonText {
+#actionAndTriggerPopup .optionsButton:hover {
+    box-shadow: rgb(0 0 0 / 10%) 0px 4px 5px;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 10px;
+}
+#actionAndTriggerPopup .optionsTitle {
+    font-weight: 600;
+}
+#actionAndTriggerPopup .buttonText {
     text-align: start;
 }
-#actionPopup .buttonIcon {
+#actionAndTriggerPopup .buttonIcon {
     margin-right: 1em;
 }
-#actionPopup .leftCol {
+#actionAndTriggerPopup .leftCol {
     padding: 20px;
+}
+#actionAndTriggerPopup .triggerAppsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+    padding: 2em 1em;
+}
+
+#actionAndTriggerPopup .triggerAppWrapper{
+    display: flex;
+    padding: 10px;
+    border: 1px solid transparent;
+}
+#actionAndTriggerPopup .triggerAppWrapper:hover {
+    box-shadow: rgb(0 0 0 / 10%) 0px 4px 5px;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 10px;
+    cursor: pointer;
+}
+#actionAndTriggerPopup .triggerAppIcon img {
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    padding:3px;
+    box-sizing: content-box;
+    margin-right: 10px;
+    display: inline-block;
+}
+#actionAndTriggerPopup .triggerAppName {
+    font-weight: 600;
+    font-size: 14px;
+}
+#actionAndTriggerPopup .triggerSubTitle {
+    font-weight: 600;
 }
 
 #gmail .selectGmail {
@@ -1680,6 +1722,7 @@ box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
 }
 #gmail .testTriggerPara {
     text-align: center;
+    padding: 0 6em;
 }
 #gmail .testTriggerBtnWrapper {
     text-align: center;
