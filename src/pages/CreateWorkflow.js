@@ -75,6 +75,33 @@ function WorkflowEditor() {
                }
                <div className="bottomLine"></div>
                <div className="arrowHead">▼</div>
+
+               <div className="listItemheader">
+                  <div className="listContent">
+                     <div className="iconSet">
+                        {/* <div className="appIcon">
+                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.02002 12C2.02002 6.49002 6.49002 2.02002 12 2.02002C17.51 2.02002 21.98 6.49002 21.98 12C21.98 17.51 17.51 21.98 12 21.98C6.49002 21.98 2.02002 17.51 2.02002 12ZM11.48 13.74V20L16.35 10.26H13V4.00002L8.00002 13.74H11.48Z" fill="#666666"></path></svg>
+                        </div> */}
+                        <div className="actionAndTriggerIcon">
+                            <span>
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.02002 12C2.02002 6.49002 6.49002 2.02002 12 2.02002C17.51 2.02002 21.98 6.49002 21.98 12C21.98 17.51 17.51 21.98 12 21.98C6.49002 21.98 2.02002 17.51 2.02002 12ZM11.48 13.74V20L16.35 10.26H13V4.00002L8.00002 13.74H11.48Z" fill="#ffffff"></path></svg>
+                            </span>
+                        </div>
+
+                     </div>
+                     <div className="listHeading">
+                        <div className="title">
+                           2
+                           .
+                           Action
+                        </div>
+                        <div>An action is an event a Zap performs after it starts</div>
+                     </div>
+                  </div>
+               </div>
+
+
+
             </div>
          </div>
       </div>
@@ -82,3 +109,4 @@ function WorkflowEditor() {
 }
 
 export default WorkflowEditor
+

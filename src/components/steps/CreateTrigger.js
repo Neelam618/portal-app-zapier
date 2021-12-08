@@ -14,13 +14,12 @@ const apps = [
     }
 ]
 
-
 function CreateTrigger(props) {
     const ref = useRef(null)
 
     return (
         <div>
-            <div className="actionAndTriggerContainer" id="actionAndTriggerPopup">
+            <div className="triggerContainer">
                 <div className="actionAndTriggerHeader">
                     <div className="actionAndTriggerTitle">
                         <div className="actionAndTriggerIcon">
@@ -67,7 +66,6 @@ function CreateTrigger(props) {
                                         )
                                     })
                                 }
-
                             </div>
                         </div>
                         <div className="rightCol">

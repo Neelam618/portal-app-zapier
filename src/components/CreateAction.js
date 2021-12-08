@@ -3,20 +3,33 @@ import { Input } from 'antd';
 import { SearchOutlined } from '@ant-design/icons'
 import useOnClickOutside from 'use-onclickoutside'
 
+const apps = [
+    {
+        app: "Google Calender", appIcon: "https://zapier-images.imgix.net/storage/services/62c82a7958c6c29736f17d0495b6635c.png?auto=format&fit=crop&h=64&ixlib=react-9.0.2&w=64&ar=undefined&h=21&w=21&q=50&dpr=1"
+    },
+    {
+        app: "Google Contacts", appIcon: "https://zapier-images.imgix.net/storage/services/1508661b55cd3c5ad1787303b0f58c99.png?auto=format&fit=crop&h=64&ixlib=react-9.0.2&w=64&ar=undefined&h=21&w=21&q=50&dpr=1"
+    },
+    {
+        app: "Google Docs", appIcon: "https://zapier-images.imgix.net/storage/services/ae42824b58d556d36b5e5b217377fc5e.png?auto=format&fit=crop&h=64&ixlib=react-9.0.2&w=64&ar=undefined&h=21&w=21&q=50&dpr=1"
+    }
+]
+
+
 function CreateAction(props) {
     const ref = useRef(null)
     useOnClickOutside(ref, () => props.setShowActionPopup(false))
 
     return (
-        <div className="actionContainer" id="actionPopup" ref={ref}>
-            <div className="actionHeader">
-                <div className="actionTitle">
-                    <div className="actionIcon">
+        <div className="actionContainer" ref={ref}>
+            <div className="actionAndTriggerHeader">
+                <div className="actionAndTriggerTitle">
+                    <div className="actionAndTriggerIcon">
                         <span>
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.02002 12C2.02002 6.49002 6.49002 2.02002 12 2.02002C17.51 2.02002 21.98 6.49002 21.98 12C21.98 17.51 17.51 21.98 12 21.98C6.49002 21.98 2.02002 17.51 2.02002 12ZM11.48 13.74V20L16.35 10.26H13V4.00002L8.00002 13.74H11.48Z" fill="#ffffff"></path></svg>
                         </span>
                     </div>
-                    <div className="actionTitleText">
+                    <div className="actionAndTriggerTitleText">
                         <div>Action</div>
                         <div>An action is an event a Zap performs after it starts</div>
                     </div>
@@ -25,8 +38,8 @@ function CreateAction(props) {
                     <button className="learnMoreBtn">Learn more</button>
                 </div>
             </div>
-            <div className="actionMain">
-                <div className="actionGrid">
+            <div className="actionAndTriggerMain">
+                <div className="actionAndTriggerGrid">
                     <div className="leftCol">
                         <div className="appEventHeading">
                             <div>
@@ -41,6 +54,20 @@ function CreateAction(props) {
                         </div>
                         <div>
                             <Input id="inputBox" size="large" placeholder="Search by App" prefix={<SearchOutlined />} />
+                            <div className="triggerAppsContainer">
+                                {
+                                    apps.map((appItem) => {
+                                        return (
+                                        <div className="triggerAppWrapper">
+                                            <div className="triggerAppIcon">
+                                                <img width="21" src={appItem.appIcon} alt="" />
+                                            </div>
+                                            <div className="triggerAppName">{appItem.app}</div>
+                                        </div>
+                                        )
+                                    })
+                                }
+                            </div>
 
                         </div>
                     </div>
