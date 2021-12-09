@@ -256,14 +256,15 @@ body {
 }
 .navContainer:hover .navItems a {
     position: absolute;
-    top: 15px;
+    top: 37px;
 }
 .navContainer:hover .navItems .createWorkflowNavText {
     position: absolute;
-    top: 3px;
+    /* top: 3px; */
 }
 .navContainer:hover .navItems  {
-    padding-bottom: 8em;
+    /* padding-bottom: 8em; */
+    padding: 4em 0;
 }
 @media screen and (min-width: 600px) {
     .navContainer {
@@ -280,7 +281,6 @@ body {
 }
 .navItems {
     padding-bottom: 4rem;
-    font-family: 'roboto';
     position: relative;
 }
 .navItems a {
@@ -294,8 +294,7 @@ body {
     margin-right: 10px;
     text-decoration: none;
     color: #000;
-    font-family: 'roboto';
-    font-weight: 100;
+    font-weight: 600;
     font-size: 1em;
 }
 .navItems:hover a:after {
@@ -319,6 +318,7 @@ body {
     background-color: #333333;
     padding: 10px;
     border-radius: 10px;
+    top: 38px;
 }
 #dashboard .navIcon {
     padding: 10px;

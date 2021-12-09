@@ -66,10 +66,10 @@ function Aside() {
             >
                 <SubMenu key="sub1" title="Build">
                     <Menu.Item key="1"><NavLink strict to="/">Integration Home</NavLink></Menu.Item>
-                    <Menu.Item key="2"><NavLink to="/auth" >Authentication</NavLink></Menu.Item>
+                    <Menu.Item key="2"><NavLink to="/auth">Authentication</NavLink></Menu.Item>
                     <Menu.Item key="3"><NavLink to="/triggers">Triggers</NavLink></Menu.Item>
-                    <Menu.Item key="4"><NavLink to="/actions" >Actions</NavLink></Menu.Item>
-                    <Menu.Item key="5"><NavLink to="/advanced" >Advanced</NavLink></Menu.Item>
+                    <Menu.Item key="4"><NavLink to="/actions">Actions</NavLink></Menu.Item>
+                    <Menu.Item key="5"><NavLink to="/advanced">Advanced</NavLink></Menu.Item>
                 </SubMenu>
                 <SubMenu key="sub2" title="Manage">
                     <Menu.Item key="6"><NavLink to="/publishing" to="/publishing">Publishing</NavLink></Menu.Item>

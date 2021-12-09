@@ -1,12 +1,13 @@
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 import './App.css';
 import Apps from './pages/Apps';
-import Dashboard from './pages/Dashboard';
+import Dashboard from './pages/Home';
 import AppConnections from './pages/AppConnections';
 import Workflows from './pages/Workflows';
 import CreateWorkflow from './pages/CreateWorkflow'
 import './style.css'
 import PlatformUi from './pages/platformUI/PlatformUi';
+import Home from './pages/Home'
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
       {/* <Workflows /> */}
       {/* <CreateWorkflow /> */}
       {/* <Apps /> */}
-      <Dashboard />
+      <Home />
       {/* <PlatformUi /> */}
     </div>
   );
