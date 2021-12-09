@@ -38,10 +38,8 @@ body {
 }
 .appText .description {
     font-size: 1rem;
-    /* overflow: hidden; */
     text-overflow: ellipsis;
     display: -webkit-box;
-    /* max-width: 200px; */
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -300,26 +298,12 @@ body {
     font-weight: 100;
     font-size: 1em;
 }
-/* .nav__items a:after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 2px;
-    background: radial-gradient(circle at 94.02% 88.03%, #54a4ff, transparent 100%);
-    opacity: 0;
-    transition: all 0.5s ease;
-    z-index: -10;
-} */
 .nav__items:hover a:after {
     opacity: 1;
 }
 .nav__items svg {
     width: 26px;
     height: 26px;
-    /* position: relative; */
     left: -25px;
     cursor: pointer;
 }
@@ -331,17 +315,7 @@ body {
    }
 }
 
-
-
-
-
-
-
-
-
-
-
- #dashboard .createWorkflowIcon {
+#dashboard .createWorkflowIcon {
     background-color: #333333;
     padding: 10px;
     border-radius: 10px;
@@ -352,82 +326,6 @@ body {
 #dashboard .createWorkflowIcon svg, #dashboard .navIcon svg{
     vertical-align: middle;
 }
-/*
-#dashboard .sideMenu {
-    position: fixed;
-    width: 60px;
-    top:0;
-    height: 100vh;
-    z-index: 999;
-    overflow:hidden;
-    transition:width .3s ease;
-    cursor:pointer;
-    box-shadow:4px 7px 10px rgba(0,0,0,.4);
-}
-#dashboard .sideMenu:hover {
-    width: 200px;
-} */
-/* #dashboard .nav {
-    list-style-type: none;
-    color:#000;
-    padding-left: 0;
-}
-#dashboard .navItems {
-    padding-bottom:4rem;
-}
-#dashboard .navItems svg {
-    width:26px;
-    height:26px;
-    position: relative;
-    left:-25px;
-    cursor:pointer;
-}
-#dashboard .navItems a {
-    position: relative;
-    display:block;
-    top:-35px;
-    padding-left:25px;
-    padding-right:15px;
-    transition:all .3s ease;
-    margin-left:25px;
-    margin-right:10px;
-    text-decoration: none;
-    color:#000;
-    font-family: 'roboto';
-    font-weight: 100;
-    font-size: 1.35em;
-}
-#dashboard .navItems a ::after {
-    content:'';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top:0;
-    left:0;
-    border-radius:2px;
-    background:radial-gradient(circle at 94.02% 88.03%, #54a4ff, transparent 100%);
-    opacity:0;
-    transition:all .5s ease;
-    z-index: -10;
-}
-#dashboard .navItems:hover a:after {
-    opacity:1;
-}
-
-
-#dashboard {
-    padding: 0 40px 0 0;
-    margin-top: 6em;
-}
-#dashboard .main {
-    padding: 4em;
-}
-#dashboard .sideMenu {
-    padding: 1em;
-    border-right: 1px solid #e6e6e6;
-    cursor: pointer;
-} */
-
 
 .make-a-zap {
     display: flex;
@@ -1575,53 +1473,12 @@ filter: brightness(2.5);
 .ant-modal-title {
     font-weight: 700;
 }
-/* #createWorkflow .modalGrid {
-    grid-template-columns: 1.75fr 1fr;
-    display: grid;
-    gap: 20px;
-    padding: 20px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    text-align: left;
-}
-#createWorkflow .leftCol {
-    background-color: rgb(250, 250, 250);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    -webkit-box-pack: start;
-    justify-content: flex-start;
-}
-#createWorkflow .modalHeadingIcon {
-    width: 40px;
-    min-width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 20px;
-    border: 1px solid rgb(255, 74, 0);
-    border-radius: 4px;
-}
-#createWorkflow .modalContentHeading {
-    display: flex;
-    align-items: center;
-}
-#createWorkflow .titlePara {
-    color: #666666;
-} */
 #createWorkflow .selectListItemTitle {
     font-weight: 600;
 }
 #createWorkflow .selectListItemPara {
     font-size: 12px;
 }
-/* #createWorkflow .selectDropdownContainer {
-    -webkit-box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
--moz-box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
-box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
-} */
 #createWorkflow .ant-select:not(.ant-select-customize-input) .ant-select-selector {
     border-radius: 10px;
 }
