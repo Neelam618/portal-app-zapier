@@ -1603,7 +1603,7 @@ filter: brightness(2.5);
     padding: 18px;
     background-color: #ffffff;
 }
-.actionContainer .buttonContent, .triggerontainer .buttonContent {
+.actionContainer .buttonContent, .triggerContainer .buttonContent {
     display: flex;
 }
 .actionAndTriggerGrid {

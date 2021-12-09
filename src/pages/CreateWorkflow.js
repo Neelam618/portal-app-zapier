@@ -11,6 +11,11 @@ function CreateWorkflow() {
    const [data, setData] = useState('Name your workflow')
    const [inputVal, setInputVal] = useState(data)
    const [showActionPopup, setShowActionPopup] = useState(false)
+   const [createActionIsOpen, setCreateActionIsOpen] = useState(false)
+
+   function openCreateAction() {
+      setCreateActionIsOpen(true)
+   }
 
    function showInputField() {
       setToggleInputField(true)
@@ -27,20 +32,12 @@ function CreateWorkflow() {
 
    const handleFocus = (event) => event.target.select();         //for selecting input value by default
 
-
    return (
       <div id="createWorkflow">
          <div className="header">
             <div className="heading">
                <div className="leftHeading">
                   <div>
-                     {/* <a href="" className="backToWorkflowLink">
-                        <span>
-                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.41 16.59L10.83 12L15.41 7.41L14 6L8 12L14 18L15.41 16.59Z" fill="#666666"></path></svg>
-                        </span>
-                        <svg height="24" viewBox="0 0 512 512" width="24"><path d="M318 256c0 19-4 36-10 52-16 7-34 10-52 10-19 0-36-3-52-9-7-17-10-34-10-53 0-18 3-36 10-52 16-6 33-10 52-10 18 0 36 4 52 10 6 16 10 34 10 52zm182-41H355l102-102c-8-11-17-22-26-32-10-9-21-18-32-26L297 157V12c-13-2-27-3-41-3s-28 1-41 3v145L113 55c-12 8-22 17-32 26-10 10-19 21-27 32l102 102H12s-3 27-3 41 1 28 3 41h144L54 399c16 23 36 43 59 59l102-102v144c13 2 27 3 41 3s28-1 41-3V356l102 102c11-8 22-17 32-27 9-10 18-20 26-32L355 297h145c2-13 3-27 3-41s-1-28-3-41z" fill="#ff4a00"></path></svg>
-                     </a> */}
-
                      <NavLink
                         to="/workflows"
                         exact
@@ -50,10 +47,7 @@ function CreateWorkflow() {
                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.41 16.59L10.83 12L15.41 7.41L14 6L8 12L14 18L15.41 16.59Z" fill="#666666"></path></svg>
                         </span>
                         <svg height="24" viewBox="0 0 512 512" width="24"><path d="M318 256c0 19-4 36-10 52-16 7-34 10-52 10-19 0-36-3-52-9-7-17-10-34-10-53 0-18 3-36 10-52 16-6 33-10 52-10 18 0 36 4 52 10 6 16 10 34 10 52zm182-41H355l102-102c-8-11-17-22-26-32-10-9-21-18-32-26L297 157V12c-13-2-27-3-41-3s-28 1-41 3v145L113 55c-12 8-22 17-32 26-10 10-19 21-27 32l102 102H12s-3 27-3 41 1 28 3 41h144L54 399c16 23 36 43 59 59l102-102v144c13 2 27 3 41 3s28-1 41-3V356l102 102c11-8 22-17 32-27 9-10 18-20 26-32L355 297h145c2-13 3-27 3-41s-1-28-3-41z" fill="#ff4a00"></path></svg>
-
-                        {/* Workflows */}
                      </NavLink>
-
                   </div>
                   <div className="nameWorkflowField">
                      <span>
@@ -91,30 +85,26 @@ function CreateWorkflow() {
                }
                <div className="bottomLine"></div>
                <div className="arrowHead">▼</div>
-
-               <div className="action">
-                  <div className="actionContent">
-                     {/* <div className="actionIconSet"> */}
-                     {/* <div className="appIcon">
-                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.02002 12C2.02002 6.49002 6.49002 2.02002 12 2.02002C17.51 2.02002 21.98 6.49002 21.98 12C21.98 17.51 17.51 21.98 12 21.98C6.49002 21.98 2.02002 17.51 2.02002 12ZM11.48 13.74V20L16.35 10.26H13V4.00002L8.00002 13.74H11.48Z" fill="#666666"></path></svg>
-                        </div> */}
-                     <div className="actionAndTriggerIcon">
-                        <span>
-                           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" clipRule="evenodd" d="M2.02002 12C2.02002 6.49002 6.49002 2.02002 12 2.02002C17.51 2.02002 21.98 6.49002 21.98 12C21.98 17.51 17.51 21.98 12 21.98C6.49002 21.98 2.02002 17.51 2.02002 12ZM11.48 13.74V20L16.35 10.26H13V4.00002L8.00002 13.74H11.48Z" fill="#e6e6e6"></path></svg>
-                        </span>
-                     </div>
-
-                     {/* </div> */}
-                     <div className="actionHeading">
-                        <div className="actionTitle">
-                           2
-                           .
-                           Action
+               {
+                  createActionIsOpen ? <CreateAction /> :
+                     <div className="action" onClick={openCreateAction}>
+                        <div className="actionContent">
+                           <div className="actionAndTriggerIcon">
+                              <span>
+                                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" clipRule="evenodd" d="M2.02002 12C2.02002 6.49002 6.49002 2.02002 12 2.02002C17.51 2.02002 21.98 6.49002 21.98 12C21.98 17.51 17.51 21.98 12 21.98C6.49002 21.98 2.02002 17.51 2.02002 12ZM11.48 13.74V20L16.35 10.26H13V4.00002L8.00002 13.74H11.48Z" fill="#e6e6e6"></path></svg>
+                              </span>
+                           </div>
+                           <div className="actionHeading">
+                              <div className="actionTitle">
+                                 2
+                                 .
+                                 Action
+                              </div>
+                              <div>An action is an event a Zap performs after it starts</div>
+                           </div>
                         </div>
-                        <div>An action is an event a Zap performs after it starts</div>
                      </div>
-                  </div>
-               </div>
+               }
 
 
 
