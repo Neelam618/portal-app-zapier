@@ -18,10 +18,11 @@ const apps = [
 
 function CreateAction(props) {
     const ref = useRef(null)
+    
     useOnClickOutside(ref, () => props.setShowActionPopup(false))
 
     return (
-        <div className="actionContainer" ref={ref}>
+        <div className="actionContainer" ref={props.createActionIsOpen? props.ref: ref}>
             <div className="actionAndTriggerHeader">
                 <div className="actionAndTriggerTitleContainer">
                     <div className="actionAndTriggerIcon">

@@ -86,7 +86,7 @@ function CreateWorkflow() {
                <div className="bottomLine"></div>
                <div className="arrowHead">▼</div>
                {
-                  createActionIsOpen ? <CreateAction /> :
+                  createActionIsOpen ? <CreateAction ref={null} createActionIsOpen={createActionIsOpen} /> :
                      <div className="action" onClick={openCreateAction}>
                         <div className="actionContent">
                            <div className="actionAndTriggerIcon">
