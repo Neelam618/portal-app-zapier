@@ -234,8 +234,6 @@ body {
 /* Dashboard */
 
 .navContainer {
-    position: fixed;
-    left: 0;
     width: 60px;
     height: 100vh;
     z-index: 100;
@@ -416,7 +414,7 @@ body {
     font-weight: 700;
     font-size: 24px;
     text-align: left;
-    margin: 40px 0 20px 0;
+    margin: 20px 0;
 }
 #dashboard .list {
     padding-left: 0;
@@ -595,7 +593,7 @@ body {
 } 
 #zaps .zaps {
     border-right: 1px solid #e6e6e6;
-    padding-right: 30px;
+    padding: 2em;
     width: 100%;
 }
 #zaps .privateFolder {

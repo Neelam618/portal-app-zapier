@@ -29,16 +29,22 @@ function Home() {
                         </div>
                     </Route>
                     <Route path="/workflows">
-                        <SideNav />
-                        <Workflows />
+                    <div style={{display: 'grid', gridTemplateColumns: '80px auto'}}>
+                            <div><SideNav /></div>
+                            <div><Workflows /></div>
+                        </div>
                     </Route>
                     <Route path="/connections">
-                        <SideNav />
-                        <AppConnections />
+                    <div style={{display: 'grid', gridTemplateColumns: '80px auto'}}>
+                            <div><SideNav /></div>
+                            <div><AppConnections /></div>
+                        </div>
                     </Route>
                     <Route path="/">
-                        <SideNav />
-                        <Dashboard />
+                    <div style={{display: 'grid', gridTemplateColumns: '80px auto'}}>
+                            <div><SideNav /></div>
+                            <div><Dashboard /></div>
+                        </div>
                     </Route>
 
                 </Switch>
