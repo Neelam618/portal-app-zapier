@@ -2,23 +2,8 @@ import React, { useState } from 'react'
 import { Input, Menu, Button } from 'antd';
 import { SearchOutlined } from '@ant-design/icons'
 import '../../src/style.css'
-import {
-    AppstoreOutlined,
-    MenuUnfoldOutlined,
-    MenuFoldOutlined,
-    PieChartOutlined,
-    DesktopOutlined,
-    ContainerOutlined,
-    MailOutlined,
-} from '@ant-design/icons';
-const { SubMenu } = Menu;
 
 function Dashboard() {
-    const [isCollapsed, setIsCollapsed] = useState(true)
-
-    function toggleCollapsed() {
-        setIsCollapsed(!isCollapsed);
-    };
 
     return (
         <div id="dashboard">
@@ -56,8 +41,6 @@ function Dashboard() {
 
                     </ul>
                 </nav>
-
-
 
                 <div className="main">
                     <div className="welcomeContent">
