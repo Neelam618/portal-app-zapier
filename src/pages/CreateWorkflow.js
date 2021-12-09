@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Switch } from 'antd';
-import CreateAction from '../components/CreateAction'
+import CreateAction from '../components/steps/CreateAction'
 import Trigger from '../components/steps/Trigger';
 import CreateTrigger from '../components/steps/CreateTrigger';
 

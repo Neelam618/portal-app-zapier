@@ -14,9 +14,9 @@ function App() {
     <div className="App">
       {/* <AppConnections /> */}
       {/* <Workflows /> */}
-      <CreateWorkflow />
+      {/* <CreateWorkflow /> */}
       {/* <Apps /> */}
-      {/* <Dashboard /> */}
+      <Dashboard />
       {/* <PlatformUi /> */}
     </div>
   );

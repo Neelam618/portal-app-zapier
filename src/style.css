@@ -234,14 +234,207 @@ body {
 }
 
 /* Dashboard */
+
+.nav__cont {
+    position: absolute;
+    left: 0;
+    width: 60px;
+    top: 0;
+    height: 100vh;
+    z-index: 100;
+    background-color: #fff;
+    overflow: hidden;
+    transition: width 0.3s ease;
+    cursor: pointer;
+    box-shadow: 4px 7px 10px rgba(0, 0, 0, .4);
+    padding: 10px;
+}
+.nav__cont:hover {
+    width: 200px;
+}
+.nav__cont:hover .createWorkflowIcon, .nav__cont:hover .navIcon {
+    position: absolute;
+    left: 0;
+}
+.nav__cont:hover .nav__items a {
+    position: absolute;
+    top: 15px;
+}
+.nav__cont:hover .nav__items .createWorkflowNavText {
+    position: absolute;
+    top: 3px;
+}
+.nav__cont:hover .nav__items  {
+    padding-bottom: 8em;
+}
+@media screen and (min-width: 600px) {
+    .nav__cont {
+        width: 80px;
+   }
+}
+.nav {
+    list-style-type: none;
+    color: white;
+    padding-left: 0;
+}
+.nav:first-child {
+    padding-top: 1.5rem;
+}
+.nav__items {
+    padding-bottom: 4rem;
+    font-family: 'roboto';
+    position: relative;
+}
+.nav__items a {
+    position: relative;
+    display: block;
+    top: -35px;
+    left: 30px;
+    padding-left: 25px;
+    padding-right: 15px;
+    margin-left: 25px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #000;
+    font-family: 'roboto';
+    font-weight: 100;
+    font-size: 1em;
+}
+/* .nav__items a:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 2px;
+    background: radial-gradient(circle at 94.02% 88.03%, #54a4ff, transparent 100%);
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: -10;
+} */
+.nav__items:hover a:after {
+    opacity: 1;
+}
+.nav__items svg {
+    width: 26px;
+    height: 26px;
+    /* position: relative; */
+    left: -25px;
+    cursor: pointer;
+}
+@media screen and (min-width: 600px) {
+    .nav__items svg {
+        width: 32px;
+        height: 32px;
+        left: -15px;
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+ #dashboard .createWorkflowIcon {
+    background-color: #333333;
+    padding: 10px;
+    border-radius: 10px;
+}
+#dashboard .navIcon {
+    padding: 10px;
+}
+#dashboard .createWorkflowIcon svg, #dashboard .navIcon svg{
+    vertical-align: middle;
+}
+/*
+#dashboard .sideMenu {
+    position: fixed;
+    width: 60px;
+    top:0;
+    height: 100vh;
+    z-index: 999;
+    overflow:hidden;
+    transition:width .3s ease;
+    cursor:pointer;
+    box-shadow:4px 7px 10px rgba(0,0,0,.4);
+}
+#dashboard .sideMenu:hover {
+    width: 200px;
+} */
+/* #dashboard .nav {
+    list-style-type: none;
+    color:#000;
+    padding-left: 0;
+}
+#dashboard .navItems {
+    padding-bottom:4rem;
+}
+#dashboard .navItems svg {
+    width:26px;
+    height:26px;
+    position: relative;
+    left:-25px;
+    cursor:pointer;
+}
+#dashboard .navItems a {
+    position: relative;
+    display:block;
+    top:-35px;
+    padding-left:25px;
+    padding-right:15px;
+    transition:all .3s ease;
+    margin-left:25px;
+    margin-right:10px;
+    text-decoration: none;
+    color:#000;
+    font-family: 'roboto';
+    font-weight: 100;
+    font-size: 1.35em;
+}
+#dashboard .navItems a ::after {
+    content:'';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    border-radius:2px;
+    background:radial-gradient(circle at 94.02% 88.03%, #54a4ff, transparent 100%);
+    opacity:0;
+    transition:all .5s ease;
+    z-index: -10;
+}
+#dashboard .navItems:hover a:after {
+    opacity:1;
+}
+
+
 #dashboard {
-    padding: 0 40px;
+    padding: 0 40px 0 0;
     margin-top: 6em;
 }
+#dashboard .main {
+    padding: 4em;
+}
+#dashboard .sideMenu {
+    padding: 1em;
+    border-right: 1px solid #e6e6e6;
+    cursor: pointer;
+} */
+
+
 .make-a-zap {
     display: flex;
     align-items: center; 
     flex-flow: row nowrap;
+    z-index: -999;
+    position: relative;
 }
 .inputGroup {
     width: 100%;
@@ -1470,6 +1663,7 @@ box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
 }
 #createWorkflow .actionAndTriggerTitle {
     font-weight: 800;
+    font-size: 18px;
 } 
 #createWorkflow .action {
     border-radius: 10px;
@@ -1867,6 +2061,5 @@ box-shadow: 1px 1px 29px -1px rgba(181,174,181,1);
     }
     #zaps .miniZap {
         padding: 0;
-    }
-        
+    }       
 }
