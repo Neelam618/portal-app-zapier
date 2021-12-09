@@ -233,7 +233,7 @@ body {
 
 /* Dashboard */
 
-.nav__cont {
+.navContainer {
     position: absolute;
     left: 0;
     width: 60px;
@@ -247,26 +247,26 @@ body {
     box-shadow: 4px 7px 10px rgba(0, 0, 0, .4);
     padding: 10px;
 }
-.nav__cont:hover {
+.navContainer:hover {
     width: 200px;
 }
-.nav__cont:hover .createWorkflowIcon, .nav__cont:hover .navIcon {
+.navContainer:hover .createWorkflowIcon, .navContainer:hover .navIcon {
     position: absolute;
     left: 0;
 }
-.nav__cont:hover .nav__items a {
+.navContainer:hover .navItems a {
     position: absolute;
     top: 15px;
 }
-.nav__cont:hover .nav__items .createWorkflowNavText {
+.navContainer:hover .navItems .createWorkflowNavText {
     position: absolute;
     top: 3px;
 }
-.nav__cont:hover .nav__items  {
+.navContainer:hover .navItems  {
     padding-bottom: 8em;
 }
 @media screen and (min-width: 600px) {
-    .nav__cont {
+    .navContainer {
         width: 80px;
    }
 }
@@ -278,12 +278,12 @@ body {
 .nav:first-child {
     padding-top: 1.5rem;
 }
-.nav__items {
+.navItems {
     padding-bottom: 4rem;
     font-family: 'roboto';
     position: relative;
 }
-.nav__items a {
+.navItems a {
     position: relative;
     display: block;
     top: -35px;
@@ -298,17 +298,17 @@ body {
     font-weight: 100;
     font-size: 1em;
 }
-.nav__items:hover a:after {
+.navItems:hover a:after {
     opacity: 1;
 }
-.nav__items svg {
+.navItems svg {
     width: 26px;
     height: 26px;
     left: -25px;
     cursor: pointer;
 }
 @media screen and (min-width: 600px) {
-    .nav__items svg {
+    .navItems svg {
         width: 32px;
         height: 32px;
         left: -15px;
