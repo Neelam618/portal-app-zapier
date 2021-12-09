@@ -22,7 +22,7 @@ function CreateAction(props) {
     useOnClickOutside(ref, () => props.setShowActionPopup(false))
 
     return (
-        <div className="actionContainer" ref={props.createActionIsOpen? props.ref: ref}>
+        <div className="actionContainer" ref={props.step2CreateActionIsOpen? props.ref: ref}>
             <div className="actionAndTriggerHeader">
                 <div className="actionAndTriggerTitleContainer">
                     <div className="actionAndTriggerIcon">
@@ -31,7 +31,9 @@ function CreateAction(props) {
                         </span>
                     </div>
                     <div className="actionAndTriggerTitleText">
-                        <div className="actionAndTriggerTitle">Action</div>
+                        <div className="actionAndTriggerTitle">
+                            {props.step2CreateActionIsOpen ? <span>2. </span> : null}           
+                            Action</div>
                         <div className="actioAndTriggerPara">An action is an event a Zap performs after it starts</div>
                     </div>
                 </div>

@@ -11,10 +11,10 @@ function CreateWorkflow() {
    const [data, setData] = useState('Name your workflow')
    const [inputVal, setInputVal] = useState(data)
    const [showActionPopup, setShowActionPopup] = useState(false)
-   const [createActionIsOpen, setCreateActionIsOpen] = useState(false)
+   const [step2CreateActionIsOpen, setStep2CreateActionIsOpen] = useState(false)
 
    function openCreateAction() {
-      setCreateActionIsOpen(true)
+      setStep2CreateActionIsOpen(true)
    }
 
    function showInputField() {
@@ -86,7 +86,7 @@ function CreateWorkflow() {
                <div className="bottomLine"></div>
                <div className="arrowHead">▼</div>
                {
-                  createActionIsOpen ? <CreateAction ref={null} createActionIsOpen={createActionIsOpen} /> :
+                  step2CreateActionIsOpen ? <CreateAction ref={null} step2CreateActionIsOpen={step2CreateActionIsOpen} /> :
                      <div className="action" onClick={openCreateAction}>
                         <div className="actionContent">
                            <div className="actionAndTriggerIcon">
