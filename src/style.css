@@ -234,21 +234,23 @@ body {
 /* Dashboard */
 
 .navContainer {
-    position: absolute;
+    position: fixed;
     left: 0;
     width: 60px;
-    top: 0;
     height: 100vh;
     z-index: 100;
     background-color: #fff;
     overflow: hidden;
     transition: width 0.3s ease;
     cursor: pointer;
-    box-shadow: 4px 7px 10px rgba(0, 0, 0, .4);
+    border: 1px solid #e6e6e6;
     padding: 10px;
 }
 .navContainer:hover {
     width: 200px;
+    position: absolute;
+    box-shadow: 2px 7px 10px rgba(0, 0, 0, .4);
+    border: 0;
 }
 .navContainer:hover .createWorkflowIcon, .navContainer:hover .navIcon {
     position: absolute;

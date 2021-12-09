@@ -17,14 +17,16 @@ function Home() {
 
     return (
         <div id="dashboard">
-            <div style={{ display: 'flex', justifyContent: 'center', padding: '6em 0' }}>
+            <div>
                 <Switch>
                     <Route path="/create-workflow">
                         <CreateWorkflow />
                     </Route>
                     <Route path="/dashboard">
-                        <SideNav />
-                        <Dashboard />
+                        <div style={{display: 'grid', gridTemplateColumns: '80px auto'}}>
+                            <div><SideNav /></div>
+                            <div><Dashboard /></div>
+                        </div>
                     </Route>
                     <Route path="/workflows">
                         <SideNav />

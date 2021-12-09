@@ -5,14 +5,9 @@ import {
     Route,
     Link
 } from "react-router-dom";
-import Apps from '../pages/Apps';
-import CreateWorkflow from '../pages/CreateWorkflow';
-import Home from '../pages/Home';
-import Workflows from '../pages/Workflows';
 
 function SideNav() {
     return (
-        // <Router>
             <div>
                 <nav class="navContainer">
                     <ul class="nav">
@@ -45,23 +40,7 @@ function SideNav() {
                         </li>
                     </ul>
                 </nav>
-                {/* <Switch>
-                    <Route path="/create-workflow">
-                        <CreateWorkflow />
-                    </Route>
-                    <Route path="/dashboard">
-                        <Home />
-                    </Route>
-                    <Route path="/workflows">
-                        <Workflows />
-                    </Route>
-                    <Route path="/my-apps">
-                        <Apps />
-                    </Route>
-                    
-                </Switch> */}
             </div>
-        // </Router >
     )
 }
 
