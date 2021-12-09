@@ -12,9 +12,16 @@ function CreateWorkflow() {
    const [inputVal, setInputVal] = useState(data)
    const [showActionPopup, setShowActionPopup] = useState(false)
    const [step2CreateActionIsOpen, setStep2CreateActionIsOpen] = useState(false)
+   const [step1CreateTriggerIsOpen, setStep1CreateTriggerIsOpen] = useState(true)
 
-   function openCreateAction() {
+   function openStep2CreateAction() {
       setStep2CreateActionIsOpen(true)
+      setStep1CreateTriggerIsOpen(false)
+   }
+
+   function openStep1CreateTrigger() {
+      setStep1CreateTriggerIsOpen(true)
+      setStep2CreateActionIsOpen(false)
    }
 
    function showInputField() {
@@ -68,7 +75,28 @@ function CreateWorkflow() {
          </div>
          <div className="mainContainer">
             <div className="mainContent">
-               <CreateTrigger />
+
+            {
+                  step1CreateTriggerIsOpen ? <CreateTrigger /> :
+                     <div className="trigger" onClick={openStep1CreateTrigger}>
+                        <div className="triggerContent">
+                           <div className="actionAndTriggerIcon">
+                              <span>
+                                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" clipRule="evenodd" d="M2.02002 12C2.02002 6.49002 6.49002 2.02002 12 2.02002C17.51 2.02002 21.98 6.49002 21.98 12C21.98 17.51 17.51 21.98 12 21.98C6.49002 21.98 2.02002 17.51 2.02002 12ZM11.48 13.74V20L16.35 10.26H13V4.00002L8.00002 13.74H11.48Z" fill="#e6e6e6"></path></svg>
+                              </span>
+                           </div>
+                           <div className="triggerHeading">
+                              <div className="triggerTitle">
+                                 1
+                                 .
+                                 Trigger
+                              </div>
+                              <div>A trigger is an event that starts your Zap</div>
+                           </div>
+                        </div>
+                     </div>
+               }
+     
                <div className="topLine"></div>
                {
                   showActionPopup ?
@@ -87,7 +115,7 @@ function CreateWorkflow() {
                <div className="arrowHead">▼</div>
                {
                   step2CreateActionIsOpen ? <CreateAction ref={null} step2CreateActionIsOpen={step2CreateActionIsOpen} /> :
-                     <div className="action" onClick={openCreateAction}>
+                     <div className="action" onClick={openStep2CreateAction}>
                         <div className="actionContent">
                            <div className="actionAndTriggerIcon">
                               <span>
