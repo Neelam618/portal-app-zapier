@@ -7,19 +7,19 @@ const menu = (
     <Menu>
         <Menu.Item>
             <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
-                1st menu item
+                View
             </a>
         </Menu.Item>
         <Menu.Divider />
         <Menu.Item>
             <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
-                2nd menu item
+                Rename
             </a>
         </Menu.Item>
         <Menu.Divider />
         <Menu.Item>
             <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-                3rd menu item
+                Delete
             </a>
         </Menu.Item>
     </Menu>
