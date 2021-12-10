@@ -293,6 +293,10 @@ body {
     padding-bottom: 2rem;
     position: relative;
 }
+.navItems a:hover {
+    background-color: #f2f2f2;
+    border-radius: 10px;
+}
 .navItems a {
     text-decoration: none;
     color: #424242;
