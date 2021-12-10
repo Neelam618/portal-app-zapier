@@ -5,7 +5,7 @@ const { Option } = Select;
 
 function SetupTrigger() {
     return (
-        <div className="chooseAppAndEventContent">
+        <div className="accordionContent">
             <div className='stepContentTitle'>Set up Trigger</div>
 
             <label htmlFor="">Label/Mailbox</label>
