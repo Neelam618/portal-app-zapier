@@ -747,6 +747,9 @@ body {
     border: none;
     cursor: pointer;
 }
+#zaps .createBtn:hover {
+    opacity: 0.8;
+}
 #zaps .zapItem {
     display: flex;
     align-items: center;
