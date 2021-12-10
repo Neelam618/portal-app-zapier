@@ -1488,6 +1488,13 @@ filter: brightness(2.5);
     margin-top: 6px;
     color: #666666;
 }
+.stepContentTitle {
+    font-size: 18px;
+    text-align: left;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 1em;
+}
 .ant-modal-content {
     border-radius: 30px;
     width: 800px;
@@ -1838,10 +1845,10 @@ filter: brightness(2.5);
 }
 #chooseAppAndEventStepContainer .titleContainer {
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
     padding: 18px;
     width: 100%;
+    border-bottom: 1px solid rgb(204, 204, 204);
 }
 #chooseAppAndEventStepContainer .triggerAppIcon {
     align-items: center;

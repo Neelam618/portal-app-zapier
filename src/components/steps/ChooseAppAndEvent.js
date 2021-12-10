@@ -64,6 +64,7 @@ function ChooseAppAndEvent(props) {
                     </div>
                 </div>
                 <div className="chooseAppAndEventContent">
+                    <div className='stepContentTitle'>Choose App & event</div>
                     <div className="chooseAppContainer" onClick={showModal}>
                         <div className="selectedApp">
                             <img className="selectedAppIcon" src="https://zapier-images.imgix.net/storage/services/6cf3f5a461feadfba7abc93c4c395b33_2.128x128.png?auto=format%2Ccompress&ixlib=python-3.0.0&q=50" alt="" />
