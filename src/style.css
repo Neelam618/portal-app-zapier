@@ -1799,37 +1799,40 @@ filter: brightness(2.5);
 #gmail .chooseAccountInfo {
     z-index: -999;
 }
-#gmail .testTriggerIcons {
+#testTriggerContainer {
+    padding: 10px 50px 50px;
+}
+#testTriggerContainer .testTriggerIcons {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#gmail .appIcon {
+#testTriggerContainer .appIcon {
     border: 1px solid rgb(204, 204, 204);
     border-radius: 15px;
     margin: 10px;
 }
-#gmail .workflowIcon {
+#testTriggerContainer .workflowIcon {
     border: 1px solid rgb(204, 204, 204);
     border-radius: 15px;
     padding: 9px;
     margin: 10px;
 }
-#gmail .testTriggerTitle {
+#testTriggerContainer .testTriggerTitle {
     text-align: center;
     font-weight: 700;
     font-size: 18px;
 }
-#gmail .testTriggerPara {
+#testTriggerContainer .testTriggerPara {
     text-align: center;
     padding: 0 6em;
 }
-#gmail .testTriggerBtnWrapper {
+#testTriggerContainer .testTriggerBtnWrapper {
     text-align: center;
     margin: 2em;
     margin-bottom: 7em;
 }
-#gmail .testTriggerBtn {
+#testTriggerContainer .testTriggerBtn {
     background-color: #136bf5;
     padding: 1em 3em;
     border-radius: 10px;

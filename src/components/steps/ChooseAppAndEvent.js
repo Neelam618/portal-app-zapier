@@ -3,6 +3,7 @@ import { Modal, Select, Input } from 'antd';
 import { SearchOutlined } from '@ant-design/icons'
 import ChooseAccount from './ChooseAccount';
 import SetupTrigger from './SetupTrigger';
+import TestTrigger from './TestTrigger';
 
 const apps = [
     {
@@ -166,6 +167,7 @@ function ChooseAppAndEvent(props) {
                 </div>
                 <ChooseAccount />
                 <SetupTrigger />
+                <TestTrigger />
 
             </div>
         </>
