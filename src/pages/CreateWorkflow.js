@@ -11,6 +11,7 @@ function CreateWorkflow() {
    const [data, setData] = useState('Name your workflow')
    const [inputVal, setInputVal] = useState(data)
    const [showActionPopup, setShowActionPopup] = useState(false)
+   const [showActionPopup2, setShowActionPopup2] = useState(false)
    const [step2CreateActionIsOpen, setStep2CreateActionIsOpen] = useState(false)
    const [step1CreateTriggerIsOpen, setStep1CreateTriggerIsOpen] = useState(true)
 
@@ -76,7 +77,7 @@ function CreateWorkflow() {
          <div className="mainContainer">
             <div className="mainContent">
 
-            {
+               {
                   step1CreateTriggerIsOpen ? <CreateTrigger /> :
                      <div className="trigger" onClick={openStep1CreateTrigger}>
                         <div className="triggerContent">
@@ -96,12 +97,12 @@ function CreateWorkflow() {
                         </div>
                      </div>
                }
-     
+
                <div className="topLine"></div>
                {
                   showActionPopup ?
                      <CreateAction setShowActionPopup={setShowActionPopup} /> :
-                     <div>
+                     <div className='addStepBtnContainer'>
                         <div style={{ position: 'relative' }}>
                            <div style={{ height: '26px' }}>
                               <div className="plusBtn" onClick={() => setShowActionPopup(true)}>
@@ -133,8 +134,20 @@ function CreateWorkflow() {
                         </div>
                      </div>
                }
-
-
+               <div className="bottomLine"></div>
+               {
+                  showActionPopup2 ?
+                     <CreateAction setShowActionPopup2={setShowActionPopup2} /> :
+                     <div className='addStepBtnContainer'>
+                        <div style={{ position: 'relative' }}>
+                           <div style={{ height: '26px' }}>
+                              <div className="plusBtn" onClick={() => setShowActionPopup2(true)}>
+                                 <svg style={{ display: 'block' }} width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z" fill="#136bf5"></path></svg>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+               }
 
             </div>
          </div>
