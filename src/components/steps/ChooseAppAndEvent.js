@@ -1,7 +1,8 @@
 import React, { useState, useRef } from 'react'
 import { Modal, Select, Input } from 'antd';
 import { SearchOutlined } from '@ant-design/icons'
-import ChooseAccount from '../ChooseAccount';
+import ChooseAccount from './ChooseAccount';
+import SetupTrigger from './SetupTrigger';
 
 const apps = [
     {
@@ -164,6 +165,7 @@ function ChooseAppAndEvent(props) {
                     </div>
                 </div>
                 <ChooseAccount />
+                <SetupTrigger />
 
             </div>
         </>

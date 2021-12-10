@@ -1483,7 +1483,7 @@ filter: brightness(2.5);
 #createWorkflow .eventLabel {
     margin-bottom: 0.8em;
 }
-#createWorkflow .eventInputInfo, .chooseAccountInfo {
+#createWorkflow .eventInputInfo, .chooseAccountInfo, .searchStringInfo {
     font-size: 12px;
     margin-top: 6px;
     color: #666666;
