@@ -1476,6 +1476,7 @@ filter: brightness(2.5);
 }
 #createWorkflow .chooseEventContainer {
     margin: 1.5em auto;
+    text-align: left;
 }
 #createWorkflow .eventLabel {
     margin-bottom: 0.8em;
@@ -1825,6 +1826,42 @@ filter: brightness(2.5);
     border: none;
     font-weight: 700;
     cursor: pointer;
+}
+#chooseAppAndEventStepContainer {
+    background-color: #fff;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 10px;
+}
+#chooseAppAndEventStepContainer .titleContainer {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 18px;
+    width: 100%;
+}
+#chooseAppAndEventStepContainer .triggerAppIcon {
+    align-items: center;
+    border-radius: 8px;
+    display: flex;
+    height: 60px;
+    padding: 0px 10px;
+    position: relative;
+    width: min-content;
+    padding: 10px;
+}
+#chooseAppAndEventStepContainer .triggerHeadingContainer {
+   text-align: left;
+   margin-left: 1em;
+}
+#chooseAppAndEventStepContainer .triggerHeadingContainer .triggerTitle {
+    color: #666666;
+    font-size: 14px;
+    font-weight: 400;
+}
+#chooseAppAndEventStepContainer .triggerHeadingContainer .triggerSubTitle {
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
 }
 @media screen and (max-width: 974px) {
     #zaps .zaps {
