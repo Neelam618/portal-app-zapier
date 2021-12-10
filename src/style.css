@@ -1396,7 +1396,7 @@ filter: brightness(2.5);
     cursor: pointer;
     border-top: 1px solid rgb(204, 204, 204);
 }
-#createWorkflow .subListItemContent {
+#createWorkflow .chooseAppAndEventContent, .chooseAccountContent {
     width: 100%;
     padding: 10px 50px 50px;
     min-height: 200px;
@@ -1476,22 +1476,26 @@ filter: brightness(2.5);
 }
 #createWorkflow .chooseEventContainer {
     margin: 1.5em auto;
+}
+.chooseAppAndEventContent, .chooseAccountContent {
     text-align: left;
 }
 #createWorkflow .eventLabel {
     margin-bottom: 0.8em;
 }
-#createWorkflow .eventInputInfo {
+#createWorkflow .eventInputInfo, .chooseAccountInfo {
     font-size: 12px;
     margin-top: 6px;
     color: #666666;
 }
 .ant-modal-content {
     border-radius: 30px;
-    width: auto;
-    max-width: 750px;
+    width: 800px;
     margin: 30px;
     box-shadow: rgb(0 0 0 / 50%) 0px 20px 30px 0px;
+}
+.ant-modal-body {
+    padding: 0;
 }
 .ant-modal-header {
     border-radius: 30px 30px 0 0;
@@ -1628,13 +1632,13 @@ filter: brightness(2.5);
     text-align: left;
     background-color: rgb(255, 255, 255);
 }
-.actionContainer .optionsButton, .triggerContainer .optionsButton {
+.actionContainer .optionsButton, .triggerContainer .optionsButton, #chooseAppAndEventStepContainer .optionsButton {
     background-color: #ffffff;
     border: none;
     padding: 2em 10px;
     cursor: pointer;
 }
-.actionContainer .optionsButton:hover, .triggerContainer .optionsButton:hover {
+.actionContainer .optionsButton:hover, .triggerContainer .optionsButton:hover, #chooseAppAndEventStepContainer .optionsButton:hover {
     box-shadow: rgb(0 0 0 / 10%) 0px 4px 5px;
     border: 1px solid rgb(230, 230, 230);
     border-radius: 10px;
@@ -1690,7 +1694,7 @@ filter: brightness(2.5);
     display: block;
     width: 100%;
 }
-#gmail .chooseAccountContainer {
+#gmail .chooseAccountContainer, .chooseAccountContainer {
     display: grid;
     grid-template-columns: 40px 1fr 40px;
     grid-template-areas: "iconBefore input iconAfter";

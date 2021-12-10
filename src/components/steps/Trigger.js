@@ -109,7 +109,7 @@ function Gmail() {
                             </div>
                             {
                                 isChooseAppEventCollapsed ?
-                                    <div className="subListItemContent">
+                                    <div className="chooseAppAndEventContent">
                                         <div className="chooseAppContainer" onClick={showModal}>
                                             <div className="selectedApp">
                                                 <img className="selectedAppIcon" src="https://zapier-images.imgix.net/storage/services/6cf3f5a461feadfba7abc93c4c395b33_2.128x128.png?auto=format%2Ccompress&ixlib=python-3.0.0&q=50" alt="" />
@@ -142,7 +142,7 @@ function Gmail() {
                                             <label className="eventLabel">Trigger Event
                                                 <span className="requiredText">required</span>
                                             </label>
-                                            <div className="selectDropdownContainer">
+                                            <div className="chooseEventDropdownContainer">
                                                 <Select className="selectListItem" defaultValue="1" style={{ width: "100%" }} onChange={selectHandleChange}>
                                                     <Option value="1">
                                                         <div className="selectListItemTitle">New Public Message Posted Anywhere</div>
@@ -172,7 +172,7 @@ function Gmail() {
                             </div>
                             {
                                 isChooseAccountCollapsed ?
-                                    <div className="subListItemContent">
+                                    <div className="chooseAppAndEventContent">
                                         <label htmlFor="">Gmail account: <span>(required)</span></label>
                                         <div>
                                             <div className="chooseAccountContainer">
@@ -203,7 +203,7 @@ function Gmail() {
                             </div>
                             {
                                 isSetupTriggerCollapsed ?
-                                    <div className="subListItemContent">
+                                    <div className="chooseAppAndEventContent">
                                         <label htmlFor="">Label/Mailbox</label>
                                         <div>
                                             <div className="chooseAccountContainer">
