@@ -2,29 +2,30 @@ import React, {useState} from 'react'
 import { Row, Col, Input, Button } from 'antd';
 import { Menu, Dropdown, Tooltip, Checkbox } from 'antd';
 import WorkflowItem from '../components/WorkflowItem';
+import { NavLink as Link } from 'react-router-dom';
 
 const menu = (
     <Menu>
         <Menu.Item>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
+            <a target="" href="">
                 Select paused
             </a>
         </Menu.Item>
         <Menu.Divider />
         <Menu.Item>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
+            <a target="" href="">
                Select drafts
             </a>
         </Menu.Item>
         <Menu.Divider />
         <Menu.Item>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
+            <a target="" href=''>
                 Select all
             </a>
         </Menu.Item>
         <Menu.Divider />
         <Menu.Item>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
+            <a target="" href="">
                 Deselect all
             </a>
         </Menu.Item>
@@ -53,7 +54,7 @@ function WorkflowListSection() {
                         </Button>
                     </Dropdown>
                     <div><button className="trashBtn">Trash</button></div>
-                    <div><button className="createBtn">Create Workflow</button></div>
+                    <Link to="/create-workflow"><button className="createBtn">Create Workflow</button></Link>
                 </div>
             </div>
             <div className="zapList">

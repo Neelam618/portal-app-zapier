@@ -37,7 +37,7 @@ function SideNav() {
                         navItems.map((navItem) => {
                             return (
                                 <li class="navItems">
-                                    <Link to={navItem.path}>
+                                    <Link to={navItem.path} activeStyle={{color: '#499df3'}}>
                                         <span className="navIcon">
                                             <img src={navItem.icon} alt="" />
                                         </span>
