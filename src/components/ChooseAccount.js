@@ -6,6 +6,7 @@ const { Option } = Select;
 function ChooseAccount() {
     return (
         <div className="chooseAccountContent">
+            <div className='stepContentTitle'>Choose Account</div>
             <label htmlFor="">Gmail account: <span>(required)</span></label>
             <div>
                 <div className="chooseAccountContainer">
