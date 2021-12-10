@@ -2,8 +2,6 @@ import React, { useState, useRef } from 'react'
 import { Modal, Select, Input } from 'antd';
 import { SearchOutlined } from '@ant-design/icons'
 import ChooseAccount from './ChooseAccount';
-import SetupTrigger from './SetupTrigger';
-import TestTrigger from './TestTrigger';
 
 const apps = [
     {
@@ -17,18 +15,9 @@ const apps = [
     }
 ]
 
-function ChooseAppAndEvent(props) {
-
-    const [showEditOptions, setShowEditOptions] = useState(false)
-    const [isVisible, setIsVisible] = useState(false)
-
-    const [isChooseAppEventCollapsed, setIsChooseAppEventCollapsed] = useState(false)
-    const [isChooseAccountCollapsed, setIsChooseAccountCollapsed] = useState(false)
-    const [isSetupTriggerCollapsed, setIsSetupTriggerCollapsed] = useState(false)
-    const [isTestTriggerCollapsed, setIsTestTriggerCollapsed] = useState(false)
+function ChooseAppAndEvent() {
 
     const [isModalVisible, setIsModalVisible] = useState(false);
-    const [showDropdown, setshowDropdown] = useState(false)
     const [option, setOption] = useState()
     const [showChooseAppAndEventStep, setShowChooseAppAndEventStep] = useState(false)
     const [showNextStep, setShowNextStep] = useState(false)
@@ -194,9 +183,6 @@ function ChooseAppAndEvent(props) {
                 {
                     showNextStep ? <ChooseAccount /> : null
                 }
-                
-               
-
             </div>
         </>
     )

@@ -61,7 +61,6 @@ function SetupTrigger() {
                         <button className="continueBtn" onClick={openNextStepAndCloseCurrentStep}>Continue</button>
                     </div>
             }
-
             {
                 showNextStep ? <TestTrigger /> : null
             }

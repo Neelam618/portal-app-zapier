@@ -54,7 +54,6 @@ function ChooseAccount() {
             {
                 showNextStep ? <SetupTrigger /> : null
             }
-
         </>
     )
 }
