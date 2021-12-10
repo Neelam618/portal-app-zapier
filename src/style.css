@@ -1379,7 +1379,7 @@ filter: brightness(2.5);
 #createWorkflow .listItemheader:hover .editBtn {
     opacity: 1;
 }
-#createWorkflow .subListItemTitle {
+.accordionTitle {
     font-weight: 700;
     font-size: 14px;
 }
@@ -1388,20 +1388,22 @@ filter: brightness(2.5);
     font-size: 14px;
     padding: 0 10px;
 }
-#createWorkflow .subListItem {
+.accordionItem {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 50px;
     cursor: pointer;
     border-top: 1px solid rgb(204, 204, 204);
+    border-bottom: 1px solid rgb(204, 204, 204);
+    padding: 1em;
 }
-#createWorkflow .chooseAppAndEventContent, .chooseAccountContent {
+#createWorkflow .accordionContent, .chooseAccountContent {
     width: 100%;
     padding: 10px 50px 50px;
     min-height: 200px;
 }
-#createWorkflow .arrow {
+#createWorkflow .accordionArrow {
     margin-right: 10px;
 }
 #createWorkflow .selectedAppIcon {
@@ -1477,7 +1479,7 @@ filter: brightness(2.5);
 #createWorkflow .chooseEventContainer {
     margin: 1.5em auto;
 }
-.chooseAppAndEventContent, .chooseAccountContent {
+.accordionContent, .chooseAccountContent {
     text-align: left;
 }
 #createWorkflow .eventLabel {
