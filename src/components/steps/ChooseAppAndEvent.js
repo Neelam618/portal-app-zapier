@@ -32,6 +32,7 @@ function ChooseAppAndEvent(props) {
     const [option, setOption] = useState()
     const [showChooseAppAndEventStep, setShowChooseAppAndEventStep] = useState(false)
     const [showNextStep, setShowNextStep] = useState(false)
+    const [showAccordionContent, setShowAccordionContent] = useState(false)
 
     const showModal = () => {
         setIsModalVisible(true);
@@ -56,8 +57,13 @@ function ChooseAppAndEvent(props) {
 
     function openNextStepAndCloseCurrentStep() {
         setShowNextStep(true)
+        setShowAccordionContent(false)
     }
 
+    function openAccordionContent() {
+        setShowAccordionContent(true)
+        setShowNextStep(false)
+    }
     return (
         <>
             <div id='chooseAppAndEventStepContainer'>
@@ -71,8 +77,8 @@ function ChooseAppAndEvent(props) {
                     </div>
                 </div>
                 {
-                    showNextStep ?
-                        <div className="accordionItem">
+                    showNextStep && !showAccordionContent ?
+                        <div className="accordionItem" onClick={openAccordionContent}>
                             <div className="accordionTitle">
                                 <span className="accordionArrow">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.41 8.59009L12 13.1701L16.59 8.59009L18 10.0001L12 16.0001L6 10.0001L7.41 8.59009Z" fill="#666666"></path></svg>
