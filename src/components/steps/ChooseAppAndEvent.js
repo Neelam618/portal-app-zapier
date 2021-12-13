@@ -1,7 +1,9 @@
 import React, { useState, useRef } from 'react'
 import { Modal, Select, Input } from 'antd';
 import { SearchOutlined } from '@ant-design/icons'
-import ChooseAccount from './ChooseAccount';
+import SetupAction from './SetupAction';
+import SetupTrigger from './SetupTrigger';
+import ChooseAccount from './ChooseAccount'
 
 const apps = [
     {
@@ -15,7 +17,7 @@ const apps = [
     }
 ]
 
-function ChooseAppAndEvent() {
+function ChooseAppAndEvent(props) {
 
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [option, setOption] = useState()
@@ -53,6 +55,14 @@ function ChooseAppAndEvent() {
         setShowAccordionContent(true)
         setShowNextStep(false)
     }
+    let nextComponent;
+    if (props.step == "trigger") {
+        nextComponent = <ChooseAccount step = "trigger" />
+    }
+    else if (props.step == "action") {
+        nextComponent = <ChooseAccount step="action"/>
+    }
+
     return (
         <>
             <div id='chooseAppAndEventStepContainer'>
@@ -61,7 +71,11 @@ function ChooseAppAndEvent() {
                         <img width="40" src="https://zapier-images.imgix.net/storage/services/62c82a7958c6c29736f17d0495b6635c.128x128.png?auto=format%2Ccompress&ixlib=python-3.0.0&q=50" alt="" />
                     </div>
                     <div class="triggerHeadingContainer">
-                        <div className="triggerTitle">Trigger</div>
+                        <div className="triggerTitle">
+                            {props.title == "trigger" ? ( <div>Trigger</div>) : props.title == "action" ? (
+                                    <div>Action</div>
+                            ) : null}
+                        </div>
                         <div className="triggerSubTitle">1. New Event in Google Calendar</div>
                     </div>
                 </div>
@@ -181,7 +195,7 @@ function ChooseAppAndEvent() {
                         </div>
                 }
                 {
-                    showNextStep ? <ChooseAccount /> : null
+                    showNextStep ? nextComponent : null
                 }
             </div>
         </>

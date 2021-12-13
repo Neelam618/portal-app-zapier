@@ -26,7 +26,7 @@ function CreateTrigger(props) {
     return (
         <div>
             {
-                showChooseAppAndEventStep ? <ChooseAppAndEvent /> :
+                showChooseAppAndEventStep ? <ChooseAppAndEvent step="trigger" title="trigger" /> :
                     <div className="triggerContainer">
                         <div className="actionAndTriggerHeader">
                             <div className="actionAndTriggerTitleContainer">
@@ -112,7 +112,7 @@ function CreateTrigger(props) {
                                 </div>
                             </div>
                         </div>
-                    </div >
+                    </div>
             }
         </div>
     )
