@@ -72,9 +72,7 @@ function ChooseAppAndEvent(props) {
                     </div>
                     <div class="triggerHeadingContainer">
                         <div className="triggerTitle">
-                            {props.title == "trigger" ? ( <div>Trigger</div>) : props.title == "action" ? (
-                                    <div>Action</div>
-                            ) : null}
+                            {props.step == "trigger" ? <div>Trigger</div> : props.step == "action" ? <div>Action</div> : null}
                         </div>
                         <div className="triggerSubTitle">1. New Event in Google Calendar</div>
                     </div>

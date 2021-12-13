@@ -29,7 +29,7 @@ function CreateAction(props) {
     return (
         <>
             {
-                showChooseAppAndEventStep ? <ChooseAppAndEvent step="action" title="action" /> :
+                showChooseAppAndEventStep ? <ChooseAppAndEvent step="action" /> :
 
                     <div className="actionContainer" ref={props.step2CreateActionIsOpen ? props.ref : ref}>
                         <div className="actionAndTriggerHeader">

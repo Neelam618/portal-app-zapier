@@ -26,7 +26,7 @@ function CreateTrigger(props) {
     return (
         <div>
             {
-                showChooseAppAndEventStep ? <ChooseAppAndEvent step="trigger" title="trigger" /> :
+                showChooseAppAndEventStep ? <ChooseAppAndEvent step="trigger" /> :
                     <div className="triggerContainer">
                         <div className="actionAndTriggerHeader">
                             <div className="actionAndTriggerTitleContainer">
