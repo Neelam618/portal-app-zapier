@@ -24,6 +24,7 @@ function ChooseAppAndEvent(props) {
     const [showChooseAppAndEventStep, setShowChooseAppAndEventStep] = useState(false)
     const [showNextStep, setShowNextStep] = useState(false)
     const [showAccordionContent, setShowAccordionContent] = useState(false)
+    const [triggerEventList, setTriggerEventList] = useState([])
 
     const showModal = () => {
         setIsModalVisible(true);
@@ -42,10 +43,31 @@ function ChooseAppAndEvent(props) {
 
     const { Option } = Select;
 
-    function openChooseAppAndEventStep(appName) {
+    function openChooseAppAndEventStep(appName, appId) {
         setShowChooseAppAndEventStep(true)
         props.setSelectedApp(appName)
         setIsModalVisible(false)
+
+         fetch('http://143.244.142.223:8005/app/v1/public/task_list/' + appId, {
+            // mode: 'no-cors',
+            // method: 'GET',
+            // headers: {
+            //   'Content-Type': 'application/json'
+            // }
+
+        })
+            .then((response) => {
+                response.json().then((taskList) => {
+                    // Work with JSON taskList here
+                    console.log(taskList)
+                    setTriggerEventList(taskList)
+                })
+            })
+            .catch((err) => {
+                // Do something for an error here
+                console.log(err)
+            })
+
     }
 
     function openNextStepAndCloseCurrentStep() {
@@ -59,10 +81,10 @@ function ChooseAppAndEvent(props) {
     }
     let nextComponent;
     if (props.step == "trigger") {
-        nextComponent = <ChooseAccount step = "trigger" />
+        nextComponent = <ChooseAccount step="trigger" />
     }
     else if (props.step == "action") {
-        nextComponent = <ChooseAccount step="action"/>
+        nextComponent = <ChooseAccount step="action" />
     }
 
     return (
@@ -124,7 +146,7 @@ function ChooseAppAndEvent(props) {
                                                 {
                                                     props.appList.map((appItem) => {
                                                         return (
-                                                            <div className="triggerAppWrapper" onClick={() => openChooseAppAndEventStep(appItem.name)}>
+                                                            <div className="triggerAppWrapper" onClick={() => openChooseAppAndEventStep(appItem.name, appItem.id)}>
                                                                 <div className="triggerAppIcon">
                                                                     <img width="21" src="" alt="" />
                                                                 </div>
@@ -178,15 +200,16 @@ function ChooseAppAndEvent(props) {
                                     <span className="requiredText">required</span>
                                 </label>
                                 <div className="chooseEventDropdownContainer">
-                                    <Select className="selectListItem" defaultValue="1" style={{ width: "100%" }} onChange={selectHandleChange}>
-                                        <Option value="1">
-                                            <div className="selectListItemTitle">New Public Message Posted Anywhere</div>
-                                            <p className="selectListItemPara">Triggers when a new message is posted to any public channel</p>
-                                        </Option>
-                                        <Option value="2">
-                                            <div className="selectListItemTitle">New Public Message Posted Anywhere 2</div>
-                                            <p className="selectListItemPara">Triggers when a new message is posted to any public channel</p>
-                                        </Option>
+                                    <Select className="selectListItem" style={{ width: "100%" }} onChange={selectHandleChange}>
+                                        {
+                                            triggerEventList.map((triggerEvent) => {
+                                                return <Option value={triggerEvent.id}>
+                                                    <div className="selectListItemTitle">{triggerEvent.name}</div>
+                                                    {/* <p className="selectListItemPara">Triggers when a new message is posted to any public channel</p> */}
+                                                </Option>
+                                            })
+                                        }
+
                                     </Select>
                                 </div>
                                 <p className="eventInputInfo">This is what starts the workflow.</p>
