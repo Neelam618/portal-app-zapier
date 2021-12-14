@@ -21,6 +21,7 @@ const apps = [
 function CreateTrigger(props) {
 
     const [appList, setAppList] = useState([])
+    const [selectedApp, setSelectedApp] = useState({})
 
     useEffect(() => {
         fetch('http://143.244.142.223:8005/app/v1/public/', {
@@ -48,14 +49,15 @@ function CreateTrigger(props) {
     const ref = useRef(null)
     const [showChooseAppAndEventStep, setShowChooseAppAndEventStep] = useState(false)
 
-    function openChooseAppAndEventStep() {
+    function openChooseAppAndEventStep(app) {
         setShowChooseAppAndEventStep(true)
+        setSelectedApp(app)
     }
 
     return (
         <div>
             {
-                showChooseAppAndEventStep ? <ChooseAppAndEvent step="trigger" /> :
+                showChooseAppAndEventStep ? <ChooseAppAndEvent step="trigger" selectedApp={selectedApp} /> :
                     <div className="triggerContainer">
                         <div className="actionAndTriggerHeader">
                             <div className="actionAndTriggerTitleContainer">
@@ -94,7 +96,7 @@ function CreateTrigger(props) {
                                         {
                                             appList.map((appItem) => {
                                                 return (
-                                                    <div className="triggerAppWrapper" onClick={openChooseAppAndEventStep}>
+                                                    <div className="triggerAppWrapper" onClick={openChooseAppAndEventStep(appItem)}>
                                                         <div className="triggerAppIcon">
                                                             <img width="21" src={appItem.appIcon} alt="" />
                                                         </div>
