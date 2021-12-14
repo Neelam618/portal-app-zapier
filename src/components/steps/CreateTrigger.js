@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import { Input } from 'antd';
 import { SearchOutlined } from '@ant-design/icons'
 import ChooseAppAndEvent from './ChooseAppAndEvent';
@@ -15,7 +15,36 @@ const apps = [
     }
 ]
 
+
+
+
 function CreateTrigger(props) {
+
+    const [appList, setAppList] = useState([])
+
+    useEffect(() => {
+        fetch('http://143.244.142.223:8005/app/v1/public/', {
+            // mode: 'no-cors',
+            // method: 'GET',
+            // headers: {
+            //   'Content-Type': 'application/json'
+            // }
+
+        })
+            .then((response) => {
+                response.json().then((appList) => {
+                    // Work with JSON appList here
+                    console.log(appList)
+                    setAppList(appList)
+                })
+            })
+            .catch((err) => {
+                // Do something for an error here
+                console.log(err)
+            })
+    }, [])
+
+
     const ref = useRef(null)
     const [showChooseAppAndEventStep, setShowChooseAppAndEventStep] = useState(false)
 
@@ -63,13 +92,13 @@ function CreateTrigger(props) {
                                     </div>
                                     <div className="triggerAppsContainer">
                                         {
-                                            apps.map((appItem) => {
+                                            appList.map((appItem) => {
                                                 return (
                                                     <div className="triggerAppWrapper" onClick={openChooseAppAndEventStep}>
                                                         <div className="triggerAppIcon">
                                                             <img width="21" src={appItem.appIcon} alt="" />
                                                         </div>
-                                                        <div className="triggerAppName">{appItem.app}</div>
+                                                        <div className="triggerAppName">{appItem.name}</div>
                                                     </div>
                                                 )
                                             })

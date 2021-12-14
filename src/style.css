@@ -708,19 +708,6 @@ body {
 .dropdownRoot {
     width: 200px;
 }
-#zaps .selectBox {
-    border-radius: 3px;
-    padding-right: 55px;
-    overflow: auto;
-    white-space: pre-wrap;
-    height: auto;
-    width: 45px;
-    line-height: 1.7;
-    min-height: 45px;
-    padding: 10px;
-    margin: 0;
-    border: 1px solid #dadfe2;
-}
 #zaps .ant-switch {
     font-weight: 600;
 }
