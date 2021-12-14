@@ -96,7 +96,7 @@ function ChooseAppAndEvent(props) {
                             <div className="chooseAppContainer" onClick={showModal}>
                                 <div className="selectedApp">
                                     <img className="selectedAppIcon" src="https://zapier-images.imgix.net/storage/services/6cf3f5a461feadfba7abc93c4c395b33_2.128x128.png?auto=format%2Ccompress&ixlib=python-3.0.0&q=50" alt="" />
-                                    <span className="selectedAppName">{props.selectedApp.name}</span>
+                                    <span className="selectedAppName">{props.selectedApp}</span>
                                 </div>
                                 <div className="changeText">Change</div>
                             </div>
@@ -120,13 +120,13 @@ function ChooseAppAndEvent(props) {
                                             </div>
                                             <div className="triggerAppsContainer">
                                                 {
-                                                    apps.map((appItem) => {
+                                                    props.appList.map((appItem) => {
                                                         return (
                                                             <div className="triggerAppWrapper" onClick={openChooseAppAndEventStep}>
                                                                 <div className="triggerAppIcon">
-                                                                    <img width="21" src={appItem.appIcon} alt="" />
+                                                                    <img width="21" src="" alt="" />
                                                                 </div>
-                                                                <div className="triggerAppName">{appItem.app}</div>
+                                                                <div className="triggerAppName">{appItem.name}</div>
                                                             </div>
                                                         )
                                                     })

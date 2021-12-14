@@ -49,15 +49,15 @@ function CreateTrigger(props) {
     const ref = useRef(null)
     const [showChooseAppAndEventStep, setShowChooseAppAndEventStep] = useState(false)
 
-    function openChooseAppAndEventStep(app) {
+    function openChooseAppAndEventStep(appName) {
         setShowChooseAppAndEventStep(true)
-        setSelectedApp(app)
+        setSelectedApp(appName)
     }
 
     return (
         <div>
             {
-                showChooseAppAndEventStep ? <ChooseAppAndEvent step="trigger" selectedApp={selectedApp} /> :
+                showChooseAppAndEventStep ? <ChooseAppAndEvent step="trigger" selectedApp={selectedApp} appList={appList} /> :
                     <div className="triggerContainer">
                         <div className="actionAndTriggerHeader">
                             <div className="actionAndTriggerTitleContainer">
@@ -96,7 +96,7 @@ function CreateTrigger(props) {
                                         {
                                             appList.map((appItem) => {
                                                 return (
-                                                    <div className="triggerAppWrapper" onClick={openChooseAppAndEventStep(appItem)}>
+                                                    <div className="triggerAppWrapper" onClick={openChooseAppAndEventStep(appItem.name)}>
                                                         <div className="triggerAppIcon">
                                                             <img width="21" src={appItem.appIcon} alt="" />
                                                         </div>
