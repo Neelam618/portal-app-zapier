@@ -42,8 +42,10 @@ function ChooseAppAndEvent(props) {
 
     const { Option } = Select;
 
-    function openChooseAppAndEventStep() {
+    function openChooseAppAndEventStep(appName) {
         setShowChooseAppAndEventStep(true)
+        props.setSelectedApp(appName)
+        setIsModalVisible(false)
     }
 
     function openNextStepAndCloseCurrentStep() {
@@ -122,7 +124,7 @@ function ChooseAppAndEvent(props) {
                                                 {
                                                     props.appList.map((appItem) => {
                                                         return (
-                                                            <div className="triggerAppWrapper" onClick={openChooseAppAndEventStep}>
+                                                            <div className="triggerAppWrapper" onClick={() => openChooseAppAndEventStep(appItem.name)}>
                                                                 <div className="triggerAppIcon">
                                                                     <img width="21" src="" alt="" />
                                                                 </div>
