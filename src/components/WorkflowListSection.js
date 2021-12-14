@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
 import { Row, Col, Input, Button } from 'antd';
-import { Menu, Dropdown, Tooltip, Checkbox } from 'antd';
+import { Menu, Dropdown, Tooltip } from 'antd';
 import WorkflowItem from '../components/WorkflowItem';
 import { NavLink as Link } from 'react-router-dom';
+import { AllCheckerCheckbox, Checkbox, CheckboxGroup } from '@createnl/grouped-checkboxes';
 
 const menu = (
     <Menu>
@@ -43,9 +44,11 @@ function WorkflowListSection() {
     return (
         <Col lg={16} className="home">
             <h2 className="subHeading">Home</h2>
+            <CheckboxGroup>
             <div style={{ position: 'relative' }}>
                 <div className="toolbar">
-                    <Checkbox className="selectBox" onChange={onChange} checked={checked} />
+                    {/* <Checkbox className="selectBox" onChange={onChange} checked={checked} /> */}
+                    <AllCheckerCheckbox />
                     <Dropdown trigger="click" overlay={menu} placement="bottomLeft" overlayClassName="dropdownRoot">
                         <Button>
                             <span>
@@ -65,6 +68,7 @@ function WorkflowListSection() {
             <Tooltip placement="bottom" title="View workflow details">
                 <WorkflowItem switchDisabled={true} />
             </Tooltip>
+            </CheckboxGroup>
         </Col>
     )
 }

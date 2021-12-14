@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import { Switch } from 'antd';
-import { Tooltip, Button, Checkbox } from 'antd';
+import { Tooltip, Button } from 'antd';
 import { Menu, Dropdown } from 'antd';
+import { AllCheckerCheckbox, Checkbox, CheckboxGroup } from '@createnl/grouped-checkboxes';
 
 const menu = (
     <Menu>
