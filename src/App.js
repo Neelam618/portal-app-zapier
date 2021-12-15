@@ -6,7 +6,6 @@ import AppConnections from './pages/AppConnections';
 import Workflows from './pages/Workflows';
 import CreateWorkflow from './pages/CreateWorkflow'
 import './style.css'
-import PlatformUi from './pages/platformUI/PlatformUi';
 import Home from './pages/Home'
 
 
@@ -18,7 +17,6 @@ function App() {
       {/* <CreateWorkflow /> */}
       {/* <Apps /> */}
       <Home />
-      {/* <PlatformUi /> */}
     </div>
   );
 }
