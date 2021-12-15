@@ -48,7 +48,7 @@ function ChooseAppAndEvent(props) {
         props.setSelectedApp(appName)
         setIsModalVisible(false)
 
-         fetch('http://143.244.142.223:8005/app/v1/public/task_list/' + appId, {
+        fetch('http://143.244.142.223:8005/app/v1/public/app/' + appId + '/tasks', {
             // mode: 'no-cors',
             // method: 'GET',
             // headers: {
