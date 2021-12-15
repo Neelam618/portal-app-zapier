@@ -2,9 +2,7 @@ import React, { useState } from 'react'
 import { NavLink } from "react-router-dom";
 import { Switch } from 'antd';
 import CreateAction from '../components/steps/CreateAction'
-import Trigger from '../components/steps/Trigger';
 import CreateTrigger from '../components/steps/CreateTrigger';
-import Workflows from './Workflows';
 
 function CreateWorkflow() {
    const [toggleInputField, setToggleInputField] = useState(false)

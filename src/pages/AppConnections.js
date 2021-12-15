@@ -37,7 +37,6 @@ function AppConnections() {
             // headers: {
             //   'Content-Type': 'application/json'
             // }
-
         })
             .then((response) => {
                 response.json().then((authUrl) => {
