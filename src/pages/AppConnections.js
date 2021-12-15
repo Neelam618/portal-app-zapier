@@ -4,19 +4,19 @@ import { SearchOutlined } from '@ant-design/icons'
 
 const appList = [
     {
-        name: "Google Calender", appIcon: "https://zapier-images.imgix.net/storage/services/62c82a7958c6c29736f17d0495b6635c.png?auto=format&fit=crop&h=64&ixlib=react-9.0.2&w=64&ar=undefined&h=21&w=21&q=50&dpr=1"
+        name: "Gitlab", appIcon: "https://zapier-images.imgix.net/storage/services/62c82a7958c6c29736f17d0495b6635c.png?auto=format&fit=crop&h=64&ixlib=react-9.0.2&w=64&ar=undefined&h=21&w=21&q=50&dpr=1", id:"61b329365a36ea3185885361"
     },
     {
-        name: "Google Contacts", appIcon: "https://zapier-images.imgix.net/storage/services/1508661b55cd3c5ad1787303b0f58c99.png?auto=format&fit=crop&h=64&ixlib=react-9.0.2&w=64&ar=undefined&h=21&w=21&q=50&dpr=1"
+        name: "Google Contacts", appIcon: "https://zapier-images.imgix.net/storage/services/1508661b55cd3c5ad1787303b0f58c99.png?auto=format&fit=crop&h=64&ixlib=react-9.0.2&w=64&ar=undefined&h=21&w=21&q=50&dpr=1", id:"61b329365a36ea318588536"
     },
     {
-        name: "Google Docs", appIcon: "https://zapier-images.imgix.net/storage/services/ae42824b58d556d36b5e5b217377fc5e.png?auto=format&fit=crop&h=64&ixlib=react-9.0.2&w=64&ar=undefined&h=21&w=21&q=50&dpr=1"
+        name: "Google Docs", appIcon: "https://zapier-images.imgix.net/storage/services/ae42824b58d556d36b5e5b217377fc5e.png?auto=format&fit=crop&h=64&ixlib=react-9.0.2&w=64&ar=undefined&h=21&w=21&q=50&dpr=1", id:"61b329365a36ea3185885361"
     }
 ]
 
 function AppConnections() {
     const [isModalVisible, setIsModalVisible] = useState(false);
-
+    const [authUrl, setAuthUrl] = useState("")
     const showModal = () => {
         setIsModalVisible(true);
     };
@@ -30,8 +30,27 @@ function AppConnections() {
 
     function redirectToUserAuthInApp(appId) {
         setIsModalVisible(false)
-    }
 
+        fetch('http://143.244.142.223:8005/app/v1/public/auth/user/authenticate_url/' + appId, {
+            // mode: 'no-cors',
+            // method: 'GET',
+            // headers: {
+            //   'Content-Type': 'application/json'
+            // }
+
+        })
+            .then((response) => {
+                response.json().then((authUrl) => {
+                    // Work with JSON authUrl here
+                    console.log("authUrl",authUrl)
+                    setAuthUrl(authUrl)
+                })
+            })
+            .catch((err) => {
+                // Do something for an error here
+                console.log(err)
+            })
+    }
 
     return (
         <div id="appConnections">
