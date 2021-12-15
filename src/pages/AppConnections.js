@@ -28,7 +28,8 @@ function AppConnections() {
         setIsModalVisible(false);
     };
 
-    function openChooseAppAndEventStep(appName, appId) {
+    function redirectToUserAuthInApp(appId) {
+
     }
 
 
@@ -45,7 +46,7 @@ function AppConnections() {
                         {
                             appList.map((appItem) => {
                                 return (
-                                    <div className="appWrapper" onClick={() => openChooseAppAndEventStep(appItem.name, appItem.id)}>
+                                    <div className="appWrapper" onClick={() => redirectToUserAuthInApp(appItem.id)}>
                                         <div className="appIcon" style={{marginRight: 10}}>
                                             <img width="36" src={appItem.appIcon} alt="" />
                                         </div>
