@@ -29,7 +29,7 @@ function AppConnections() {
     };
 
     function redirectToUserAuthInApp(appId) {
-
+        setIsModalVisible(false)
     }
 
 
