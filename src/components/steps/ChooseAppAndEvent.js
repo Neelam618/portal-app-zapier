@@ -24,7 +24,6 @@ function ChooseAppAndEvent(props) {
     const [showChooseAppAndEventStep, setShowChooseAppAndEventStep] = useState(false)
     const [showNextStep, setShowNextStep] = useState(false)
     const [showAccordionContent, setShowAccordionContent] = useState(false)
-    const [triggerEventList, setTriggerEventList] = useState([])
 
     const showModal = () => {
         setIsModalVisible(true);
@@ -45,6 +44,7 @@ function ChooseAppAndEvent(props) {
 
     function openChooseAppAndEventStep(appName, appId) {
         setShowChooseAppAndEventStep(true)
+        props.setTriggerEventList(props.triggerEventList)
         props.setSelectedApp(appName)
         setIsModalVisible(false)
 
@@ -60,14 +60,13 @@ function ChooseAppAndEvent(props) {
                 response.json().then((taskList) => {
                     // Work with JSON taskList here
                     console.log(taskList)
-                    setTriggerEventList(taskList)
+                    props.setTriggerEventList(taskList)
                 })
             })
             .catch((err) => {
                 // Do something for an error here
                 console.log(err)
             })
-
     }
 
     function openNextStepAndCloseCurrentStep() {
@@ -202,7 +201,7 @@ function ChooseAppAndEvent(props) {
                                 <div className="chooseEventDropdownContainer">
                                     <Select className="selectListItem" style={{ width: "100%" }} onChange={selectHandleChange}>
                                         {
-                                            triggerEventList.map((triggerEvent) => {
+                                            props.triggerEventList.map((triggerEvent) => {
                                                 return <Option value={triggerEvent.id}>
                                                     <div className="selectListItemTitle">{triggerEvent.name}</div>
                                                     {/* <p className="selectListItemPara">Triggers when a new message is posted to any public channel</p> */}

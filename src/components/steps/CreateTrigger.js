@@ -19,6 +19,7 @@ function CreateTrigger(props) {
 
     const [appList, setAppList] = useState([])
     const [selectedApp, setSelectedApp] = useState()
+    const [triggerEventList, setTriggerEventList] = useState([])
 
     useEffect(() => {
         setShowChooseAppAndEventStep(false)
@@ -49,15 +50,35 @@ function CreateTrigger(props) {
     const ref = useRef(null)
     const [showChooseAppAndEventStep, setShowChooseAppAndEventStep] = useState(false)
 
-    function openChooseAppAndEventStep(appName) {
+    function openChooseAppAndEventStep(appName, appId) {
         setShowChooseAppAndEventStep(true)
         setSelectedApp(appName)
+
+        fetch('http://143.244.142.223:8005/app/v1/public/task_list/' + appId, {
+            // mode: 'no-cors',
+            // method: 'GET',
+            // headers: {
+            //   'Content-Type': 'application/json'
+            // }
+
+        })
+            .then((response) => {
+                response.json().then((taskList) => {
+                    // Work with JSON taskList here
+                    console.log("taskList",taskList)
+                    setTriggerEventList(taskList)
+                })
+            })
+            .catch((err) => {
+                // Do something for an error here
+                console.log(err)
+            })
     }
 
     return (
         <div>
             {
-                showChooseAppAndEventStep ? <ChooseAppAndEvent step="trigger" selectedApp={selectedApp} appList={appList} setSelectedApp={setSelectedApp} /> :
+                showChooseAppAndEventStep ? <ChooseAppAndEvent step="trigger" selectedApp={selectedApp} appList={appList} setSelectedApp={setSelectedApp} triggerEventList={triggerEventList} setTriggerEventList={setTriggerEventList} /> :
                     <div className="triggerContainer">
                         <div className="actionAndTriggerHeader">
                             <div className="actionAndTriggerTitleContainer">
@@ -96,7 +117,7 @@ function CreateTrigger(props) {
                                         {
                                             appList.map((appItem) => {
                                                 return (
-                                                    <div className="triggerAppWrapper" onClick={()=> openChooseAppAndEventStep(appItem.name)}>
+                                                    <div className="triggerAppWrapper" onClick={()=> openChooseAppAndEventStep(appItem.name, appItem.id)}>
                                                         <div className="triggerAppIcon">
                                                             <img width="21" src={appItem.appIcon} alt="" />
                                                         </div>
