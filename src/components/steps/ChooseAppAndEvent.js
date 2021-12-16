@@ -70,6 +70,8 @@ function ChooseAppAndEvent(props) {
     }
 
     function openNextStepAndCloseCurrentStep() {
+
+        
         setShowNextStep(true)
         setShowAccordionContent(false)
     }

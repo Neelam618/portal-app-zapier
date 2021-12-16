@@ -1,20 +1,24 @@
 import React, { useState } from 'react'
 import { Input, Modal } from 'antd';
 import { SearchOutlined } from '@ant-design/icons'
+import { useUserContext } from '../context/UserContext';
+
 
 const appList = [
     {
-        name: "Gitlab", appIcon: "https://zapier-images.imgix.net/storage/services/62c82a7958c6c29736f17d0495b6635c.png?auto=format&fit=crop&h=64&ixlib=react-9.0.2&w=64&ar=undefined&h=21&w=21&q=50&dpr=1", id:"61b329365a36ea3185885361"
+        name: "Gitlab", appIcon: "https://zapier-images.imgix.net/storage/services/62c82a7958c6c29736f17d0495b6635c.png?auto=format&fit=crop&h=64&ixlib=react-9.0.2&w=64&ar=undefined&h=21&w=21&q=50&dpr=1", id: "61b329365a36ea3185885361"
     },
     {
-        name: "Google Contacts", appIcon: "https://zapier-images.imgix.net/storage/services/1508661b55cd3c5ad1787303b0f58c99.png?auto=format&fit=crop&h=64&ixlib=react-9.0.2&w=64&ar=undefined&h=21&w=21&q=50&dpr=1", id:"61b329365a36ea318588536"
+        name: "Google Contacts", appIcon: "https://zapier-images.imgix.net/storage/services/1508661b55cd3c5ad1787303b0f58c99.png?auto=format&fit=crop&h=64&ixlib=react-9.0.2&w=64&ar=undefined&h=21&w=21&q=50&dpr=1", id: "61b329365a36ea318588536"
     },
     {
-        name: "Google Docs", appIcon: "https://zapier-images.imgix.net/storage/services/ae42824b58d556d36b5e5b217377fc5e.png?auto=format&fit=crop&h=64&ixlib=react-9.0.2&w=64&ar=undefined&h=21&w=21&q=50&dpr=1", id:"61b329365a36ea3185885361"
+        name: "Google Docs", appIcon: "https://zapier-images.imgix.net/storage/services/ae42824b58d556d36b5e5b217377fc5e.png?auto=format&fit=crop&h=64&ixlib=react-9.0.2&w=64&ar=undefined&h=21&w=21&q=50&dpr=1", id: "61b329365a36ea3185885361"
     }
 ]
 
 function AppConnections() {
+    const {user} = useUserContext()
+
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [authUrl, setAuthUrl] = useState("")
     const showModal = () => {
@@ -33,15 +37,17 @@ function AppConnections() {
 
         fetch('http://143.244.142.223:8005/app/v1/public/auth/user/authenticate_url/' + appId, {
             // mode: 'no-cors',
-            // method: 'GET',
-            // headers: {
-            //   'Content-Type': 'application/json'
-            // }
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + user.accessToken,
+            }
         })
             .then((response) => {
                 response.json().then((authUrl) => {
                     // Work with JSON authUrl here
-                    console.log("authUrl",authUrl)
+                    console.log("authUrl", authUrl)
                     setAuthUrl(authUrl)
                 })
             })
@@ -60,12 +66,12 @@ function AppConnections() {
                     <div className="addBtnWrapper"><button onClick={showModal} className="addBtn">Add connection</button></div>
                     <Modal className='addConnectionModal' centered title="Add a new app connection" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
                         {/* <p>Add a new app connection</p> */}
-                        <Input size="large" placeholder="Search apps..." prefix={<SearchOutlined />} style={{marginBottom: 10}}/>
+                        <Input size="large" placeholder="Search apps..." prefix={<SearchOutlined />} style={{ marginBottom: 10 }} />
                         {
                             appList.map((appItem) => {
                                 return (
                                     <div className="appWrapper" onClick={() => redirectToUserAuthInApp(appItem.id)}>
-                                        <div className="appIcon" style={{marginRight: 10}}>
+                                        <div className="appIcon" style={{ marginRight: 10 }}>
                                             <img width="36" src={appItem.appIcon} alt="" />
                                         </div>
                                         <div className="appName">{appItem.name}</div>

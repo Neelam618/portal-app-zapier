@@ -1548,6 +1548,7 @@ filter: brightness(2.5);
     position: relative;
     z-index: 4;
     line-height: 1;
+    text-align: center;
 }
 #createWorkflow .actionAndTriggerTitle {
     font-weight: 800;
