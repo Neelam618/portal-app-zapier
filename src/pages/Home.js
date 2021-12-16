@@ -12,11 +12,13 @@ import {
 import CreateWorkflow from '../pages/CreateWorkflow';
 import Workflows from '../pages/Workflows';
 import AppConnections from './AppConnections';
+import Topbar from '../components/Topbar';
 
 function Home() {
 
     return (
         <div id="dashboard">
+            <Topbar />
             <div>
                 <Switch>
                     <Route path="/create-workflow">

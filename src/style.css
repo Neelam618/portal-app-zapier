@@ -1879,15 +1879,14 @@ filter: brightness(2.5);
 
 /* firebase */
 
-.App {
+/* .appHome {
     display: flex;
-    align-items: center;
     justify-content: center;
     min-height: 100vh;
     flex-direction: column;
-  }
+  } */
   
-  input {
+  .authInput {
     padding: 12px;
     margin: 12px;
     font-size: 14px;
@@ -1898,7 +1897,7 @@ filter: brightness(2.5);
     width: 93%;
   }
   
-  button {
+  .authBtn {
     background-color: teal;
     border: none;
     color: white;

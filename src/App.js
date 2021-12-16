@@ -9,9 +9,9 @@ function App() {
   const { user, loading, error } = useUserContext();
 
   return (
-    <div className="App">
+    <div className="appHome">
       {error && <p className="error">{error}</p>}
-      {loading ? <h2>Loading...</h2> : <> {user ? <Home /> : <Auth />} </>}
+      {loading ? <h2>Loading...</h2> : user ? <Home /> : <Auth />}
     </div>
   );
 }
