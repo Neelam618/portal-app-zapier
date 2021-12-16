@@ -2,6 +2,7 @@ import React from 'react'
 import SideNav from '../components/SideNav'
 import Dashboard from './../components/Dashboard';
 import '../../src/style.css'
+import { useLocation } from 'react-router-dom';
 
 import {
     BrowserRouter as Router,
@@ -15,10 +16,13 @@ import AppConnections from './AppConnections';
 import Topbar from '../components/Topbar';
 
 function Home() {
+    let location = useLocation();
 
     return (
         <div id="dashboard">
-            <Topbar />
+            {
+                location.pathname == "/create-workflow"? null :  <Topbar />
+            }
             <div>
                 <Switch>
                     <Route path="/create-workflow">
@@ -48,7 +52,6 @@ function Home() {
                             <div><Dashboard /></div>
                         </div>
                     </Route>
-
                 </Switch>
             </div>
         </div>
