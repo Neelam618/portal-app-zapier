@@ -2,7 +2,7 @@ import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 import './App.css';
 import './style.css'
 import Home from './pages/Home'
-import Auth from './components/Auth'
+import Auth from './pages/Auth'
 import { useUserContext } from "./context/UserContext";
 
 function App() {

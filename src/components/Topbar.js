@@ -24,7 +24,7 @@ function Topbar() {
             <div>InnerKore</div>
             <div>
                 <Dropdown overlay={menu} placement="bottomLeft" arrow>
-                    <Button>{user.displayName}</Button>
+                    <Button>{user.email}</Button>
                 </Dropdown>
             </div>
         </div>

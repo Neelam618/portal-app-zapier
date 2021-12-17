@@ -1,26 +1,35 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Input, Modal } from 'antd';
 import { SearchOutlined } from '@ant-design/icons'
 import { useUserContext } from '../context/UserContext';
-
-
-const appList = [
-    {
-        name: "Gitlab", appIcon: "https://zapier-images.imgix.net/storage/services/62c82a7958c6c29736f17d0495b6635c.png?auto=format&fit=crop&h=64&ixlib=react-9.0.2&w=64&ar=undefined&h=21&w=21&q=50&dpr=1", id: "61b329365a36ea3185885361"
-    },
-    {
-        name: "Google Contacts", appIcon: "https://zapier-images.imgix.net/storage/services/1508661b55cd3c5ad1787303b0f58c99.png?auto=format&fit=crop&h=64&ixlib=react-9.0.2&w=64&ar=undefined&h=21&w=21&q=50&dpr=1", id: "61b329365a36ea318588536"
-    },
-    {
-        name: "Google Docs", appIcon: "https://zapier-images.imgix.net/storage/services/ae42824b58d556d36b5e5b217377fc5e.png?auto=format&fit=crop&h=64&ixlib=react-9.0.2&w=64&ar=undefined&h=21&w=21&q=50&dpr=1", id: "61b329365a36ea3185885361"
-    }
-]
 
 function AppConnections() {
     const {user} = useUserContext()
 
     const [isModalVisible, setIsModalVisible] = useState(false);
-    const [authUrl, setAuthUrl] = useState("")
+    const [appList, setAppList] = useState([])
+
+    useEffect(() => {
+        fetch('http://143.244.142.223:8005/app/v1/public/', {
+            // mode: 'no-cors',
+            // method: 'GET',
+            // headers: {
+            //   'Content-Type': 'application/json'
+            // }
+        })
+            .then((response) => {
+                response.json().then((appList) => {
+                    // Work with JSON appList here
+                    console.log(appList)
+                    setAppList(appList)
+                })
+            })
+            .catch((err) => {
+                // Do something for an error here
+                console.log(err)
+            })
+    }, [])
+
     const showModal = () => {
         setIsModalVisible(true);
     };
@@ -57,9 +66,10 @@ function AppConnections() {
                         'Authorization': 'Bearer ' + user.accessToken,
                     },
                     body: JSON.stringify({
+                        "client_id": "1ee66772259adacc31c6306a563d2437bcf4eee9c58b6fd5a8277c5dcc1ceb1e",
                         "user_data": {
                             "authorization_response_url": url
-                        }
+                        },
                     })
                 }).then(response => response.json())
                 .then(response => console.log("response2", response))

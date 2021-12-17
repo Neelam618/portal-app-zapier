@@ -1902,6 +1902,8 @@ filter: brightness(2.5);
       background-color: transparent;
       padding: 0;
       cursor: pointer;
+      width: 100%;
+      text-align: left;
   }
   .authBtn {
     background-color: teal;
@@ -1915,7 +1917,13 @@ filter: brightness(2.5);
     font-size: 18px;
   }
   
-  .container {
+  .authContainer {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+  .loginContainer {
     box-shadow: 0 1px 6px #ccc;
     border-radius: 6px;
     display: flex;
@@ -1926,7 +1934,7 @@ filter: brightness(2.5);
     padding: 22px;
   }
   
-  .container > p {
+  .loginContainer > p {
     cursor: pointer;
     margin: 12px;
   }
