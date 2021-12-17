@@ -66,7 +66,6 @@ function AppConnections() {
                         'Authorization': 'Bearer ' + user.accessToken,
                     },
                     body: JSON.stringify({
-                        "client_id": "1ee66772259adacc31c6306a563d2437bcf4eee9c58b6fd5a8277c5dcc1ceb1e",
                         "user_data": {
                             "authorization_response_url": url
                         },
