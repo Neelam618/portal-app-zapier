@@ -1897,7 +1897,12 @@ filter: brightness(2.5);
     font-size: 18px;
     width: 93%;
   }
-  
+  .logoutBtn {
+      border: 0;
+      background-color: transparent;
+      padding: 0;
+      cursor: pointer;
+  }
   .authBtn {
     background-color: teal;
     border: none;

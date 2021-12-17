@@ -12,9 +12,9 @@ function Topbar() {
                 </a>
             </Menu.Item>
             <Menu.Item>
-                <a href='' onClick={logoutUser} >
+                <button className='logoutBtn' onClick={logoutUser} >
                     Log out
-                </a>
+                </button>
             </Menu.Item>
         </Menu>
     );

@@ -45,7 +45,7 @@ function AppConnections() {
         }).then((resp) => resp.json())
             .then((response) => {
                 // Work with JSON authUrl here
-                console.log("response", response)
+                console.log("response1", response)
                 return response.url
                 // setAuthUrl(authUrl)
             }).then(url => {
@@ -62,7 +62,7 @@ function AppConnections() {
                         }
                     })
                 }).then(response => response.json())
-                .then(response => console.log(response))
+                .then(response => console.log("response2", response))
             })
             .catch((err) => {
                 // Do something for an error here
