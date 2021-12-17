@@ -36,20 +36,33 @@ function AppConnections() {
         setIsModalVisible(false)
 
         fetch('http://143.244.142.223:8005/app/v1/public/auth/user/authenticate_url/' + appId, {
-            // mode: 'no-cors',
             method: 'GET',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + user.accessToken,
             }
-        })
+        }).then((resp) => resp.json())
             .then((response) => {
-                response.json().then((authUrl) => {
-                    // Work with JSON authUrl here
-                    console.log("authUrl", authUrl)
-                    setAuthUrl(authUrl)
-                })
+                // Work with JSON authUrl here
+                console.log("response", response)
+                return response.url
+                // setAuthUrl(authUrl)
+            }).then(url => {
+                fetch('http://143.244.142.223:8005/app/v1/public/auth/user/' + appId + "?name=gitlab", {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer ' + user.accessToken,
+                    },
+                    body: JSON.stringify({
+                        "user_data": {
+                            "authorization_response_url": url
+                        }
+                    })
+                }).then(response => response.json())
+                .then(response => console.log(response))
             })
             .catch((err) => {
                 // Do something for an error here
