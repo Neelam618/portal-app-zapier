@@ -107,7 +107,10 @@ function CreateTrigger(props) {
                                                 return (
                                                     <div className="triggerAppWrapper" onClick={()=> openChooseAppAndEventStep(appItem.name, appItem.id)}>
                                                         <div className="triggerAppIcon">
-                                                            <img width="21" src={appItem.appIcon} alt="" />
+                                                            {/* <img width="21" src={appItem.appIcon} alt="" /> */}
+                                                            <div style={{backgroundColor: "#82807f", color: 'white', width: '30px',height: '30px',textAlign: 'center',borderRadius: '8px', marginRight: '12px'}}>
+                                                                {appItem.name.charAt(0)}
+                                                            </div>
                                                         </div>
                                                         <div className="triggerAppName">{appItem.name}</div>
                                                     </div>
