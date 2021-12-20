@@ -4,7 +4,7 @@ import { SearchOutlined } from '@ant-design/icons'
 import { useUserContext } from '../context/UserContext';
 
 function AppConnections() {
-    const {user} = useUserContext()
+    const { user } = useUserContext()
 
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [appList, setAppList] = useState([])
@@ -54,9 +54,10 @@ function AppConnections() {
         }).then((resp) => resp.json())
             .then((response) => {
                 // Work with JSON authUrl here
-                console.log("response1", response)
+                console.log("responseurl", response.url)
+                window.open(response.url, "width=200, height=300");
                 return response.url
-                // setAuthUrl(authUrl)
+
             }).then(url => {
                 fetch('http://143.244.142.223:8005/app/v1/public/auth/user/' + appId + "?name=gitlab", {
                     method: 'POST',
@@ -71,8 +72,10 @@ function AppConnections() {
                         },
                     })
                 }).then(response => response.json())
-                .then(response => console.log("response2", response))
+                    .then(response => console.log("response2", response))
+
             })
+
             .catch((err) => {
                 // Do something for an error here
                 console.log(err)
@@ -94,7 +97,10 @@ function AppConnections() {
                                 return (
                                     <div className="appWrapper" onClick={() => redirectToUserAuthInApp(appItem.id)}>
                                         <div className="appIcon" style={{ marginRight: 10 }}>
-                                            <img width="36" src={appItem.appIcon} alt="" />
+                                            {/* <img width="36" src={appItem.appIcon} alt="" /> */}
+                                            <div style={{ backgroundColor: "#82807f", color: 'white', width: '30px', height: '30px', textAlign: 'center', borderRadius: '8px', marginRight: '12px' }}>
+                                                {appItem.name.charAt(0)}
+                                            </div>
                                         </div>
                                         <div className="appName">{appItem.name}</div>
                                     </div>
