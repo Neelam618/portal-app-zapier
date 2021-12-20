@@ -97,7 +97,10 @@ function ChooseAppAndEvent(props) {
             <div id='chooseAppAndEventStepContainer'>
                 <div className='titleContainer'>
                     <div className='triggerAppIcon'>
-                        <img width="40" src="https://zapier-images.imgix.net/storage/services/62c82a7958c6c29736f17d0495b6635c.128x128.png?auto=format%2Ccompress&ixlib=python-3.0.0&q=50" alt="" />
+                        {/* <img width="40" src="https://zapier-images.imgix.net/storage/services/62c82a7958c6c29736f17d0495b6635c.128x128.png?auto=format%2Ccompress&ixlib=python-3.0.0&q=50" alt="" /> */}
+                        <div style={{ backgroundColor: "#82807f", color: 'white', width: '45px', height: '45px', textAlign: 'center', borderRadius: '8px', marginRight: '12px', display: 'grid', alignItems: 'center' }}>
+                            {props.selectedApp.charAt(0)}
+                        </div>
                     </div>
                     <div class="triggerHeadingContainer">
                         <div className="triggerTitle">

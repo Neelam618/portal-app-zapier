@@ -74,7 +74,6 @@ function CreateWorkflow() {
          </div>
          <div className="mainContainer">
             <div className="mainContent">
-
                {
                   step1CreateTriggerIsOpen ? <CreateTrigger /> :
                      <div className="trigger" onClick={openStep1CreateTrigger}>
@@ -95,7 +94,6 @@ function CreateWorkflow() {
                         </div>
                      </div>
                }
-
                <div className="topLine"></div>
                {
                   showActionPopup ?
@@ -146,7 +144,6 @@ function CreateWorkflow() {
                         </div>
                      </div>
                }
-
             </div>
          </div>
       </div>
