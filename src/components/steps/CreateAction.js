@@ -1,35 +1,77 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import { Input } from 'antd';
 import { SearchOutlined } from '@ant-design/icons'
 import useOnClickOutside from 'use-onclickoutside'
 import ChooseAppAndEvent from './ChooseAppAndEvent'
 
-const apps = [
-    {
-        app: "Google Calender", appIcon: "https://zapier-images.imgix.net/storage/services/62c82a7958c6c29736f17d0495b6635c.png?auto=format&fit=crop&h=64&ixlib=react-9.0.2&w=64&ar=undefined&h=21&w=21&q=50&dpr=1"
-    },
-    {
-        app: "Google Contacts", appIcon: "https://zapier-images.imgix.net/storage/services/1508661b55cd3c5ad1787303b0f58c99.png?auto=format&fit=crop&h=64&ixlib=react-9.0.2&w=64&ar=undefined&h=21&w=21&q=50&dpr=1"
-    },
-    {
-        app: "Google Docs", appIcon: "https://zapier-images.imgix.net/storage/services/ae42824b58d556d36b5e5b217377fc5e.png?auto=format&fit=crop&h=64&ixlib=react-9.0.2&w=64&ar=undefined&h=21&w=21&q=50&dpr=1"
-    }
-]
-
 function CreateAction(props) {
+    const [appList, setAppList] = useState([])
+    const [selectedApp, setSelectedApp] = useState()
+    const [triggerEventList, setTriggerEventList] = useState([])
+    const [showChooseAppAndEventStep, setShowChooseAppAndEventStep] = useState(false)
+
+
+    useEffect(() => {
+        setShowChooseAppAndEventStep(false)
+        setSelectedApp()
+
+        fetch('http://143.244.142.223:8005/app/v1/public/', {
+            // mode: 'no-cors',
+            // method: 'GET',
+            // headers: {
+            //   'Content-Type': 'application/json'
+            // }
+
+        })
+            .then((response) => {
+                response.json().then((appList) => {
+                    // Work with JSON appList here
+                    console.log(appList)
+                    setAppList(appList)
+                })
+            })
+            .catch((err) => {
+                // Do something for an error here
+                console.log(err)
+            })
+    }, [])
+
     const ref = useRef(null)
     useOnClickOutside(ref, () => props.setShowActionPopup(false))
-
-    const [showChooseAppAndEventStep, setShowChooseAppAndEventStep] = useState(false)
 
     function openChooseAppAndEventStep() {
         setShowChooseAppAndEventStep(true)
     }
 
+    function openChooseAppAndEventStep(appName, appId) {
+        setShowChooseAppAndEventStep(true)
+        setSelectedApp(appName)
+
+        fetch('http://143.244.142.223:8005/app/v1/public/app/' + appId + '/tasks', {
+            // mode: 'no-cors',
+            // method: 'GET',
+            // headers: {
+            //   'Content-Type': 'application/json'
+            // }
+
+        })
+            .then((response) => {
+                response.json().then((taskList) => {
+                    // Work with JSON taskList here
+                    console.log("taskList", taskList)
+                    setTriggerEventList(taskList)
+                })
+            })
+            .catch((err) => {
+                // Do something for an error here
+                console.log(err)
+            })
+    }
+
     return (
         <>
             {
-                showChooseAppAndEventStep ? <ChooseAppAndEvent step="action" /> :
+                showChooseAppAndEventStep ? <ChooseAppAndEvent step="action" selectedApp={selectedApp} appList={appList} setSelectedApp={setSelectedApp} triggerEventList={triggerEventList} setTriggerEventList={setTriggerEventList} /> :
 
                     <div className="actionContainer" ref={props.step2CreateActionIsOpen ? props.ref : ref}>
                         <div className="actionAndTriggerHeader">
@@ -68,13 +110,16 @@ function CreateAction(props) {
                                         <Input id="inputBox" size="large" placeholder="Search by App" prefix={<SearchOutlined />} />
                                         <div className="triggerAppsContainer">
                                             {
-                                                apps.map((appItem) => {
+                                                appList.map((appItem) => {
                                                     return (
-                                                        <div className="triggerAppWrapper" onClick={openChooseAppAndEventStep}>
+                                                        <div className="triggerAppWrapper" onClick={() => openChooseAppAndEventStep(appItem.name, appItem.id)}>
                                                             <div className="triggerAppIcon">
-                                                                <img width="21" src={appItem.appIcon} alt="" />
+                                                                {/* <img width="21" src={appItem.appIcon} alt="" /> */}
+                                                                <div style={{ backgroundColor: "#82807f", color: 'white', width: '30px', height: '30px', textAlign: 'center', borderRadius: '8px', marginRight: '12px' }}>
+                                                                    {appItem.name.charAt(0)}
+                                                                </div>
                                                             </div>
-                                                            <div className="triggerAppName">{appItem.app}</div>
+                                                            <div className="triggerAppName">{appItem.name}</div>
                                                         </div>
                                                     )
                                                 })
