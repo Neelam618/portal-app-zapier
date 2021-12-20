@@ -154,7 +154,7 @@ function ChooseAppAndEvent(props) {
                                                             <div className="triggerAppWrapper" onClick={() => openChooseAppAndEventStep(appItem.name, appItem.id)}>
                                                                 <div className="triggerAppIcon">
                                                                     {/* <img width="21" src="" alt="" /> */}
-                                                                    <div style={{ backgroundColor: "#82807f", color: 'white', width: '30px', height: '30px', textAlign: 'center', borderRadius: '8px', marginRight: '12px' }}>
+                                                                    <div style={{ backgroundColor: "#82807f", color: 'white', width: '30px', height: '30px', textAlign: 'center', borderRadius: '8px', marginRight: '12px', display: 'grid', alignItems: 'center' }}>
                                                                         {appItem.name.charAt(0)}
                                                                     </div>
                                                                 </div>
@@ -166,34 +166,34 @@ function ChooseAppAndEvent(props) {
                                             </div>
                                         </div>
                                         <div className="rightCol">
-                                            <button className="optionsButton">
-                                                <div className="buttonContent">
-                                                    <div className="buttonIcon">
+                                            <button className="moreTriggerOptionsBtn">
+                                                <div className="triggerOptionBtnContent">
+                                                    <div className="triggerBtnIcon">
                                                         <img width="40" src="https://zapier-images.imgix.net/storage/services/9abbda159e8d9cec0e5eaa8ff1fd5205.png?auto=format&fit=crop&h=50&ixlib=react-9.0.2&w=50&ar=undefined&h=40&w=40&q=75&dpr=1" alt="" />
                                                     </div>
-                                                    <div className="buttonText">
-                                                        <div className="optionsTitle">Schedule</div>
+                                                    <div className="triggerOptionBtnTxt">
+                                                        <div className="triggerOptionTitle">Schedule</div>
                                                         <div>Start the workflow every day, hour, or a custom interval</div>
                                                     </div>
                                                 </div>
                                             </button>
-                                            <button className="optionsButton">
-                                                <div className="buttonContent">
-                                                    <div className="buttonIcon">
+                                            <button className="moreTriggerOptionsBtn">
+                                                <div className="triggerOptionBtnContent">
+                                                    <div className="triggerBtnIcon">
                                                         <img width="40" src="https://zapier-images.imgix.net/storage/services/603433f546bb15670c1df9309b198816.png?auto=format&fit=crop&h=50&ixlib=react-9.0.2&w=50&ar=undefined&h=40&w=40&q=75&dpr=1" alt="" />                                    </div>
-                                                    <div className="buttonText">
-                                                        <div className="optionsTitle">RSS</div>
+                                                    <div className="triggerOptionBtnTxt">
+                                                        <div className="triggerOptionTitle">RSS</div>
                                                         <div>Start the workflow when an RSS feed updates</div>
                                                     </div>
                                                 </div>
                                             </button>
-                                            <button className="optionsButton">
-                                                <div className="buttonContent">
-                                                    <div className="buttonIcon">
+                                            <button className="moreTriggerOptionsBtn">
+                                                <div className="triggerOptionBtnContent">
+                                                    <div className="triggerBtnIcon">
                                                         <img width="40" src="https://zapier-images.imgix.net/storage/services/2b3416ebc79b3fb31c014a3a149633c0.png?auto=format&fit=crop&h=50&ixlib=react-9.0.2&w=50&ar=undefined&h=40&w=40&q=75&dpr=1" alt="" />
                                                     </div>
-                                                    <div className="buttonText">
-                                                        <div className="optionsTitle">Webhook</div>
+                                                    <div className="triggerOptionBtnTxt">
+                                                        <div className="triggerOptionTitle">Webhook</div>
                                                         <div>Start the workflow when another app sends a webhook</div>
                                                     </div>
                                                 </div>

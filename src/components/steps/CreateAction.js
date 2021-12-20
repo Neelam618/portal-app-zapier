@@ -84,35 +84,35 @@ function CreateAction(props) {
                                     </div>
                                 </div>
                                 <div className="rightCol">
-                                    <button className="optionsButton">
-                                        <div className="buttonContent">
-                                            <div className="buttonIcon">
+                                    <button className="moreTriggerOptionsBtn">
+                                        <div className="triggerOptionBtnContent">
+                                            <div className="triggerBtnIcon">
                                                 <img src="https://zapier-images.imgix.net/storage/services/a3c21b5705839bf5cc398491792fde26.png?auto=format&fit=crop&h=50&ixlib=react-9.0.2&w=50&ar=undefined&h=40&w=40&q=75&dpr=1" alt="" />
                                             </div>
-                                            <div className="buttonText">
-                                                <div>Filter</div>
+                                            <div className="triggerOptionBtnTxt">
+                                                <div className='triggerOptionTitle'>Filter</div>
                                                 <div>Only process when condition is met</div>
                                             </div>
                                         </div>
                                     </button>
-                                    <button className="optionsButton">
-                                        <div className="buttonContent">
-                                            <div className="buttonIcon">
+                                    <button className="moreTriggerOptionsBtn">
+                                        <div className="triggerOptionBtnContent">
+                                            <div className="triggerBtnIcon">
                                                 <img src="https://zapier-images.imgix.net/storage/services//bcc9b8c3b870e129fb7c869ec686ab90.png?auto=format&fit=crop&h=50&ixlib=react-9.0.2&w=50&ar=undefined&h=40&w=40&q=75&dpr=1" alt="" />
                                             </div>
-                                            <div className="buttonText">
-                                                <div>Format</div>
+                                            <div className="triggerOptionBtnTxt">
+                                                <div className='triggerOptionTitle'>Format</div>
                                                 <div>Change how incoming data is changed</div>
                                             </div>
                                         </div>
                                     </button>
-                                    <button className="optionsButton">
-                                        <div className="buttonContent">
-                                            <div className="buttonIcon">
+                                    <button className="moreTriggerOptionsBtn">
+                                        <div className="triggerOptionBtnContent">
+                                            <div className="triggerBtnIcon">
                                                 <img src="https://zapier-images.imgix.net/storage/services/2b3416ebc79b3fb31c014a3a149633c0.png?auto=format&fit=crop&h=50&ixlib=react-9.0.2&w=50&ar=undefined&h=40&w=40&q=75&dpr=1" alt="" />
                                             </div>
-                                            <div className="buttonText">
-                                                <div>Delay</div>
+                                            <div className="triggerOptionBtnTxt">
+                                                <div className='triggerOptionTitle'>Delay</div>
                                                 <div>Pause actions for a certain amount of time</div>
                                             </div>
                                         </div>

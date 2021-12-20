@@ -1593,7 +1593,7 @@ filter: brightness(2.5);
     border-radius: 10px;
     font-weight: 500;
 }
-.actionContainer .appEventIcon, .triggerContainer .appEventIcon {
+.appEventIcon {
     width: 40px;
     min-width: 40px;
     height: 40px;
@@ -1604,7 +1604,10 @@ filter: brightness(2.5);
     justify-content: center;
     align-items: center;
 } 
-.actionContainer .appEventHeading, .triggerContainer .appEventHeading {
+.appEventIcon svg {
+    vertical-align: middle;
+}
+.appEventHeading {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -1621,7 +1624,7 @@ filter: brightness(2.5);
     padding: 18px;
     background-color: #ffffff;
 }
-.actionContainer .buttonContent, .triggerContainer .buttonContent {
+.triggerOptionBtnContent {
     display: flex;
 }
 .actionAndTriggerGrid {
@@ -1634,24 +1637,24 @@ filter: brightness(2.5);
     text-align: left;
     background-color: rgb(255, 255, 255);
 }
-.actionContainer .optionsButton, .triggerContainer .optionsButton, #chooseAppAndEventStepContainer .optionsButton {
+.moreTriggerOptionsBtn {
     background-color: #ffffff;
     border: none;
     padding: 2em 10px;
     cursor: pointer;
 }
-.actionContainer .optionsButton:hover, .triggerContainer .optionsButton:hover, #chooseAppAndEventStepContainer .optionsButton:hover {
+.moreTriggerOptionsBtn:hover {
     box-shadow: rgb(0 0 0 / 10%) 0px 4px 5px;
     border: 1px solid rgb(230, 230, 230);
     border-radius: 10px;
 }
-.actionContainer .optionsTitle, .triggerContainer .optionsTitle {
+.triggerOptionTitle {
     font-weight: 600;
 }
-.actionContainer .buttonText, .triggerContainer .buttonText {
+.triggerOptionBtnTxt {
     text-align: start;
 }
-.actionContainer .buttonIcon, .triggerContainer .buttonIcon {
+.triggerBtnIcon {
     margin-right: 1em;
 }
 .actionContainer .leftCol, .triggerContainer .leftCol {
