@@ -24,6 +24,7 @@ function ChooseAppAndEvent(props) {
     const [showChooseAppAndEventStep, setShowChooseAppAndEventStep] = useState(false)
     const [showNextStep, setShowNextStep] = useState(false)
     const [showAccordionContent, setShowAccordionContent] = useState(false)
+    const [selectedEvent, setSelectedEvent] = useState("")
 
     const showModal = () => {
         setIsModalVisible(true);
@@ -41,6 +42,10 @@ function ChooseAppAndEvent(props) {
     }
 
     const { Option } = Select;
+
+    function updateEventNameInTriggerTitle(eventName) {
+        setSelectedEvent(eventName)
+    }
 
     function openChooseAppAndEventStep(appName, appId) {
         setShowChooseAppAndEventStep(true)
@@ -71,7 +76,6 @@ function ChooseAppAndEvent(props) {
 
     function openNextStepAndCloseCurrentStep() {
 
-
         setShowNextStep(true)
         setShowAccordionContent(false)
     }
@@ -99,7 +103,7 @@ function ChooseAppAndEvent(props) {
                         <div className="triggerTitle">
                             {props.step == "trigger" ? <div>Trigger</div> : props.step == "action" ? <div>Action</div> : null}
                         </div>
-                        <div className="triggerSubTitle">1. New Event in Google Calendar</div>
+                        <div className="triggerSubTitle">{props.selectedApp}</div>
                     </div>
                 </div>
                 {
@@ -207,7 +211,7 @@ function ChooseAppAndEvent(props) {
                                     <Select className="selectListItem" placeholder="Choose an event" style={{ width: "100%" }} onChange={selectHandleChange}>
                                         {
                                             props.triggerEventList.map((triggerEvent) => {
-                                                return <Option value={triggerEvent.id}>
+                                                return <Option value={triggerEvent.id} onClick={() => updateEventNameInTriggerTitle(triggerEvent.name)}>
                                                     <div className="selectListItemTitle">{triggerEvent.name}</div>
                                                     {/* <p className="selectListItemPara">Triggers when a new message is posted to any public channel</p> */}
                                                 </Option>
