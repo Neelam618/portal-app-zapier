@@ -55,7 +55,7 @@ function AppConnections() {
             .then((response) => {
                 // Work with JSON authUrl here
                 console.log("responseurl", response.url)
-                window.open(response.url, "width=200, height=300");
+                window.open(response.url, "myTab", "width=1000, height=1000");
                 return response.url
 
             }).then(url => {
@@ -98,7 +98,7 @@ function AppConnections() {
                                     <div className="appWrapper" onClick={() => redirectToUserAuthInApp(appItem.id)}>
                                         <div className="appIcon" style={{ marginRight: 10 }}>
                                             {/* <img width="36" src={appItem.appIcon} alt="" /> */}
-                                            <div style={{ backgroundColor: "#82807f", color: 'white', width: '30px', height: '30px', textAlign: 'center', borderRadius: '8px', marginRight: '12px' }}>
+                                            <div style={{ backgroundColor: "#82807f", color: 'white', width: '30px', height: '30px', textAlign: 'center', borderRadius: '8px', marginRight: '12px', display: 'grid', alignItems: 'center' }}>
                                                 {appItem.name.charAt(0)}
                                             </div>
                                         </div>
