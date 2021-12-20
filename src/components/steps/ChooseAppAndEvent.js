@@ -204,7 +204,7 @@ function ChooseAppAndEvent(props) {
                                     <span className="requiredText">required</span>
                                 </label>
                                 <div className="chooseEventDropdownContainer">
-                                    <Select className="selectListItem" style={{ width: "100%" }} onChange={selectHandleChange}>
+                                    <Select className="selectListItem" placeholder="Choose an event" style={{ width: "100%" }} onChange={selectHandleChange}>
                                         {
                                             props.triggerEventList.map((triggerEvent) => {
                                                 return <Option value={triggerEvent.id}>
