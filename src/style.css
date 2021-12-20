@@ -1398,6 +1398,9 @@ filter: brightness(2.5);
 #createWorkflow .accordionArrow {
     margin-right: 10px;
 }
+.selectedApp {
+    display: flex;
+}
 #createWorkflow .selectedAppIcon {
     width: 20px;
     margin-right: 10px;

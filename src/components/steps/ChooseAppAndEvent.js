@@ -124,7 +124,10 @@ function ChooseAppAndEvent(props) {
                             <div className='stepContentTitle'>Choose App & event</div>
                             <div className="chooseAppContainer" onClick={showModal}>
                                 <div className="selectedApp">
-                                    <img className="selectedAppIcon" src="https://zapier-images.imgix.net/storage/services/6cf3f5a461feadfba7abc93c4c395b33_2.128x128.png?auto=format%2Ccompress&ixlib=python-3.0.0&q=50" alt="" />
+                                    {/* <img className="selectedAppIcon" src="https://zapier-images.imgix.net/storage/services/6cf3f5a461feadfba7abc93c4c395b33_2.128x128.png?auto=format%2Ccompress&ixlib=python-3.0.0&q=50" alt="" /> */}
+                                    <div style={{ backgroundColor: "#82807f", color: 'white', width: '30px', height: '30px', textAlign: 'center', borderRadius: '8px', marginRight: '12px' }}>
+                                        {props.selectedApp.charAt(0)}
+                                    </div>
                                     <span className="selectedAppName">{props.selectedApp}</span>
                                 </div>
                                 <div className="changeText">Change</div>
@@ -166,7 +169,7 @@ function ChooseAppAndEvent(props) {
                                             </div>
                                         </div>
                                         <div className="rightCol">
-                                            <button className="moreTriggerOptionsBtn">
+                                            <button className="moreTriggerOptionsBtn" onClick={() => openChooseAppAndEventStep("Schedule byInnerkore", "123")}>
                                                 <div className="triggerOptionBtnContent">
                                                     <div className="triggerBtnIcon">
                                                         <img width="40" src="https://zapier-images.imgix.net/storage/services/9abbda159e8d9cec0e5eaa8ff1fd5205.png?auto=format&fit=crop&h=50&ixlib=react-9.0.2&w=50&ar=undefined&h=40&w=40&q=75&dpr=1" alt="" />
@@ -177,7 +180,7 @@ function ChooseAppAndEvent(props) {
                                                     </div>
                                                 </div>
                                             </button>
-                                            <button className="moreTriggerOptionsBtn">
+                                            <button className="moreTriggerOptionsBtn" onClick={() => openChooseAppAndEventStep("RSS by Innerkore", "123")}>
                                                 <div className="triggerOptionBtnContent">
                                                     <div className="triggerBtnIcon">
                                                         <img width="40" src="https://zapier-images.imgix.net/storage/services/603433f546bb15670c1df9309b198816.png?auto=format&fit=crop&h=50&ixlib=react-9.0.2&w=50&ar=undefined&h=40&w=40&q=75&dpr=1" alt="" />                                    </div>
@@ -187,7 +190,7 @@ function ChooseAppAndEvent(props) {
                                                     </div>
                                                 </div>
                                             </button>
-                                            <button className="moreTriggerOptionsBtn">
+                                            <button className="moreTriggerOptionsBtn" onClick={() => openChooseAppAndEventStep("Webhook by Innerkore", "123")}>
                                                 <div className="triggerOptionBtnContent">
                                                     <div className="triggerBtnIcon">
                                                         <img width="40" src="https://zapier-images.imgix.net/storage/services/2b3416ebc79b3fb31c014a3a149633c0.png?auto=format&fit=crop&h=50&ixlib=react-9.0.2&w=50&ar=undefined&h=40&w=40&q=75&dpr=1" alt="" />

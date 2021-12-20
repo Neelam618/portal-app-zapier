@@ -120,7 +120,7 @@ function CreateTrigger(props) {
                                     </div>
                                 </div>
                                 <div className="rightCol">
-                                    <button className="moreTriggerOptionsBtn">
+                                    <button className="moreTriggerOptionsBtn" onClick={() => openChooseAppAndEventStep("Schedule by Innerkore", "123")}>
                                         <div className="triggerOptionBtnContent">
                                             <div className="triggerBtnIcon">
                                                 <img width="40" src="https://zapier-images.imgix.net/storage/services/9abbda159e8d9cec0e5eaa8ff1fd5205.png?auto=format&fit=crop&h=50&ixlib=react-9.0.2&w=50&ar=undefined&h=40&w=40&q=75&dpr=1" alt="" />
@@ -131,7 +131,7 @@ function CreateTrigger(props) {
                                             </div>
                                         </div>
                                     </button>
-                                    <button className="moreTriggerOptionsBtn">
+                                    <button className="moreTriggerOptionsBtn" onClick={() => openChooseAppAndEventStep("RSS by Innerkore", "123")}>
                                         <div className="triggerOptionBtnContent">
                                             <div className="triggerBtnIcon">
                                                 <img width="40" src="https://zapier-images.imgix.net/storage/services/603433f546bb15670c1df9309b198816.png?auto=format&fit=crop&h=50&ixlib=react-9.0.2&w=50&ar=undefined&h=40&w=40&q=75&dpr=1" alt="" />                                    </div>
@@ -141,7 +141,7 @@ function CreateTrigger(props) {
                                             </div>
                                         </div>
                                     </button>
-                                    <button className="moreTriggerOptionsBtn">
+                                    <button className="moreTriggerOptionsBtn" onClick={() => openChooseAppAndEventStep("Webhook by Innerkore", "123")}>
                                         <div className="triggerOptionBtnContent">
                                             <div className="triggerBtnIcon">
                                                 <img width="40" src="https://zapier-images.imgix.net/storage/services/2b3416ebc79b3fb31c014a3a149633c0.png?auto=format&fit=crop&h=50&ixlib=react-9.0.2&w=50&ar=undefined&h=40&w=40&q=75&dpr=1" alt="" />
