@@ -1,11 +1,14 @@
 import React, { useRef } from "react";
 import { useUserContext } from "../context/UserContext";
+import { useHistory } from "react-router-dom";
 
 const Signup = () => {
+  let history = useHistory();
   const emailRef = useRef();
   const nameRef = useRef();
   const psdRef = useRef();
   const { registerUser } = useUserContext();
+  history.push("/signup");
 
   const onSubmit = (e) => {
     e.preventDefault();

@@ -7,6 +7,7 @@ const Signin = () => {
   const emailRef = useRef();
   const psdRef = useRef();
   const { signInUser, forgotPassword } = useUserContext();
+  history.push("/login");
 
   const onSubmit = (e) => {
     e.preventDefault();
