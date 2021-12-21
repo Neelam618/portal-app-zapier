@@ -32,7 +32,6 @@ function SideNav() {
                             <span className="navText">Create Workflow</span>
                         </Link>
                     </li>
-
                     {
                         navItems.map((navItem) => {
                             return (

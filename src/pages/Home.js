@@ -3,6 +3,7 @@ import SideNav from '../components/SideNav'
 import Dashboard from './../components/Dashboard';
 import '../../src/style.css'
 import { useLocation } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 import {
     BrowserRouter as Router,
@@ -27,6 +28,7 @@ function Home() {
             }
             <div>
                 <Switch>
+                <Redirect exact from="/" to="/dashboard" />
                     <Route path="/create-workflow">
                         <CreateWorkflow />
                     </Route>

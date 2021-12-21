@@ -8,8 +8,33 @@ function AppConnections() {
 
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [appList, setAppList] = useState([])
+    const [appConnectionsList, setAppConnectionsList] = useState([])
 
     useEffect(() => {
+        fetch('http://143.244.142.223:8005/app/v1/public/user/my_apps', {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + user.accessToken,
+            }
+        })
+            .then((response) => {
+                response.json().then((appConnectionsList) => {
+                    // Work with JSON appConnectionsList here
+                    console.log(appConnectionsList)
+                    setAppConnectionsList(appConnectionsList)
+                })
+            })
+            .catch((err) => {
+                // Do something for an error here
+                console.log(err)
+            })
+    }, [])
+
+    const showModal = () => {
+        setIsModalVisible(true);
+
         fetch('http://143.244.142.223:8005/app/v1/public/', {
             // mode: 'no-cors',
             // method: 'GET',
@@ -28,11 +53,9 @@ function AppConnections() {
                 // Do something for an error here
                 console.log(err)
             })
-    }, [])
 
-    const showModal = () => {
-        setIsModalVisible(true);
     };
+
     const handleOk = () => {
         setIsModalVisible(false);
     };
@@ -112,27 +135,32 @@ function AppConnections() {
                 </div>
             </div>
             <div>
-                <div className="listItem">
-                    <div className="listTitleWrapper">
-                        <span className="imgWrapper">
-                            <img src="https://cdn.zapier.com/storage/services/54f0bd6f9c31b757ab20d4c7058dc7c0.32x32.png?auto=format&ar=undefined&fit=crop&ixlib=react-9.0.2&h=28&w=28&q=75&dpr=1" alt="" />
-                        </span>
-                        <span className="listTitle">Gmail</span>
-                    </div>
-                    <div>
-                        <div className="listDetails">
-                            <div className="connections">
-                                <span className="count">1</span><div className="countText">Connection</div>
-                            </div>
-                            <div className="zaps">
-                                <span className="count">2</span><div className="countText">Zaps</div>
+                {
+                    appConnectionsList.map((appItem) => {
+                        return <div className="listItem">
+                            <div className="listTitleWrapper">
+                                <span className="imgWrapper">
+                                    <img src="https://cdn.zapier.com/storage/services/54f0bd6f9c31b757ab20d4c7058dc7c0.32x32.png?auto=format&ar=undefined&fit=crop&ixlib=react-9.0.2&h=28&w=28&q=75&dpr=1" alt="" />
+                                </span>
+                                <span className="listTitle">{appItem.name}</span>
                             </div>
                             <div>
-                                <svg className="arrowIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.58984 16.59L13.1698 12L8.58984 7.41L9.99984 6L15.9998 12L9.99984 18L8.58984 16.59Z" fill="#136bf5"></path></svg>
+                                <div className="listDetails">
+                                    <div className="connections">
+                                        <span className="count">{appItem.connections}</span><div className="countText">Connection</div>
+                                    </div>
+                                    <div className="zaps">
+                                        <span className="count">0</span><div className="countText">Zaps</div>
+                                    </div>
+                                    <div>
+                                        <svg className="arrowIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.58984 16.59L13.1698 12L8.58984 7.41L9.99984 6L15.9998 12L9.99984 18L8.58984 16.59Z" fill="#136bf5"></path></svg>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    })
+                }
+
             </div>
         </div>
     )
