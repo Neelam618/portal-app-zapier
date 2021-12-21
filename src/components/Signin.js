@@ -1,7 +1,9 @@
 import React, { useRef } from "react";
 import { useUserContext } from "../context/UserContext";
+import { useHistory } from "react-router-dom";
 
 const Signin = () => {
+  let history = useHistory();
   const emailRef = useRef();
   const psdRef = useRef();
   const { signInUser, forgotPassword } = useUserContext();
@@ -11,6 +13,7 @@ const Signin = () => {
     const email = emailRef.current.value;
     const password = psdRef.current.value;
     if (email && password) signInUser(email, password);
+    history.push("/dashboard");
   };
 
   const forgotPasswordHandler = () => {
@@ -22,6 +25,7 @@ const Signin = () => {
   };
 
   return (
+    
     <div className="form">
       <h2> Login </h2>
       <form onSubmit={onSubmit}>

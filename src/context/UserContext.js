@@ -8,6 +8,7 @@ import {
   sendPasswordResetEmail,
 } from "firebase/auth";
 import { auth } from "../firebase";
+import { useHistory } from "react-router-dom";
 
 export const UserContext = createContext({});
 
@@ -16,6 +17,7 @@ export const useUserContext = () => {
 };
 
 export const UserContextProvider = ({ children }) => {
+  let history = useHistory();
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -57,6 +59,7 @@ export const UserContextProvider = ({ children }) => {
 
   const logoutUser = () => {
     signOut(auth);
+    history.push("/login");
   };
 
   const forgotPassword = (email) => {
