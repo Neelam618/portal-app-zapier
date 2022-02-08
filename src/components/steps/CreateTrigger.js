@@ -2,23 +2,25 @@ import React, { useRef, useState, useEffect } from 'react'
 import { Input } from 'antd';
 import { SearchOutlined } from '@ant-design/icons'
 import ChooseAppAndEvent from './ChooseAppAndEvent';
+import { useUserContext } from '../../context/UserContext';
 
 function CreateTrigger(props) {
 
     const [appList, setAppList] = useState([])
     const [selectedApp, setSelectedApp] = useState()
     const [triggerEventList, setTriggerEventList] = useState([])
+    const { user } = useUserContext()
 
     useEffect(() => {
         setShowChooseAppAndEventStep(false)
         setSelectedApp()
 
-        fetch('http://143.244.142.223:8005/app/v1/public/', {
-            // mode: 'no-cors',
-            // method: 'GET',
-            // headers: {
-            //   'Content-Type': 'application/json'
-            // }
+        fetch('http://143.244.142.223:8005/v1/apps', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + user.accessToken,
+            }
 
         })
             .then((response) => {
@@ -42,18 +44,18 @@ function CreateTrigger(props) {
         setShowChooseAppAndEventStep(true)
         setSelectedApp(appName)
 
-        fetch('http://143.244.142.223:8005/app/v1/public/app/' + appId + '/tasks', {
-            // mode: 'no-cors',
-            // method: 'GET',
-            // headers: {
-            //   'Content-Type': 'application/json'
-            // }
+        fetch('http://143.244.142.223:8005/v1/app/' + appId + '/triggers', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + user.accessToken,
+            }
 
         })
             .then((response) => {
                 response.json().then((taskList) => {
                     // Work with JSON taskList here
-                    console.log("taskList",taskList)
+                    console.log("triggerList", taskList)
                     setTriggerEventList(taskList)
                 })
             })
@@ -105,10 +107,10 @@ function CreateTrigger(props) {
                                         {
                                             appList.map((appItem) => {
                                                 return (
-                                                    <div className="triggerAppWrapper" onClick={()=> openChooseAppAndEventStep(appItem.name, appItem.id)}>
+                                                    <div className="triggerAppWrapper" onClick={() => openChooseAppAndEventStep(appItem.name, appItem._id)}>
                                                         <div className="triggerAppIcon">
                                                             {/* <img width="21" src={appItem.appIcon} alt="" /> */}
-                                                            <div style={{backgroundColor: "#82807f", color: 'white', width: '30px',height: '30px',textAlign: 'center',borderRadius: '8px', marginRight: '12px'}}>
+                                                            <div style={{ backgroundColor: "#82807f", color: 'white', width: '30px', height: '30px', textAlign: 'center', borderRadius: '8px', marginRight: '12px' }}>
                                                                 {appItem.name.charAt(0)}
                                                             </div>
                                                         </div>

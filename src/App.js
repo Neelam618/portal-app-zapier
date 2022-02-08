@@ -4,10 +4,6 @@ import './style.css'
 import Home from './pages/Home'
 import Auth from './pages/Auth'
 import { useUserContext } from "./context/UserContext";
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { Redirect } from 'react-router-dom';
-import Signin from './components/Signin';
-import Signup from './components/Signup';
 
 function App() {
   const { user, loading, error } = useUserContext();

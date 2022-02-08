@@ -4,7 +4,6 @@ import Dashboard from './../components/Dashboard';
 import '../../src/style.css'
 import { useLocation } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
-
 import {
     BrowserRouter as Router,
     Switch,
@@ -15,8 +14,7 @@ import CreateWorkflow from '../pages/CreateWorkflow';
 import Workflows from '../pages/Workflows';
 import AppConnections from './AppConnections';
 import Topbar from '../components/Topbar';
-import Signin from '../components/Signin';
-import { signOut } from 'firebase/auth';
+
 
 function Home() {
     let location = useLocation();

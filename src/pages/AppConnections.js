@@ -11,7 +11,7 @@ function AppConnections() {
     const [appConnectionsList, setAppConnectionsList] = useState([])
 
     useEffect(() => {
-        fetch('http://143.244.142.223:8005/app/v1/public/user/my_apps', {
+        fetch('http://143.244.142.223:8005/v1/app', {
             method: 'GET',
             headers: {
                 'Accept': 'application/json',
@@ -35,12 +35,12 @@ function AppConnections() {
     const showModal = () => {
         setIsModalVisible(true);
 
-        fetch('http://143.244.142.223:8005/app/v1/public/', {
-            // mode: 'no-cors',
-            // method: 'GET',
-            // headers: {
-            //   'Content-Type': 'application/json'
-            // }
+        fetch('http://143.244.142.223:8005/v1/apps', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + user.accessToken,
+            }
         })
             .then((response) => {
                 response.json().then((appList) => {
@@ -67,7 +67,7 @@ function AppConnections() {
     function redirectToUserAuthInApp(appId) {
         setIsModalVisible(false)
 
-        fetch('http://143.244.142.223:8005/app/v1/public/auth/user/authenticate_url/' + appId, {
+        fetch('http://143.244.142.223:8005/v1/app/' + appId + '/auth/authenticate_url/', {
             method: 'GET',
             headers: {
                 'Accept': 'application/json',
@@ -82,7 +82,7 @@ function AppConnections() {
                 return response.url
 
             }).then(url => {
-                fetch('http://143.244.142.223:8005/app/v1/public/auth/user/' + appId + "?name=gitlab", {
+                fetch('http://143.244.142.223:8005/v1/app/' + appId + "auth?name=gitlab", {
                     method: 'POST',
                     headers: {
                         'Accept': 'application/json',
